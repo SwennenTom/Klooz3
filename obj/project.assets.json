@@ -11193,11 +11193,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Repositories\\Klooz3\\Klooz3.csproj",
+      "projectUniqueName": "C:\\Repositories\\Klooz3\\Klooz3.csproj",
       "projectName": "Klooz3",
-      "projectPath": "E:\\Repositories\\Klooz3\\Klooz3.csproj",
+      "projectPath": "C:\\Repositories\\Klooz3\\Klooz3.csproj",
       "packagesPath": "C:\\Users\\tomsw\\.nuget\\packages\\",
-      "outputPath": "E:\\Repositories\\Klooz3\\obj\\",
+      "outputPath": "C:\\Repositories\\Klooz3\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\tomsw\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -11207,6 +11207,8 @@
         "net6.0"
       ],
       "sources": {
+        "C:\\LocalPackages": {},
+        "C:\\NugetPackageLocal": {},
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
