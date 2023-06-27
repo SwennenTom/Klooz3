@@ -1,0 +1,338 @@
+
+/* ++++GENERAL++++*/
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@700&display=swap');
+
+@font-face {
+    font-family: 'ImpactFont';
+    src: url('/fonts/impact.ttf') format('truetype');
+  }
+  
+
+html{
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+
+/* ++++NAVIGATION++++ */
+
+/* Font size and color*/
+.nav a{
+    font-family: 'ImpactFont', Impact, 'Hind', 'Arial Narrow Bold', sans-serif;
+    font-size: 5rem;
+    color: black;
+    text-decoration: none;
+}
+
+.active{
+    color:rgb(155,186,97) !important;
+}
+
+/* Link turns green on hover*/
+.nav a:hover, .accordion-button:hover{
+    
+    color: rgb(155,186,97);
+}
+
+.green-button{
+    color: rgb(155,186,97)!important;
+}
+
+/*Keeps first letter black*/
+.first-letter-black{
+    color: black;
+}
+
+
+/* Position */
+#navbar-position{
+    margin-top: 20px;
+}
+
+.navbar{
+    background-color: white;
+}
+
+/* Smaller font size for small devices */
+@media (max-width: 650px) {
+    .nav-link {
+      font-size: 3.5rem !important; 
+    }
+}
+
+.smallfont{
+    font-size: 48px !important;
+    margin:-8px;
+}
+
+/* ++++ CONTENT ++++*/
+
+/* OVER */
+
+/* Accordion title sizing */
+
+.accordion-header button{
+    font-family: 'ImpactFont', Impact, 'Hind', 'Arial Narrow Bold', sans-serif;
+    font-size: 2rem!important;
+}
+
+/* Partner card styling */
+
+.card-body h5, .card a{
+    color:black;
+    text-decoration: none;
+    filter: grayscale();
+}
+
+.card-body h5:hover, .card a:hover{
+    filter: none;
+}
+
+/*card sizing and placement*/
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.partnercard {
+    width: 160px;
+    height: 224px;
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    float: left;
+}
+
+.card:hover{
+    border: 1px black solid;
+}
+
+.imgSizer{
+    height: 140px;
+    width: 140px;
+}
+
+.notextdecoration{
+    list-style: none;
+}
+
+#link{
+    color: black;
+}
+
+#linkdeco{
+    color: black;
+    text-decoration: none;
+}
+
+#linkdeco2{
+    
+        color: black;
+        text-decoration: none;
+        font-family: 'ImpactFont', Impact, 'Hind', 'Arial Narrow Bold', sans-serif;
+    font-size: 2rem!important;
+    
+}
+
+/* EXPERIMENTEN */ 
+
+/* Set the size of the cards for the experiments */
+.experimentcard{
+    width: 300px !important;
+    height: 300px !important;
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    float: left;
+}
+
+/* Sets the size of the images on the front of the cards*/
+.experimentsizer{
+    max-width: 275px !important;
+    max-height: 200px;
+    object-fit:contain;
+}
+
+.card-front,
+.card-back {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.6s;
+  
+}
+
+.card-back{
+    margin-top: -10px;
+  margin-left: -10px;
+  padding: 5px;
+}
+
+.invisible {
+    opacity: 0;
+  }
+  
+  .visible {
+    opacity: 1;
+  }
+
+  /*EXPERIMENTEN PAGINAS */
+
+  #titelblock{
+    display: block;
+  }
+
+/* Galleries */
+
+.content{
+    margin-top: 25%;
+}
+
+.carousel{
+margin-bottom: 25%;
+/* margin-left: 10%; */
+}
+
+.carousel button{
+    z-index: 100;
+}
+
+/* CONTACT */
+
+.ContactLijst li{
+    list-style: none;
+}
+
+.accordion-button{
+    background-color: none;
+    color: black;
+}
+
+.accordion-button address, .accordion-button p{
+    font-size: 1rem !important;
+    font-family: 'Hind', 'Arial Narrow Bold', sans-serif !important;
+}
+
+.accordion-button small{
+    font-size: 0.7rem;
+    font-style: italic;
+}
+
+#parkeerkaart{
+    width: 100%;
+}
+
+
+
+#ContactAccordion h3{
+    font-size: 1.2rem;
+}
+
+#ContactAccordion h4{
+    font-size: 1rem;
+}
+
+/* AGENDA */
+
+.linkClickable{
+    color: black;
+    text-decoration: none;
+}
+
+/* Responsiveness of agenda */
+
+.responsiveAgenda{
+    position: relative;
+    padding-bottom: 75%;
+    height: 0;
+    overflow:hidden;
+    margin-bottom: 100px;
+    filter:grayscale();
+    
+}
+
+.responsiveAgenda iframe{
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+}
+
+#activiteit{
+    list-style: none;
+}
+
+/*STAPPENPLAN*/
+
+.stappencard{
+    width: 300px;
+    height: 300px !important;
+    max-width: 300px;
+    max-height: 300px;
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    float: left;
+}
+
+
+/*++++FOOTER++++*/
+
+/* Keeps image at bottom right*/
+.TorenImage{
+    height: 500px;
+    width: auto;
+}
+
+@media (max-height: 800px) {
+    .TorenImage{
+        height: 350px;
+        width: auto;
+    }
+}
+
+/*Footer position*/
+#content{
+    padding-bottom: 340px;
+}
+
+footer{
+    /* position:fixed; */
+    position:static;
+    bottom:0;
+    /* width: 100vw; */
+    background-color: white;
+}
+
+/* @media (max-height: 850px) {
+    footer{
+        position: static;
+        top: 770px;
+    }
+} */
+
+/* Footer logo's */
+.footerlogo {
+    height: 4vh;
+    margin: 15px;
+    filter: grayscale();
+}
+
+/*Footer logo's get color back on hover*/
+.footerlogo:hover {
+    filter: none;
+}
+
+/* Copy right sizing */
+#copyright{
+    font-size: 0.75rem;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
