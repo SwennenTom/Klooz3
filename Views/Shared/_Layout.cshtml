@@ -35,7 +35,7 @@
     <header id="top">
         <nav class="navbar navbar-expand-lg bg-body-white sticky-top">
             <div class="container-fluid">
-                <a href="/index2.html">
+                <a asp-page="/Index">
                     <img src="/img/KloozLogo/PLACEHOLDER_kloozlogo01_TRANSPARANT.webp" width="234px"
                          alt="Welkom op de website van Project Klooz, leerecosysteem">
                 </a>
@@ -47,18 +47,20 @@
                 <div class="collapse navbar-collapse nav" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link smallfont active"
-                               href="/html/over.html">OVER</a>
+                            <a class="nav-link p-0 @(ViewContext.RouteData.Values["controller"].ToString() == "Over" ? "active" : "")"
+                               href="@Url.Action("Index", "Over", new { area = "" })">OVER</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link smallfont"
-                               href="/html/experimenten.html">EXPERIMENTEN</a>
+                            <a class="nav-link p-0 @(ViewContext.RouteData.Values["controller"].ToString() == "Experimenten" ? "active" : "")"
+                               href="@Url.Action("Index", "Experimenten", new { area = "" })">EXPERIMENTEN</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link smallfont" href="/html/contact.html">CONTACT</a>
+                            <a class="nav-link p-0 @(ViewContext.RouteData.Values["controller"].ToString() == "Contact" ? "active" : "")"
+                               href="@Url.Action("Index", "Contact", new { area = "" })">CONTACT</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link smallfont" href="/html/agenda.html">AGENDA</a>
+                            <a class="nav-link p-0 @(ViewContext.RouteData.Values["controller"].ToString() == "Agenda" ? "active" : "")"
+                               href="@Url.Action("Index", "Agenda", new { area = "" })">AGENDA</a>
                         </li>
                     </ul>
                 </div>

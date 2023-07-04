@@ -20,20 +20,20 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Repositories/Klooz3/Pages/Contact.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29udGFjdC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Repositories/Klooz3/Pages/Experimenten.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXhwZXJpbWVudGVuLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Repositories/Klooz3/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Repositories/Klooz3/Pages/Over.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3Zlci5jc2h0bWw=
+[C:/Repositories/Klooz3/Views/Agenda/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWdlbmRhXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Repositories/Klooz3/Views/Contact/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Repositories/Klooz3/Views/Experimenten/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZXJpbWVudGVuXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Repositories/Klooz3/Views/Home/Index.cshtml]
@@ -42,6 +42,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Repositories/Klooz3/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Repositories/Klooz3/Views/Over/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3ZlclxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Repositories/Klooz3/Views/Shared/Error.cshtml]

@@ -56,10 +56,10 @@
                 <div class="col-xl-6 col-lg-4 col-md-2"></div>
                 <div class="col-xl-6 col-lg-8 col-md-10" id="navbar-position">
                     <nav class="nav flex-column">
-                        <a class="nav-link" asp-page="/Over">OVER</a>
-                        <a class="nav-link" asp-page="/Experimenten">EXPERIMENTEN</a>
-                        <a class="nav-link" asp-page="/Contact">CONTACT</a>
-                        <a class="nav-link" asp-page="/Agenda">AGENDA</a>
+                        <a class="nav-link" href="@Url.Action("Index","Over", new {area = ""})">OVER</a>
+                        <a class="nav-link" href="@Url.Action("Index","Experimenten", new {area = ""})">EXPERIMENTEN</a>
+                        <a class="nav-link" href="@Url.Action("Index","Contact", new {area = ""})">CONTACT</a>
+                        <a class="nav-link" href="@Url.Action("Index","Agenda", new {area = ""})">AGENDA</a>
                     </nav>
                 </div>
             </div>
