@@ -1,0 +1,20 @@
+﻿@model Klooz3.Models.Experiment
+
+<div class="card experimentcard" onclick="flipCard(this)">
+    <a href="#top" target="" class="card-front">
+        <div class="d-flex align-items-center">
+            @Model.experimentImage
+        </div>
+        <div class="card-body">
+            <h5 class="card-title text-center">@Model.experimentName</h5>
+            <p class="card-text text-center">@Model.experimentCardFrontText</p>
+        </div>
+    </a>
+    <div class="card-back invisible">
+        <h5 class="text-center">@Model.experimentName</h5><br>
+        <p>
+            @Model.experimentCardBackText
+        </p>
+        <a class="fw-bolder" href="/experimenten/experiment1.html">Lees meer...</a>
+    </div>
+</div>

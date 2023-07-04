@@ -19,8 +19,9 @@
         public string? experimenttargetAndImpact { get; set; }
         public string? experimentTouchstone { get; set; }
         public string? experimentPhotos { get; set; }
+        public bool? experimentPublished { get; set; }
 
-        public Experiment(string? experimentImage, string? experimentName, string? experimentCardFrontText, string? experimentCardBackText, int? categoriesId, string? experimentShortText, string? experimentPartners, DateTime? experimentKickOffDate, string? experimentwickedProblemsToSmartSolutions, string? experimenttargetAndImpact, string? experimentTouchstone, string? experimentPhotos)
+        public Experiment(string? experimentImage, string? experimentName, string? experimentCardFrontText, string? experimentCardBackText, int? categoriesId, string? experimentShortText, string? experimentPartners, DateTime? experimentKickOffDate, string? experimentwickedProblemsToSmartSolutions, string? experimenttargetAndImpact, string? experimentTouchstone, string? experimentPhotos, bool? experimentPublished)
         {
             this.experimentImage = experimentImage;
             this.experimentName = experimentName;
@@ -34,6 +35,7 @@
             this.experimenttargetAndImpact = experimenttargetAndImpact;
             this.experimentTouchstone = experimentTouchstone;
             this.experimentPhotos = experimentPhotos;
+            this.experimentPublished = experimentPublished;
         }
 
         public Experiment()
