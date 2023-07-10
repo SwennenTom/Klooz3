@@ -1,0 +1,36 @@
+﻿@model Klooz3.Models.Partner
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Partner</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.partnerName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.partnerName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.partnerImage)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.partnerImage)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.partnerLink)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.partnerLink)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.partnerId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
