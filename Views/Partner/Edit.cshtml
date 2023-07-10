@@ -19,14 +19,19 @@
                 <span asp-validation-for="partnerName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="partnerImage" class="control-label"></label>
-                <input asp-for="partnerImage" class="form-control" />
-                <span asp-validation-for="partnerImage" class="text-danger"></span>
+                @Html.LabelFor(model => model.partnerImage)
+                <input type="file" name="PartnerImageFile" />
+                @Html.ValidationMessageFor(model => model.partnerImage)
             </div>
             <div class="form-group">
                 <label asp-for="partnerLink" class="control-label"></label>
                 <input asp-for="partnerLink" class="form-control" />
                 <span asp-validation-for="partnerLink" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="partnerDisplayOrder" class="control-label"></label>
+                <input asp-for="partnerDisplayOrder" class="form-control" />
+                <span asp-validation-for="partnerDisplayOrder" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />

@@ -21,6 +21,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.partnerLink)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.partnerDisplayOrder)
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -36,6 +39,9 @@
             <td>
                 @Html.DisplayFor(modelItem => item.partnerLink)
             </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.partnerDisplayOrder)
+                </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.partnerId">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.partnerId">Details</a> |

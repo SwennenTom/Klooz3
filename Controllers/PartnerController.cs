@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Klooz3.Data;
 using Klooz3.Models;
+using Microsoft.AspNetCore.Http;
 using System.IO;
 
 namespace Klooz3.Controllers
@@ -57,15 +58,29 @@ namespace Klooz3.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("partnerId,partnerName,partnerImage,partnerLink")] Partner partner)
+        public async Task<IActionResult> Create([Bind("PartnerId,PartnerName,PartnerLink")] Partner partner, IFormFile partnerImageFile)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(partner);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                if (partnerImageFile != null && partnerImageFile.Length > 0)
+                {
+                    using (var stream = new MemoryStream())
+                    {
+                        await partnerImageFile.CopyToAsync(stream);
+                        partner.partnerImage = stream.ToArray();
+                    }
+                }
+
+                using (var context = new YourDbContext())
+                {
+                    context.Partners.Add(partner);
+                    await context.SaveChangesAsync();
+                }
+
+                return RedirectToAction("Index"); // Redirect to the desired action after successful creation
             }
-            return View(partner);
+
+            return View(partner); // If there are validation errors, return the view with the submitted model
         }
 
         // GET: Partner/Edit/5
