@@ -16,6 +16,9 @@ builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
+SeedData.Seed(app);
+await SeedData.EnsurePopulatedAsync(app);
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

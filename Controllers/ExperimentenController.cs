@@ -8,5 +8,10 @@ namespace Klooz3.Controllers
         {
             return View();
         }
+
+        public ActionResult Create()
+        {
+            return View();
+        }
     }
 }

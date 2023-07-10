@@ -4,7 +4,7 @@
     {
         public int experimentId { get; set; }
 
-        public string? experimentImage { get; set; }
+        public byte[]? experimentImage { get; set; }
         public string? experimentName { get; set; }
         public string? experimentCardFrontText { get; set; }
         public string? experimentCardBackText { get; set; }
@@ -18,10 +18,10 @@
         public string? experimentwickedProblemsToSmartSolutions { get; set; }
         public string? experimenttargetAndImpact { get; set; }
         public string? experimentTouchstone { get; set; }
-        public string? experimentPhotos { get; set; }
+        public byte[]? experimentPhotos { get; set; }
         public bool? experimentPublished { get; set; }
 
-        public Experiment(string? experimentImage, string? experimentName, string? experimentCardFrontText, string? experimentCardBackText, int? categoriesId, string? experimentShortText, string? experimentPartners, DateTime? experimentKickOffDate, string? experimentwickedProblemsToSmartSolutions, string? experimenttargetAndImpact, string? experimentTouchstone, string? experimentPhotos, bool? experimentPublished)
+        public Experiment(byte[]? experimentImage, string? experimentName, string? experimentCardFrontText, string? experimentCardBackText, int? categoriesId, string? experimentShortText, string? experimentPartners, DateTime? experimentKickOffDate, string? experimentwickedProblemsToSmartSolutions, string? experimenttargetAndImpact, string? experimentTouchstone, byte[]? experimentPhotos, bool? experimentPublished)
         {
             this.experimentImage = experimentImage;
             this.experimentName = experimentName;
