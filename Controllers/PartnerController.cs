@@ -58,22 +58,22 @@ namespace Klooz3.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("PartnerId,PartnerName,PartnerLink")] Partner partner, IFormFile partnerImageFile)
+        public async Task<IActionResult> Create([Bind("partnerId,partnerName,partnerLink,partnerDisplayOrder")] Partner partner, IFormFile PartnerImageFile)
         {
             if (ModelState.IsValid)
             {
-                if (partnerImageFile != null && partnerImageFile.Length > 0)
+                if (PartnerImageFile != null && PartnerImageFile.Length > 0)
                 {
                     using (var stream = new MemoryStream())
                     {
-                        await partnerImageFile.CopyToAsync(stream);
+                        await PartnerImageFile.CopyToAsync(stream);
                         partner.partnerImage = stream.ToArray();
                     }
                 }
 
-                using (var context = new YourDbContext())
+                using (var context = _context)
                 {
-                    context.Partners.Add(partner);
+                    context.partners.Add(partner);
                     await context.SaveChangesAsync();
                 }
 
@@ -104,7 +104,7 @@ namespace Klooz3.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("partnerId,partnerName,partnerImage,partnerLink")] Partner partner)
+        public async Task<IActionResult> Edit(int id, [Bind("partnerId,partnerName,partnerLink,partnerDisplayOrder")] Partner partner, IFormFile partnerImageFile)
         {
             if (id != partner.partnerId)
             {
@@ -115,8 +115,20 @@ namespace Klooz3.Controllers
             {
                 try
                 {
-                    _context.Update(partner);
-                    await _context.SaveChangesAsync();
+                    if (partnerImageFile != null && partnerImageFile.Length > 0)
+                    {
+                        using (var stream = new MemoryStream())
+                        {
+                            await partnerImageFile.CopyToAsync(stream);
+                            partner.partnerImage = stream.ToArray();
+                        }
+                    }
+
+                    using (var context = _context)
+                    {
+                        context.partners.Update(partner);
+                        await context.SaveChangesAsync();
+                    }
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -129,10 +141,13 @@ namespace Klooz3.Controllers
                         throw;
                     }
                 }
+
                 return RedirectToAction(nameof(Index));
             }
+
             return View(partner);
         }
+
 
         // GET: Partner/Delete/5
         public async Task<IActionResult> Delete(int? id)

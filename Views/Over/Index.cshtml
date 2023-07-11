@@ -1,4 +1,6 @@
-﻿@{
+﻿@model IEnumerable<Klooz3.Models.Partner>
+
+@{
     ViewData["Title"] = "Over";
 }
 
@@ -249,156 +251,10 @@
                         <p>Wij werken samen met deze partners:</p>
                         <div class="row" id="partnerKaarten">
                             <div class="card-container">
-                                <div class="card partnercard">
-                                    <a href="https://in-z.be/" target="_blank">
-                                        <div class="imgSizer d-flex align-items-center">
-                                            <img src="/img/PartnerLogos/10-2021_IN-Z_website_voorstel_V1-09.webp"
-                                                 class="card-img-top" alt="Vzw Inzet">
-                                        </div>
-                                        <div class="card-body">
-                                            <h5 class="card-title text-center">vzw In-Z</h5>
-                                            <p class="card-text"></p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="card partnercard">
-                                    <a href="https://www.facebook.com/biejke/?locale=nl_NL" target="_blank">
-                                        <div class="imgSizer d-flex align-items-center">
-                                            <img src="/img/PartnerLogos/Biejke.webp" class="card-img-top"
-                                                 alt="Jeugdhuis 't Biejke">
-                                        </div>
-                                        <div class="card-body">
-                                            <h5 class="card-title text-center">Jeugdhuis 't Biejke</h5>
-                                            <p class="card-text"></p>
-                                        </div>
-                                    </a>
-                                </div>
-
-                                <div class="card partnercard">
-                                    <a href="https://www.pibo.be/nl" target="_blank">
-                                        <div class="imgSizer d-flex align-items-center">
-                                            <img src="/img/PartnerLogos/logo-pibo.webp" class="card-img-top"
-                                                 alt="Provinciaal Instituut voor Biotechnisch Onderwijs">
-                                        </div>
-                                        <div class="card-body">
-                                            <h5 class="card-title text-center">PIBO</h5>
-                                            <p class="card-text"></p>
-                                        </div>
-                                    </a>
-                                </div>
-
-                                <div class="card partnercard">
-                                    <a href="https://borgloon.be/art-huis-voor-kunst-borgloon"
-                                       target="_blank">
-                                        <div class="imgSizer d-flex align-items-center">
-                                            <img src="/img/PartnerLogos/huis voor kunst.webp"
-                                                 class="card-img-top" alt="Huis voor Kunst Borgloon">
-                                        </div>
-                                        <div class="card-body">
-                                            <h5 class="card-title text-center">Huis voor Kunst</h5>
-                                            <p class="card-text"></p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="card partnercard">
-                                    <a href="https://www.digbij.be/" target="_blank">
-                                        <div class="imgSizer d-flex align-items-center">
-                                            <img src="/img/PartnerLogos/Logo tekst digbij - groen transparant.webp"
-                                                 class="card-img-top" alt="DigBij">
-                                        </div>
-                                        <div class="card-body">
-                                            <h5 class="card-title text-center">DigBij</h5>
-                                            <p class="card-text"></p>
-                                        </div>
-                                    </a>
-                                </div>
-
-                                <div class="card partnercard">
-                                    <a href="https://www.ciago.be/nl/home" target="_blank">
-                                        <div class="imgSizer d-flex align-items-center">
-                                            <img src="/img/PartnerLogos/Ciago.webp" class="card-img-top"
-                                                 alt="Ciago, Centrum voor Innovatief Agrarisch Ondernemen">
-                                        </div>
-                                        <div class="card-body">
-                                            <h5 class="card-title text-center">Ciago</h5>
-                                            <p class="card-text"></p>
-                                        </div>
-                                    </a>
-                                </div>
-
-                                <div class="card partnercard">
-                                    <a href="https://www.ucll.be/nl" target="_blank">
-                                        <div class="imgSizer d-flex align-items-center">
-                                            <img src="/img/PartnerLogos/Logo_UCLL_ENG_CMYK.webp"
-                                                 class="card-img-top"
-                                                 alt="University Colleges Leuven-Limburg">
-                                        </div>
-                                        <div class="card-body">
-                                            <h5 class="card-title text-center">UCLL</h5>
-                                            <p class="card-text"></p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="card partnercard">
-                                    <a href="https://www.borgloon.be/ocmw-sociale-dienst" target="_blank">
-                                        <div class="imgSizer d-flex align-items-center">
-                                            <img src="/img/PartnerLogos/ocmw.webp" class="card-img-top"
-                                                 alt="OCMW, Openbaar centrum voor maatschappelijk welzijn">
-                                        </div>
-                                        <div class="card-body">
-                                            <h5 class="card-title text-center">OCMW</h5>
-                                            <p class="card-text"></p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="card partnercard">
-                                    <a href="https://www.pcfruit.be/nl" target="_blank">
-                                        <div class="imgSizer d-flex align-items-center">
-                                            <img src="/img/PartnerLogos/PCfruit.webp" class="card-img-top"
-                                                 alt="Proefcentrum Fruitteelt vzw">
-                                        </div>
-                                        <div class="card-body">
-                                            <h5 class="card-title text-center">PCFruit</h5>
-                                            <p class="card-text"></p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="card partnercard">
-                                    <a href="http://www.pentagoon.be/" target="_blank">
-                                        <div class="imgSizer d-flex align-items-center">
-                                            <img src="/img/PartnerLogos/pentagoon.webp" class="card-img-top"
-                                                 alt="Pentagoon Academie Tongeren">
-                                        </div>
-                                        <div class="card-body">
-                                            <h5 class="card-title text-center">Pentagoon</h5>
-                                            <p class="card-text"></p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="card partnercard">
-                                    <a href="https://www.stroopfabriek.be/" target="_blank">
-                                        <div class="imgSizer d-flex align-items-center">
-                                            <img src="/img/PartnerLogos/Stroopfabriek.webp"
-                                                 class="card-img-top" alt="Stroopfabriek">
-                                        </div>
-                                        <div class="card-body">
-                                            <h5 class="card-title text-center">Stroop-fabriek</h5>
-                                            <p class="card-text"></p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="card partnercard">
-                                    <a href="https://www.vdab.be/" target="_blank">
-                                        <div class="imgSizer d-flex align-items-center">
-                                            <img src="/img/PartnerLogos/vdab.webp" class="card-img-top"
-                                                 alt="VDAB, Vlaamse Dienst voor Arbeids Bemiddeling">
-                                        </div>
-                                        <div class="card-body">
-                                            <h5 class="card-title text-center">VDAB</h5>
-                                            <p class="card-text"></p>
-                                        </div>
-                                    </a>
-                                </div>
+                                @foreach (var item in Model)
+                                {
+                                    <partial name="PartnerCardPartial" model="item"/>
+                                }
                             </div>
                         </div>
 
