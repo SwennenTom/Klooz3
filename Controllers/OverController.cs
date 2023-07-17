@@ -23,9 +23,12 @@ namespace Klooz3.Controllers
 
         public async Task<IActionResult> Index()
         {
-            return _context.partners != null ?
-                          View(await _context.partners.ToListAsync()) :
-                          Problem("Entity set 'ApplicationDbContext.partners'  is null.");
+            var orderedPartners = await _context.partners
+        .OrderBy(p => p.partnerDisplayOrder)
+        .AsNoTracking()
+        .ToListAsync();
+
+            return View(orderedPartners);
         }
     }
 }

@@ -24,9 +24,15 @@ namespace Klooz3.Controllers
         // GET: Partner
         public async Task<IActionResult> Index()
         {
-              return _context.partners != null ? 
-                          View(await _context.partners.ToListAsync()) :
-                          Problem("Entity set 'ApplicationDbContext.partners'  is null.");
+            var orderedPartners = await _context.partners
+        .OrderBy(p => p.partnerDisplayOrder) // Order by partnerDisplayOrder ascending
+        .AsNoTracking()
+        .ToListAsync();
+
+            return View(orderedPartners);
+            //return _context.partners != null ? 
+            //            View(await _context.partners.ToListAsync()) :
+            //            Problem("Entity set 'ApplicationDbContext.partners'  is null.");
         }
 
         // GET: Partner/Details/5
@@ -104,7 +110,7 @@ namespace Klooz3.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("partnerId,partnerName,partnerLink,partnerDisplayOrder")] Partner partner, IFormFile partnerImageFile)
+        public async Task<IActionResult> Edit(int id, [Bind("partnerId,partnerName,partnerLink,partnerDisplayOrder")] Partner partner, IFormFile? partnerImageFile)
         {
             if (id != partner.partnerId)
             {
@@ -124,11 +130,24 @@ namespace Klooz3.Controllers
                         }
                     }
 
+                    else
+                    {
+                        var existingPartner = await _context.partners
+                            .AsNoTracking()
+                            .FirstOrDefaultAsync(p => p.partnerId == id);
+
+                        if (existingPartner != null)
+                        {
+                            partner.partnerImage = existingPartner.partnerImage;
+                        }
+                    }
+
                     using (var context = _context)
                     {
                         context.partners.Update(partner);
                         await context.SaveChangesAsync();
                     }
+                    return RedirectToAction(nameof(Index));
                 }
                 catch (DbUpdateConcurrencyException)
                 {

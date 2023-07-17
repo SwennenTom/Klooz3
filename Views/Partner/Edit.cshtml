@@ -10,7 +10,7 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Edit" enctype="multipart/form-data">
+        <form id="partnerEditForm" asp-action="Edit" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="partnerId" />
             <div class="form-group">
@@ -19,7 +19,13 @@
                 <span asp-validation-for="partnerName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="partnerImage" class="control-label"></label>
+                @if (Model.partnerImage != null)
+                {
+                    <label asp-for="partnerImage" class="control-label"></label>
+                    <br />
+                    <img src="data:image/jpeg;base64,@Convert.ToBase64String(Model.partnerImage)" alt="Current Image" style="max-width: 200px; max-height: 200px;" />
+                    <br />
+                }
                 <input type="file" name="partnerImageFile" />
                 <span asp-validation-for="partnerImage" class="text-danger"></span>
             </div>
@@ -34,16 +40,52 @@
                 <span asp-validation-for="partnerDisplayOrder" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" value="Opslaan" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Terug naar overzicht</a>
 </div>
 
-@section Scripts {
+@*@section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}*@
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            // Handle the form submission using AJAX
+            $('#partnerEditForm').submit(function (e) {
+                e.preventDefault();
+                var form = $(this)[0];
+                var formData = new FormData(form);
+
+                $.ajax({
+                    url: form.action,
+                    type: 'POST',
+                    data: formData,
+                    contentType: false,
+                    processData: false,
+                    success: function (data) {
+                        // Handle the success response (data) here if needed
+                        // For example, display a success message to the user
+                        alert('Image update successful!');
+                    },
+                    error: function (xhr, status, error) {
+                        // Handle the error here if needed
+                        // For example, display an error message to the user
+                        alert('Image update failed!');
+                    }
+                });
+            });
+        });
+    </script>
 }
+

@@ -17,7 +17,7 @@ html{
 /* ++++NAVIGATION++++ */
 
 /* Font size and color*/
-.nav a{
+.nav a {
     font-family: 'ImpactFont', Impact, 'Hind', 'Arial Narrow Bold', sans-serif;
     font-size: 5rem;
     color: black;
@@ -63,6 +63,12 @@ html{
 .smallfont{
     font-size: 48px !important;
     margin:-8px;
+}
+
+/* Administratie-link verkleiner*/
+.halfSize {
+    font-size: 2.5rem !important;
+    color: red !important;
 }
 
 /* ++++ CONTENT ++++*/

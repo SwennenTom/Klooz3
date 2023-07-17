@@ -7,22 +7,22 @@
 <h1>Overzicht Partners</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Nieuwe partner</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.partnerName)
+                @Html.DisplayName("Naam")
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.partnerImage)
+                @Html.DisplayName("Afbeelding")
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.partnerLink)
+                @Html.DisplayName("Link")
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.partnerDisplayOrder)
+                @Html.DisplayName("Volgorde")
             </th>
             <th></th>
         </tr>
@@ -43,8 +43,8 @@
                     @Html.DisplayFor(modelItem => item.partnerDisplayOrder)
                 </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.partnerId">Edit</a> |
-                <a asp-action="Delete" asp-route-id="@item.partnerId">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.partnerId">Bewerk</a> |
+                <a asp-action="Delete" asp-route-id="@item.partnerId">Verwijder</a>
             </td>
         </tr>
 }
