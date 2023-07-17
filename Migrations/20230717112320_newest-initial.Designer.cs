@@ -9,11 +9,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace Klooz3.Data.Migrations
+namespace Klooz3.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230704110123_Initial_Migration")]
-    partial class Initial_Migration
+    [Migration("20230717112320_newest-initial")]
+    partial class newestinitial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -57,8 +57,8 @@ namespace Klooz3.Data.Migrations
                     b.Property<string>("experimentCardFrontText")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("experimentImage")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<byte[]>("experimentImage")
+                        .HasColumnType("varbinary(max)");
 
                     b.Property<DateTime?>("experimentKickOffDate")
                         .HasColumnType("datetime2");
@@ -69,8 +69,8 @@ namespace Klooz3.Data.Migrations
                     b.Property<string>("experimentPartners")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("experimentPhotos")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<byte[]>("experimentPhotos")
+                        .HasColumnType("varbinary(max)");
 
                     b.Property<bool?>("experimentPublished")
                         .HasColumnType("bit");
@@ -102,8 +102,11 @@ namespace Klooz3.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("partnerId"), 1L, 1);
 
-                    b.Property<string>("partnerImage")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int?>("partnerDisplayOrder")
+                        .HasColumnType("int");
+
+                    b.Property<byte[]>("partnerImage")
+                        .HasColumnType("varbinary(max)");
 
                     b.Property<string>("partnerLink")
                         .HasColumnType("nvarchar(max)");
@@ -280,12 +283,10 @@ namespace Klooz3.Data.Migrations
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
                     b.Property<string>("LoginProvider")
-                        .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("ProviderKey")
-                        .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("ProviderDisplayName")
                         .HasColumnType("nvarchar(max)");
@@ -322,12 +323,10 @@ namespace Klooz3.Data.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("LoginProvider")
-                        .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Name")
-                        .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Value")
                         .HasColumnType("nvarchar(max)");

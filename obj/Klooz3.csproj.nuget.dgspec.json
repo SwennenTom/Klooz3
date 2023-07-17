@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Repositories\\Klooz3\\Klooz3.csproj": {}
+    "E:\\Repositories\\Klooz3\\Klooz3.csproj": {}
   },
   "projects": {
-    "C:\\Repositories\\Klooz3\\Klooz3.csproj": {
+    "E:\\Repositories\\Klooz3\\Klooz3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Repositories\\Klooz3\\Klooz3.csproj",
+        "projectUniqueName": "E:\\Repositories\\Klooz3\\Klooz3.csproj",
         "projectName": "Klooz3",
-        "projectPath": "C:\\Repositories\\Klooz3\\Klooz3.csproj",
+        "projectPath": "E:\\Repositories\\Klooz3\\Klooz3.csproj",
         "packagesPath": "C:\\Users\\tomsw\\.nuget\\packages\\",
-        "outputPath": "C:\\Repositories\\Klooz3\\obj\\",
+        "outputPath": "E:\\Repositories\\Klooz3\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\tomsw\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -21,8 +21,6 @@
           "net6.0"
         ],
         "sources": {
-          "C:\\LocalPackages": {},
-          "C:\\NugetPackageLocal": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
