@@ -9,13 +9,16 @@
 <p>
     <a class="btn btn-dark" asp-action="Create">Nieuwe partner</a>
     <a class="btn btn-dark  @(ViewContext.RouteData.Values["controller"].ToString() == "Administratie" ? "active" : "")"
-       href="@Url.Action("Index", "Administratie", new { area = "" })">Terug naar overzicht</a>
+       href="@Url.Action("Index", "Administratie", new { area = "" })">Terug naar administratie</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
                 @Html.DisplayName("Naam")
+            </th>
+            <th>
+                @Html.DisplayName("Volledige naam")
             </th>
             <th>
                 @Html.DisplayName("Afbeelding")
@@ -35,6 +38,9 @@
             <td>
                 @Html.DisplayFor(modelItem => item.partnerName)
             </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.partnerAlt)
+                </td>
             <td>
                     <img style="width:64px" src="data:image/jpeg;base64,@Convert.ToBase64String(item.partnerImage)" alt="Partner Image" />
             </td>
@@ -45,8 +51,8 @@
                     @Html.DisplayFor(modelItem => item.partnerDisplayOrder)
                 </td>
             <td>
-                <a class="btn btn-dark" asp-action="Edit" asp-route-id="@item.partnerId">Bewerk</a> |
-                <a class="btn btn-dark" asp-action="Delete" asp-route-id="@item.partnerId">Verwijder</a>
+                <a class="btn btn-dark m-2 p-2" asp-action="Edit" asp-route-id="@item.partnerId">Bewerk</a> |
+                    <a class="btn btn-dark m-2 p-2" asp-action="Delete" asp-route-id="@item.partnerId">Verwijder</a>
             </td>
         </tr>
 }

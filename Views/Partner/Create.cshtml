@@ -18,6 +18,12 @@
             </div>
             <br />
             <div class="form-group">
+                <label asp-for="partnerAlt" class="control-label">Volledige naam</label>
+                <input asp-for="partnerAlt" class="form-control" />
+                <span asp-validation-for="partnerAlt" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
                 <label asp-for="partnerImage" class="control-label">Afbeelding</label><br />
                 <input type="file" name="partnerImageFile" />
                 <span asp-validation-for="partnerImage" class="text-danger"></span>

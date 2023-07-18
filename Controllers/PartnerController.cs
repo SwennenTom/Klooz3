@@ -110,7 +110,7 @@ namespace Klooz3.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("partnerId,partnerName,partnerLink,partnerDisplayOrder")] Partner partner, IFormFile? partnerImageFile)
+        public async Task<IActionResult> Edit(int id, [Bind("partnerId,partnerAlt,partnerName,partnerLink,partnerDisplayOrder")] Partner partner, IFormFile? partnerImageFile)
         {
             if (id != partner.partnerId)
             {
