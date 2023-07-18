@@ -97,19 +97,66 @@
                         var firstYear = 2023;
                         var displayYear = (currentYear > firstYear) ? `${firstYear} - ${currentYear}` : currentYear;
                         document.write(displayYear);
-                    </script> <a target="_blank" id="linkdeco" href="https://www.lidk.be/">VZW Link in de Kabel</a> - <a href="/html/privacy.html" id="linkdeco">Privacy beleid</a>
+                    </script> <a target="_blank" id="linkdeco" href="https://www.lidk.be/">VZW Link in de Kabel</a> - <a class="nav-link" href="@Url.Action("Index", "Privacy", new { area = "" })">Privacy beleid</a>
                 </p>
             </footer>
         </div>
 
-        <!-- Cookies consent popup-->
-        <!-- <script type="text/javascript" src="https://cookieconsent.popupsmart.com/src/js/popper.js"></script>
-        <script> window.start.init({ Palette: "palette1", Mode: "banner bottom", Theme: "classic", LinkText: "Meer informatie", Message: "Deze website gebruikt cookies om u de beste ervaring te geven.",ButtonText: "Akkoord!", ButtonText: "Weigeren", Time: "5", })</script> -->
-        <!-- <div class="popup-container">
+        <!-- Cookies consent popup
+        <script type="text/javascript" src="https:cookieconsent.popupsmart.com/src/js/popper.js"></script>-->
+
+        <div id="cookiePopup" class="popup-container" style="display: none;">
             <span class="popup-message">Deze website maakt gebruik van cookies.</span>
-            <button class="popup-button popup-button-ok">Ok!</button>
-            <button class="popup-button popup-button-refuse">Weigeren</button>
-        </div> -->
+            <a class="nav-link" href="@Url.Action("Index", "Privacy", new { area = "" })">Privacy beleid</a>
+            <button id="btnOk" class="popup-button popup-button-ok">Ok!</button>
+            <button id="btnRefuse" class="popup-button popup-button-refuse">Weigeren</button>
+        </div>
+
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                // Function to set the "cookie-accepted" cookie with a value of "true"
+                function acceptCookies() {
+                    document.cookie = "cookie-accepted=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
+                    closePopup();
+                }
+
+                // Function to remove the "cookie-accepted" cookie
+                function refuseCookies() {
+                    document.cookie = "cookie-accepted=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+                    closePopup();
+                }
+
+                // Function to close the popup
+                function closePopup() {
+                    var popupContainer = document.querySelector(".popup-container");
+                    if (popupContainer) {
+                        popupContainer.style.display = "none";
+                    }
+                }
+
+
+
+                function showCookiePopup() {
+                    var popupContainer = document.querySelector(".popup-container");
+                    if (popupContainer) {
+                        popupContainer.style.display = "block";
+                    }
+                }
+
+                // Attach click event handler to the link
+                var linkChangeCookieSettings = document.querySelector("a[href='#top']");
+                if (linkChangeCookieSettings) {
+                    linkChangeCookieSettings.addEventListener("click", function (event) {
+                        event.preventDefault();
+                        showCookiePopup();
+                    });
+                }
+
+
+            });
+        </script>
+
 
     </body>
 
