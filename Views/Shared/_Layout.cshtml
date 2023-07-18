@@ -63,10 +63,6 @@
                             <a class="nav-link p-0 @(ViewContext.RouteData.Values["controller"].ToString() == "Agenda" ? "active" : "")"
                                href="@Url.Action("Index", "Agenda", new { area = "" })">AGENDA</a>
                         </li>
-                        <li class="nav-item halfSize">
-                            <a class="nav-link p-0 @(ViewContext.RouteData.Values["controller"].ToString() == "Administratie" ? "active" : "")"
-                               href="@Url.Action("Index", "Administratie", new { area = "" })">ADMINISTRATIE</a>
-                        </li>
                     </ul>
                 </div>
             </div>

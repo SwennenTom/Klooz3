@@ -2,9 +2,10 @@
 <div class="col-xl-6 col-lg-8 col-md-10 col-sm-12 col-12 pb-5">
 
 <h2>Administratie</h2>
+<hr />
     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item halfSize">
-            <a class="nav-link p-0 @(ViewContext.RouteData.Values["controller"].ToString() == "Partner" ? "active" : "")"
+        <li class="nav-item">
+            <a class="btn btn-dark  @(ViewContext.RouteData.Values["controller"].ToString() == "Partner" ? "active" : "")"
                href="@Url.Action("Index", "Partner", new { area = "" })">Partners</a>
         </li>
     </ul>

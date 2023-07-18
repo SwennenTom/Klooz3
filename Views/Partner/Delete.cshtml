@@ -4,35 +4,35 @@
     ViewData["Title"] = "Delete";
 }
 
-<h1>Verwijderen</h1>
 
 <h3>Ben je zeker dat je deze partner wil verwijderen?</h3>
 <div>
     <hr />
     <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.partnerName)
-        </dt>
-        <dd class = "col-sm-10">
+        @*<dt class = "col-sm-2">
+            @Html.DisplayName("Partner Naam")
+        </dt>*@
+        <dd class = "col-sm-10 display-1">
             @Html.DisplayFor(model => model.partnerName)
         </dd>
-        <dt class = "col-sm-2">
+        @*<dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.partnerImage)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.partnerImage)
+            img src="data:image/jpeg;base64,@Convert.ToBase64String(Model.partnerImage)" alt="Partner Image" />
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.partnerLink)
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.partnerLink)
-        </dd>
+        </dd>*@
     </dl>
     
     <form asp-action="Delete">
         <input type="hidden" asp-for="partnerId" />
-        <input type="submit" value="Verwijder" class="btn btn-danger" /> |
-        <a asp-action="Index">Terug naar overzicht</a>
+        <input type="submit" value="Verwijder" class="btn btn-danger p-2 m-2" /> |
+        <a class="btn btn-dark" asp-action="Index">Terug naar overzicht</a>
     </form>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 </div>

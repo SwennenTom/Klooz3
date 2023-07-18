@@ -4,9 +4,6 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
-
-<h4>Partner</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -14,14 +11,14 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="partnerId" />
             <div class="form-group">
-                <label asp-for="partnerName" class="control-label"></label>
+                <label asp-for="partnerName" class="control-label">Naam</label>
                 <input asp-for="partnerName" class="form-control" />
                 <span asp-validation-for="partnerName" class="text-danger"></span>
             </div>
             <div class="form-group">
                 @if (Model.partnerImage != null)
                 {
-                    <label asp-for="partnerImage" class="control-label"></label>
+                    <label asp-for="partnerImage" class="control-label">Afbeelding</label>
                     <br />
                     <img src="data:image/jpeg;base64,@Convert.ToBase64String(Model.partnerImage)" alt="Current Image" style="max-width: 200px; max-height: 200px;" />
                     <br />
@@ -30,25 +27,33 @@
                 <span asp-validation-for="partnerImage" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="partnerLink" class="control-label"></label>
+                <label asp-for="partnerLink" class="control-label">Link</label>
                 <input asp-for="partnerLink" class="form-control" />
                 <span asp-validation-for="partnerLink" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="partnerDisplayOrder" class="control-label"></label>
+                <label asp-for="partnerDisplayOrder" class="control-label">Prioriteit</label>
                 <input asp-for="partnerDisplayOrder" class="form-control" />
                 <span asp-validation-for="partnerDisplayOrder" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Opslaan" class="btn btn-primary" />
+                <input type="submit" value="Opslaan" class="btn btn-dark m-2 p-2" />
+                <a class="btn btn-dark m-2 p-2" asp-action="Index">Terug naar overzicht</a>
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Terug naar overzicht</a>
-</div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 
 @*@section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

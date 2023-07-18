@@ -7,7 +7,9 @@
 <h1>Overzicht Partners</h1>
 
 <p>
-    <a asp-action="Create">Nieuwe partner</a>
+    <a class="btn btn-dark" asp-action="Create">Nieuwe partner</a>
+    <a class="btn btn-dark  @(ViewContext.RouteData.Values["controller"].ToString() == "Administratie" ? "active" : "")"
+       href="@Url.Action("Index", "Administratie", new { area = "" })">Terug naar overzicht</a>
 </p>
 <table class="table">
     <thead>
@@ -22,7 +24,7 @@
                 @Html.DisplayName("Link")
             </th>
             <th>
-                @Html.DisplayName("Volgorde")
+                @Html.DisplayName("Prioriteit")
             </th>
             <th></th>
         </tr>
@@ -43,10 +45,11 @@
                     @Html.DisplayFor(modelItem => item.partnerDisplayOrder)
                 </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.partnerId">Bewerk</a> |
-                <a asp-action="Delete" asp-route-id="@item.partnerId">Verwijder</a>
+                <a class="btn btn-dark" asp-action="Edit" asp-route-id="@item.partnerId">Bewerk</a> |
+                <a class="btn btn-dark" asp-action="Delete" asp-route-id="@item.partnerId">Verwijder</a>
             </td>
         </tr>
 }
     </tbody>
 </table>
+

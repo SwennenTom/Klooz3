@@ -1,427 +1,427 @@
 {
   "Files": [
     {
-      "Id": "E:\\Repositories\\Klooz3\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Klooz3.bundle.scp.css",
+      "Id": "C:\\Repositories\\Klooz3\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Klooz3.bundle.scp.css",
       "PackagePath": "staticwebassets\\Klooz3.bundle.scp.css"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\css\\site.css",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\css\\style.css",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\css\\style.css",
       "PackagePath": "staticwebassets\\css\\style.css"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\css\\style2.css",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\css\\style2.css",
       "PackagePath": "staticwebassets\\css\\style2.css"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\docs\\How to experiment_stappenplan (3).pdf",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\docs\\How to experiment_stappenplan (3).pdf",
       "PackagePath": "staticwebassets\\docs\\How to experiment_stappenplan (3).pdf"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\docs\\HowToExperiment.pdf",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\docs\\HowToExperiment.pdf",
       "PackagePath": "staticwebassets\\docs\\HowToExperiment.pdf"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\docs\\Klooz_Sjabloon Experiment.pptx",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\docs\\Klooz_Sjabloon Experiment.pptx",
       "PackagePath": "staticwebassets\\docs\\Klooz_Sjabloon Experiment.pptx"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\docs\\Opvolging_experiment_[TEMPLATE] (1) (1).xlsx",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\docs\\Opvolging_experiment_[TEMPLATE] (1) (1).xlsx",
       "PackagePath": "staticwebassets\\docs\\Opvolging_experiment_[TEMPLATE] (1) (1).xlsx"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\docs\\PItch_template (1) (1).pptx",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\docs\\PItch_template (1) (1).pptx",
       "PackagePath": "staticwebassets\\docs\\PItch_template (1) (1).pptx"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\docs\\klooz-aanvraag terugbetaling werkingskosten_Template (1).docx",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\docs\\klooz-aanvraag terugbetaling werkingskosten_Template (1).docx",
       "PackagePath": "staticwebassets\\docs\\klooz-aanvraag terugbetaling werkingskosten_Template (1).docx"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\docs\\klooz_criteria.docx",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\docs\\klooz_criteria.docx",
       "PackagePath": "staticwebassets\\docs\\klooz_criteria.docx"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\experimenten\\experiment1.html",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\experimenten\\experiment1.html",
       "PackagePath": "staticwebassets\\experimenten\\experiment1.html"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\favicon.ico",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\favicon.webp",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\favicon.webp",
       "PackagePath": "staticwebassets\\favicon.webp"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\fonts\\impact.ttf",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\fonts\\impact.ttf",
       "PackagePath": "staticwebassets\\fonts\\impact.ttf"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\img\\Contact\\Parkeerplan-3xUS-staand-rol2.webp",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\img\\Contact\\Parkeerplan-3xUS-staand-rol2.webp",
       "PackagePath": "staticwebassets\\img\\Contact\\Parkeerplan-3xUS-staand-rol2.webp"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\img\\Experimenten\\Categorie\\Cam3.webp",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\img\\Experimenten\\Categorie\\Cam3.webp",
       "PackagePath": "staticwebassets\\img\\Experimenten\\Categorie\\Cam3.webp"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\img\\Experimenten\\Categorie\\Fototoestel.webp",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\img\\Experimenten\\Categorie\\Fototoestel.webp",
       "PackagePath": "staticwebassets\\img\\Experimenten\\Categorie\\Fototoestel.webp"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\img\\Experimenten\\Categorie\\Microfoon.webp",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\img\\Experimenten\\Categorie\\Microfoon.webp",
       "PackagePath": "staticwebassets\\img\\Experimenten\\Categorie\\Microfoon.webp"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\img\\Experimenten\\Categorie\\camera2.webp",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\img\\Experimenten\\Categorie\\camera2.webp",
       "PackagePath": "staticwebassets\\img\\Experimenten\\Categorie\\camera2.webp"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\img\\Experimenten\\Experiment 1\\D1028_66_164_1200.webp",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\img\\Experimenten\\Experiment 1\\D1028_66_164_1200.webp",
       "PackagePath": "staticwebassets\\img\\Experimenten\\Experiment 1\\D1028_66_164_1200.webp"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\img\\Experimenten\\Experiment 1\\dignity-projecrt.webp",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\img\\Experimenten\\Experiment 1\\dignity-projecrt.webp",
       "PackagePath": "staticwebassets\\img\\Experimenten\\Experiment 1\\dignity-projecrt.webp"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\img\\Experimenten\\Experiment 1\\kit_best60diy01__73270.jpg",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\img\\Experimenten\\Experiment 1\\kit_best60diy01__73270.jpg",
       "PackagePath": "staticwebassets\\img\\Experimenten\\Experiment 1\\kit_best60diy01__73270.jpg"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\img\\Experimenten\\Placeholder.webp",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\img\\Experimenten\\Placeholder.webp",
       "PackagePath": "staticwebassets\\img\\Experimenten\\Placeholder.webp"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\img\\Experimenten\\placeholder2.webp",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\img\\Experimenten\\placeholder2.webp",
       "PackagePath": "staticwebassets\\img\\Experimenten\\placeholder2.webp"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\img\\Experimenten\\placeholder3.webp",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\img\\Experimenten\\placeholder3.webp",
       "PackagePath": "staticwebassets\\img\\Experimenten\\placeholder3.webp"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\img\\Experimenten\\placeholder4.webp",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\img\\Experimenten\\placeholder4.webp",
       "PackagePath": "staticwebassets\\img\\Experimenten\\placeholder4.webp"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\img\\FooterLogos\\esflogo_large.webp",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\img\\FooterLogos\\esflogo_large.webp",
       "PackagePath": "staticwebassets\\img\\FooterLogos\\esflogo_large.webp"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\img\\FooterLogos\\lidk_logofull_color_1600x1240.webp",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\img\\FooterLogos\\lidk_logofull_color_1600x1240.webp",
       "PackagePath": "staticwebassets\\img\\FooterLogos\\lidk_logofull_color_1600x1240.webp"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\img\\FooterLogos\\lidk_logofull_color_1600x1240OBSOLETE.webp",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\img\\FooterLogos\\lidk_logofull_color_1600x1240OBSOLETE.webp",
       "PackagePath": "staticwebassets\\img\\FooterLogos\\lidk_logofull_color_1600x1240OBSOLETE.webp"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\img\\FooterLogos\\logo-borgloon (1).webp",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\img\\FooterLogos\\logo-borgloon (1).webp",
       "PackagePath": "staticwebassets\\img\\FooterLogos\\logo-borgloon (1).webp"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\img\\KloozLogo\\PLACEHOLDER_kloozlogo01_TRANSPARANT.webp",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\img\\KloozLogo\\PLACEHOLDER_kloozlogo01_TRANSPARANT.webp",
       "PackagePath": "staticwebassets\\img\\KloozLogo\\PLACEHOLDER_kloozlogo01_TRANSPARANT.webp"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\img\\KloozU.png",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\img\\KloozU.png",
       "PackagePath": "staticwebassets\\img\\KloozU.png"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\img\\PartnerLogos\\10-2021_IN-Z_website_voorstel_V1-09.webp",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\img\\PartnerLogos\\10-2021_IN-Z_website_voorstel_V1-09.webp",
       "PackagePath": "staticwebassets\\img\\PartnerLogos\\10-2021_IN-Z_website_voorstel_V1-09.webp"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\img\\PartnerLogos\\Biejke.webp",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\img\\PartnerLogos\\Biejke.webp",
       "PackagePath": "staticwebassets\\img\\PartnerLogos\\Biejke.webp"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\img\\PartnerLogos\\Ciago.webp",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\img\\PartnerLogos\\Ciago.webp",
       "PackagePath": "staticwebassets\\img\\PartnerLogos\\Ciago.webp"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\img\\PartnerLogos\\Logo tekst digbij - groen transparant.webp",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\img\\PartnerLogos\\Logo tekst digbij - groen transparant.webp",
       "PackagePath": "staticwebassets\\img\\PartnerLogos\\Logo tekst digbij - groen transparant.webp"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\img\\PartnerLogos\\Logo_UCLL_ENG_CMYK.webp",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\img\\PartnerLogos\\Logo_UCLL_ENG_CMYK.webp",
       "PackagePath": "staticwebassets\\img\\PartnerLogos\\Logo_UCLL_ENG_CMYK.webp"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\img\\PartnerLogos\\PCfruit.webp",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\img\\PartnerLogos\\PCfruit.webp",
       "PackagePath": "staticwebassets\\img\\PartnerLogos\\PCfruit.webp"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\img\\PartnerLogos\\Stroopfabriek.webp",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\img\\PartnerLogos\\Stroopfabriek.webp",
       "PackagePath": "staticwebassets\\img\\PartnerLogos\\Stroopfabriek.webp"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\img\\PartnerLogos\\huis voor kunst.webp",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\img\\PartnerLogos\\huis voor kunst.webp",
       "PackagePath": "staticwebassets\\img\\PartnerLogos\\huis voor kunst.webp"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\img\\PartnerLogos\\logo-pibo.webp",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\img\\PartnerLogos\\logo-pibo.webp",
       "PackagePath": "staticwebassets\\img\\PartnerLogos\\logo-pibo.webp"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\img\\PartnerLogos\\ocmw.webp",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\img\\PartnerLogos\\ocmw.webp",
       "PackagePath": "staticwebassets\\img\\PartnerLogos\\ocmw.webp"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\img\\PartnerLogos\\pentagoon.webp",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\img\\PartnerLogos\\pentagoon.webp",
       "PackagePath": "staticwebassets\\img\\PartnerLogos\\pentagoon.webp"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\img\\PartnerLogos\\vdab.webp",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\img\\PartnerLogos\\vdab.webp",
       "PackagePath": "staticwebassets\\img\\PartnerLogos\\vdab.webp"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\img\\Placeholder\\PLACEHOLDER_Toren-Transparent.webp",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\img\\Placeholder\\PLACEHOLDER_Toren-Transparent.webp",
       "PackagePath": "staticwebassets\\img\\Placeholder\\PLACEHOLDER_Toren-Transparent.webp"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\img\\favicon.webp",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\img\\favicon.webp",
       "PackagePath": "staticwebassets\\img\\favicon.webp"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\js\\site.js",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Id": "E:\\Repositories\\Klooz3\\wwwroot\\script\\script.js",
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\script\\script.js",
       "PackagePath": "staticwebassets\\script\\script.js"
     },
     {
