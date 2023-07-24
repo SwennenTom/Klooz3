@@ -12,11 +12,11 @@ namespace Klooz3.Models
         public string? userPostcode { get; set; }
         public string? userGemeente { get; set; }
         public string? userPhoneNumber { get; set; }
-        public Roles? userrole { get; set; }
+        //public Roles? userrole { get; set; }
         public DateTime? userJoined { get; set; }
         public bool? userIsAccountActive { get; set; }
 
-        public User(int? userId, string? userEmail, string? userVoornaam, string? userAchternaam, string? userAdressLine1, string? userPostcode, string? userGemeente, string? userPhoneNumber, Roles? userrole, DateTime? userJoined, bool? userIsAccountActive)
+        public User(int? userId, string? userEmail, string? userVoornaam, string? userAchternaam, string? userAdressLine1, string? userPostcode, string? userGemeente, string? userPhoneNumber/*, Roles? userrole*/, DateTime? userJoined, bool? userIsAccountActive)
         {
             this.userId = userId;
             this.userEmail = userEmail;
@@ -26,7 +26,7 @@ namespace Klooz3.Models
             this.userPostcode = userPostcode;
             this.userGemeente = userGemeente;
             this.userPhoneNumber = userPhoneNumber;
-            this.userrole = userrole;
+            //this.userrole = userrole;
             this.userJoined = userJoined;
             this.userIsAccountActive = userIsAccountActive;
         }

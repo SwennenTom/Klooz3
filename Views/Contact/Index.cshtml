@@ -2,6 +2,8 @@
     ViewData["Title"] = "Contact";
 }
 
+@model List<Klooz3.Models.TeamRegie>
+
 <div class="col-xl-5 col-lg-3 col-md-1 col-sm-1 col-0"></div>
 <div class="col-xl-6 col-lg-8 col-md-10 col-sm-10 col-12" id="navbar-position ContactAccordion">
     <h2>Contact</h2><br>
@@ -14,14 +16,10 @@
         Mail dan naar team Regie. Zij zorgen er voor dat je vraag beantwoord wordt door de juiste persoon.
     </p>
     <ul class="ContactLijst">
-        <li>
-            <p>Nele Bylois: <a class="linkClickable" href="mailto:nele@klooz.be">nele@klooz.be</a></p>
-        </li>
-        <li>
-            <p>
-                Valerie Spec: <a class="linkClickable" href="mailto:valerie@klooz.be">valerie@klooz.be</a>
-            </p>
-        </li>
+        @foreach (var item in Model)
+        {
+            <partial name="TeamRegie" model="item" />
+        }
     </ul>
     <br><br>
 
