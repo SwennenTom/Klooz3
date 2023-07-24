@@ -8,6 +8,10 @@
             <a class="btn btn-dark  @(ViewContext.RouteData.Values["controller"].ToString() == "Partner" ? "active" : "")"
                href="@Url.Action("Index", "Partner", new { area = "" })">Partners</a>
         </li>
+        <li class="nav-item">
+            <a class="btn btn-dark  @(ViewContext.RouteData.Values["controller"].ToString() == "Experimenten" ? "active" : "")"
+               href="@Url.Action("Index", "Experimenten", new { area = "" })">Experimenten</a>
+        </li>
     </ul>
 
     </div>
