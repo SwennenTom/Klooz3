@@ -111,55 +111,87 @@
 
     <!-- Cookies consent popup-->
 
-    <div id="cookiePopup" class="popup-container" style="display: none;">
-        <span class="popup-message">Deze website maakt gebruik van cookies.</span>
-        <a class="nav-link" href="@Url.Action("Index", "Privacy", new { area = "" })">Privacy beleid</a>
-        <button id="btnOk" class="popup-button popup-button-ok">Ok!</button>
-        <button id="btnRefuse" class="popup-button popup-button-refuse">Weigeren</button>
+    <div class="cookie-consent-overlay">
+        <div id="cookieConsent" class="cookie-consent">
+            <p>
+                Deze website gebruikt cookies om uw ervaring te verbeteren.
+                <a class="nav-link p-0 @(ViewContext.RouteData.Values["controller"].ToString() == "Privacy" ? "active" : "")"
+                   href="@Url.Action("Index", "Privacy", new { area = "" })">Privacy beleid</a>
+            </p>
+            <div class="buttons">
+                <button id="acceptCookiesButton" class="cookie-consent-button">Ok!</button>
+                <button id="refuseCookiesButton" class="cookie-consent-button">Liever niet</button>
+            </div>
+        </div>
     </div>
 
-
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            // Function to set the "cookie-accepted" cookie with a value of "true"
-            function acceptCookies() {
-                document.cookie = "cookie-accepted=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
-                closePopup();
+        // Function to set the cookie for consent
+        function setCookie(name, value, days) {
+            var expires = "";
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
             }
+            document.cookie = name + "=" + (value || "") + expires + "; path=/";
+        }
 
-            // Function to remove the "cookie-accepted" cookie
-            function refuseCookies() {
-                document.cookie = "cookie-accepted=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
-                closePopup();
-            }
+        // Function to hide the cookie consent popup
+        function hideCookieConsent() {
+            var cookieConsentPopup = document.getElementById("cookieConsent");
+            var cookieConsentOverlay = document.querySelector(".cookie-consent-overlay");
 
-            // Function to close the popup
-            function closePopup() {
-                var popupContainer = document.querySelector(".popup-container");
-                if (popupContainer) {
-                    popupContainer.style.display = "none";
-                }
-            }
+            cookieConsentPopup.style.display = "none";
+            cookieConsentOverlay.style.display = "none";
+        }
 
+        // Function to reset the cookie consent status
+        function resetCookieConsent() {
+            setCookie("cookieConsent", "", -1); // Delete the consent cookie
+            var cookieConsentPopup = document.getElementById("cookieConsent");
+            var cookieConsentOverlay = document.querySelector(".cookie-consent-overlay");
 
-            // Function to show the cookie popup
-            function showCookiePopup() {
-                var popupContainer = document.querySelector(".popup-container");
-                if (popupContainer) {
-                    popupContainer.style.display = "block";
-                }
-            }
+            cookieConsentPopup.style.display = "block"; // Display the popup again
+            cookieConsentOverlay.style.display = "block"; // Display the overlay again
+        }
 
-            // Attach click event handler to the link
-            var changeCookieSettingsLink = document.getElementById("changeCookieSettingsLink");
-            if (changeCookieSettingsLink) {
-                changeCookieSettingsLink.addEventListener("click", function (event) {
-                    event.preventDefault();
-                    showCookiePopup();
-                });
-            }
+        // Function to handle the Accept button click
+        function handleAcceptClick() {
+            setCookie("cookieConsent", "accepted", 365); // Cookie will expire after 1 year
+            console.log("Accepted");
+            hideCookieConsent();
+        }
 
+        // Function to handle the Refuse button click
+        function handleRefuseClick() {
+            setCookie("cookieConsent", "refused", 365); // Cookie will expire after 1 year
+            console.log("refused");
+            hideCookieConsent();
+        }
 
+        // Check if the consent cookie exists
+        if (!document.cookie.includes("cookieConsent=")) {
+            console.log("cookieConsentCheck performed");
+            document.addEventListener("DOMContentLoaded", function () {
+                var acceptCookiesButton = document.getElementById("acceptCookiesButton");
+                acceptCookiesButton.addEventListener("click", handleAcceptClick);
+
+                var refuseCookiesButton = document.getElementById("refuseCookiesButton");
+                refuseCookiesButton.addEventListener("click", handleRefuseClick);
+
+                var cookieConsentPopup = document.getElementById("cookieConsent");
+                cookieConsentPopup.style.display = "block";
+            });
+        } else {
+            hideCookieConsent();
+        }
+
+        // Add event listener for the "Wijzig cookie instellingen" link
+        var changeCookieSettingsLink = document.getElementById("changeCookieSettingsLink");
+        changeCookieSettingsLink.addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent the link from navigating to a new page
+            resetCookieConsent(); // Reset the cookie consent status and display the popup again
         });
     </script>
 
