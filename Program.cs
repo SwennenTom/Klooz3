@@ -1,21 +1,46 @@
 using Klooz3.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using SendGrid;
+using SendGrid.Helpers.Mail;
+using Klooz3.Email;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-	options.UseSqlServer(connectionString));
+    options.UseSqlServer(connectionString));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 builder.Services.AddIdentity<IdentityUser, IdentityRole>(options =>
-options.SignIn.RequireConfirmedAccount = false)
+    options.SignIn.RequireConfirmedAccount = false)
     .AddEntityFrameworkStores<ApplicationDbContext>();
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
+
+// Add SendGrid service
+builder.Services.AddTransient<EmailService>();
+
+// Configure SendGrid settings from appsettings.json
+var emailSettings = builder.Configuration.GetSection("EmailSettings");
+var smtpServer = emailSettings["SmtpServer"];
+var port = int.Parse(emailSettings["Port"]);
+var userName = emailSettings["UserName"];
+var password = emailSettings["Password"];
+
+builder.Services.Configure<EmailSettings>(options =>
+{
+    options.SmtpServer = smtpServer;
+    options.Port = port;
+    options.UserName = userName;
+    options.Password = password;
+});
 
 var app = builder.Build();
 
@@ -25,13 +50,13 @@ await SeedData.EnsurePopulatedAsync(app);
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-	app.UseMigrationsEndPoint();
+    app.UseMigrationsEndPoint();
 }
 else
 {
-	app.UseExceptionHandler("/Home/Error");
-	// The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-	app.UseHsts();
+    app.UseExceptionHandler("/Home/Error");
+    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+    app.UseHsts();
 }
 
 app.UseHttpsRedirection();
@@ -43,8 +68,8 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(
-	name: "default",
-	pattern: "{controller=Home}/{action=Index}/{id?}");
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 app.MapRazorPages();
 
 app.Run();
