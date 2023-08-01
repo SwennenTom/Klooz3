@@ -11,10 +11,10 @@ namespace Klooz3.Data
 		{
 		}
 
-        public DbSet<Categories> categories { get; set; }
-		public DbSet<Experiment> experiments { get; set; }
-		public DbSet<Partner> partners { get; set; }
-		public DbSet<TeamRegie> teamregies { get; set; }
+        public DbSet<Categories>? categories { get; set; }
+		public DbSet<Experiment>? experiments { get; set; }
+		public DbSet<Partner>? partners { get; set; }
+		public DbSet<TeamRegie>? teamregies { get; set; }
 
     }
 }

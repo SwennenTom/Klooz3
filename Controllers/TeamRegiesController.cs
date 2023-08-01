@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Klooz3.Data;
 using Klooz3.Models;
+using Microsoft.AspNetCore.Http;
+using System.IO;
 
 namespace Klooz3.Controllers
 {
@@ -22,9 +24,10 @@ namespace Klooz3.Controllers
         // GET: TeamRegies
         public async Task<IActionResult> Index()
         {
-              return _context.teamregies != null ? 
-                          View(await _context.teamregies.ToListAsync()) :
-                          Problem("Entity set 'ApplicationDbContext.teamregies'  is null.");
+            var teamRegieLeden = await _context.teamregies
+                .AsNoTracking()
+                .ToListAsync();
+            return View(teamRegieLeden);
         }
 
         // GET: TeamRegies/Details/5
