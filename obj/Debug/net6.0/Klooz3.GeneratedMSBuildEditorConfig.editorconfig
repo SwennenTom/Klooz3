@@ -9,125 +9,149 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Klooz3
 build_property.RootNamespace = Klooz3
-build_property.ProjectDir = C:\Repositories\Klooz3\
+build_property.ProjectDir = E:\Repositories\Klooz3\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Repositories\Klooz3
+build_property.MSBuildProjectDirectory = E:\Repositories\Klooz3
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Repositories/Klooz3/Areas/Identity/Pages/_ViewStart.cshtml]
+[E:/Repositories/Klooz3/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Repositories/Klooz3/Pages/Index.cshtml]
+[E:/Repositories/Klooz3/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Repositories/Klooz3/Views/Administratie/Index.cshtml]
+[E:/Repositories/Klooz3/Views/Administratie/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5pc3RyYXRpZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Repositories/Klooz3/Views/Agenda/Index.cshtml]
+[E:/Repositories/Klooz3/Views/Agenda/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWdlbmRhXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Repositories/Klooz3/Views/Contact/Index.cshtml]
+[E:/Repositories/Klooz3/Views/Contact/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Repositories/Klooz3/Views/Experimenten/Index.cshtml]
+[E:/Repositories/Klooz3/Views/ExperimentAdmin/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZXJpbWVudEFkbWluXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Repositories/Klooz3/Views/ExperimentAdmin/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZXJpbWVudEFkbWluXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Repositories/Klooz3/Views/ExperimentAdmin/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZXJpbWVudEFkbWluXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Repositories/Klooz3/Views/ExperimentAdmin/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZXJpbWVudEFkbWluXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Repositories/Klooz3/Views/ExperimentAdmin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZXJpbWVudEFkbWluXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Repositories/Klooz3/Views/Experimenten/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZXJpbWVudGVuXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Repositories/Klooz3/Views/Home/Index.cshtml]
+[E:/Repositories/Klooz3/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Repositories/Klooz3/Views/Home/Privacy.cshtml]
+[E:/Repositories/Klooz3/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Repositories/Klooz3/Views/Over/Index.cshtml]
+[E:/Repositories/Klooz3/Views/Over/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3ZlclxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Repositories/Klooz3/Views/Partner/Create.cshtml]
+[E:/Repositories/Klooz3/Views/Partner/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydG5lclxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Repositories/Klooz3/Views/Partner/Delete.cshtml]
+[E:/Repositories/Klooz3/Views/Partner/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydG5lclxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Repositories/Klooz3/Views/Partner/Details.cshtml]
+[E:/Repositories/Klooz3/Views/Partner/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydG5lclxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Repositories/Klooz3/Views/Partner/Edit.cshtml]
+[E:/Repositories/Klooz3/Views/Partner/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydG5lclxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Repositories/Klooz3/Views/Partner/Index.cshtml]
+[E:/Repositories/Klooz3/Views/Partner/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydG5lclxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Repositories/Klooz3/Views/Privacy/Index.cshtml]
+[E:/Repositories/Klooz3/Views/Privacy/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJpdmFjeVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Repositories/Klooz3/Views/Shared/Error.cshtml]
+[E:/Repositories/Klooz3/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Repositories/Klooz3/Views/Shared/ExperimentCard.cshtml]
+[E:/Repositories/Klooz3/Views/Shared/ExperimentCard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEV4cGVyaW1lbnRDYXJkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Repositories/Klooz3/Views/Shared/PartnerCardPartial.cshtml]
+[E:/Repositories/Klooz3/Views/Shared/PartnerCardPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFBhcnRuZXJDYXJkUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Repositories/Klooz3/Views/Shared/TeamRegiePartial.cshtml]
+[E:/Repositories/Klooz3/Views/Shared/TeamRegiePartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFRlYW1SZWdpZVBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Repositories/Klooz3/Views/Shared/_LoginPartial.cshtml]
+[E:/Repositories/Klooz3/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Repositories/Klooz3/Views/Shared/_ValidationScriptsPartial.cshtml]
+[E:/Repositories/Klooz3/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Repositories/Klooz3/Views/TeamRegies/Create.cshtml]
+[E:/Repositories/Klooz3/Views/Stappenplan/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhcHBlbnBsYW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Repositories/Klooz3/Views/TeamRegies/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVhbVJlZ2llc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Repositories/Klooz3/Views/TeamRegies/Delete.cshtml]
+[E:/Repositories/Klooz3/Views/TeamRegies/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVhbVJlZ2llc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Repositories/Klooz3/Views/TeamRegies/Details.cshtml]
+[E:/Repositories/Klooz3/Views/TeamRegies/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVhbVJlZ2llc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Repositories/Klooz3/Views/TeamRegies/Edit.cshtml]
+[E:/Repositories/Klooz3/Views/TeamRegies/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVhbVJlZ2llc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Repositories/Klooz3/Views/TeamRegies/Index.cshtml]
+[E:/Repositories/Klooz3/Views/TeamRegies/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVhbVJlZ2llc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Repositories/Klooz3/Views/_ViewImports.cshtml]
+[E:/Repositories/Klooz3/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Repositories/Klooz3/Views/_ViewStart.cshtml]
+[E:/Repositories/Klooz3/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Repositories/Klooz3/Views/Shared/_Layout.cshtml]
+[E:/Repositories/Klooz3/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-o6hp50wikt

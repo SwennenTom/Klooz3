@@ -28,6 +28,13 @@
                                         /* ++++NAVIGATION++++ */
 
 /* Font size and color*/
+
+h3 {
+    font-family: 'ImpactFont', Impact, 'Hind', 'Arial Narrow Bold', sans-serif;
+    color: black;
+    text-decoration: none;
+}
+
 .nav a {
     font-family: 'ImpactFont', Impact, 'Hind', 'Arial Narrow Bold', sans-serif;
     font-size: 3rem;

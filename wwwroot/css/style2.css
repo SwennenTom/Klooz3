@@ -17,6 +17,12 @@ html{
 /* ++++NAVIGATION++++ */
 
 /* Font size and color*/
+h3 {
+    font-family: 'ImpactFont', Impact, 'Hind', 'Arial Narrow Bold', sans-serif;
+    color: black;
+    text-decoration: none;
+}
+
 .nav a {
     font-family: 'ImpactFont', Impact, 'Hind', 'Arial Narrow Bold', sans-serif;
     font-size: 5rem;
@@ -274,7 +280,7 @@ margin-bottom: 25%;
 /*STAPPENPLAN*/
 
 .stappencard{
-    width: 300px;
+    width: 300px !important;
     height: 300px !important;
     max-width: 300px;
     max-height: 300px;

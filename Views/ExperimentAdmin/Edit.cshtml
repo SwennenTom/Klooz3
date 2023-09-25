@@ -1,0 +1,109 @@
+﻿@model Klooz3.Models.Experiment
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Experiment</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="experimentId" />
+            <div class="form-group">
+                <label asp-for="experimentImage" class="control-label"></label>
+                <input asp-for="experimentImage" class="form-control" />
+                <span asp-validation-for="experimentImage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="experimentName" class="control-label"></label>
+                <input asp-for="experimentName" class="form-control" />
+                <span asp-validation-for="experimentName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="experimentCardFrontText" class="control-label"></label>
+                <input asp-for="experimentCardFrontText" class="form-control" />
+                <span asp-validation-for="experimentCardFrontText" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="experimentCardBackText" class="control-label"></label>
+                <input asp-for="experimentCardBackText" class="form-control" />
+                <span asp-validation-for="experimentCardBackText" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="categoriesId" class="control-label"></label>
+                <select asp-for="categoriesId" class="form-control" asp-items="ViewBag.categoriesId"></select>
+                <span asp-validation-for="categoriesId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="experimentShortText" class="control-label"></label>
+                <input asp-for="experimentShortText" class="form-control" />
+                <span asp-validation-for="experimentShortText" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="experimentKickOffDate" class="control-label"></label>
+                <input asp-for="experimentKickOffDate" class="form-control" />
+                <span asp-validation-for="experimentKickOffDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="experimentEndDate" class="control-label"></label>
+                <input asp-for="experimentEndDate" class="form-control" />
+                <span asp-validation-for="experimentEndDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="experimentwickedProblemsToSmartSolutions" class="control-label"></label>
+                <input asp-for="experimentwickedProblemsToSmartSolutions" class="form-control" />
+                <span asp-validation-for="experimentwickedProblemsToSmartSolutions" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="experimenttargetAndImpact" class="control-label"></label>
+                <input asp-for="experimenttargetAndImpact" class="form-control" />
+                <span asp-validation-for="experimenttargetAndImpact" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="experimentTouchstone" class="control-label"></label>
+                <input asp-for="experimentTouchstone" class="form-control" />
+                <span asp-validation-for="experimentTouchstone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="experimentPhotos" class="control-label"></label>
+                <input asp-for="experimentPhotos" class="form-control" />
+                <span asp-validation-for="experimentPhotos" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="experimentPublished" class="control-label"></label>
+                <input asp-for="experimentPublished" class="form-control" />
+                <span asp-validation-for="experimentPublished" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="experimentCreatedDate" class="control-label"></label>
+                <input asp-for="experimentCreatedDate" class="form-control" />
+                <span asp-validation-for="experimentCreatedDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="experimentLastModified" class="control-label"></label>
+                <input asp-for="experimentLastModified" class="form-control" />
+                <span asp-validation-for="experimentLastModified" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="experimentStatus" class="control-label"></label>
+                <input asp-for="experimentStatus" class="form-control" />
+                <span asp-validation-for="experimentStatus" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

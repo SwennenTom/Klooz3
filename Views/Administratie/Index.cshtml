@@ -14,8 +14,8 @@
                href="@Url.Action("Index", "Partner", new { area = "" })">Partners</a>
         </li>
         <li class="nav-item m-1 p-1">
-            <a class="btn btn-dark  @(ViewContext.RouteData.Values["controller"].ToString() == "Experimenten" ? "active" : "")"
-               href="@Url.Action("Index", "Experimenten", new { area = "" })">Experimenten</a>
+            <a class="btn btn-dark  @(ViewContext.RouteData.Values["controller"].ToString() == "ExperimentAdmin" ? "active" : "")"
+               href="@Url.Action("Index", "ExperimentAdmin", new { area = "" })">Experimenten</a>
         </li>
         <li class="nav-item m-1 p-1">
             <a class="btn btn-dark  @(ViewContext.RouteData.Values["controller"].ToString() == "TeamRegies" ? "active" : "")"
