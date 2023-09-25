@@ -1,12 +1,11 @@
 ﻿@model Klooz3.Models.Experiment
 
 @{
-    ViewData["Title"] = "Delete";
+    ViewData["Title"] = "Details";
 }
 
-<h1>Delete</h1>
+<h1>Details</h1>
 
-<h3>Ben je zeker dat je dit experiment wil verwijderen? Dit kan niet ongedaan gemaakt worden.</h3>
 <div>
     <h4>Experiment</h4>
     <hr />
@@ -108,10 +107,8 @@
             @Html.DisplayFor(model => model.experimentStatus)
         </dd>
     </dl>
-    
-    <form asp-action="Delete">
-        <input type="hidden" asp-for="experimentId" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="Index">Back to List</a>
-    </form>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.experimentId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
 </div>

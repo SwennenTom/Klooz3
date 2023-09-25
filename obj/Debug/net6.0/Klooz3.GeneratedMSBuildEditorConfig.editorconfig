@@ -36,24 +36,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Repositories/Klooz3/Views/ExperimentAdmin/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZXJpbWVudEFkbWluXENyZWF0ZS5jc2h0bWw=
+[E:/Repositories/Klooz3/Views/Experimenten/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZXJpbWVudGVuXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Repositories/Klooz3/Views/ExperimentAdmin/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZXJpbWVudEFkbWluXERlbGV0ZS5jc2h0bWw=
+[E:/Repositories/Klooz3/Views/Experimenten/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZXJpbWVudGVuXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Repositories/Klooz3/Views/ExperimentAdmin/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZXJpbWVudEFkbWluXERldGFpbHMuY3NodG1s
+[E:/Repositories/Klooz3/Views/Experimenten/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZXJpbWVudGVuXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Repositories/Klooz3/Views/ExperimentAdmin/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZXJpbWVudEFkbWluXEVkaXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[E:/Repositories/Klooz3/Views/ExperimentAdmin/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZXJpbWVudEFkbWluXEluZGV4LmNzaHRtbA==
+[E:/Repositories/Klooz3/Views/Experimenten/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZXJpbWVudGVuXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/Repositories/Klooz3/Views/Experimenten/Index.cshtml]
