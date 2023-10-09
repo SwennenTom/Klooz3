@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-﻿// Licensed to the .NET Foundation under one or more agreements.
-=======
-// Licensed to the .NET Foundation under one or more agreements.
->>>>>>> Adding_Identity
-// The .NET Foundation licenses this file to you under the MIT license.
-#nullable disable
-
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -22,10 +14,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
-<<<<<<< HEAD
-=======
 using Klooz3.Email;
->>>>>>> Adding_Identity
 
 namespace Klooz3.Areas.Identity.Pages.Account
 {
@@ -33,39 +22,26 @@ namespace Klooz3.Areas.Identity.Pages.Account
     {
         private readonly SignInManager<IdentityUser> _signInManager;
         private readonly UserManager<IdentityUser> _userManager;
-<<<<<<< HEAD
-        private readonly IUserStore<IdentityUser> _userStore;
-        private readonly IUserEmailStore<IdentityUser> _emailStore;
-        private readonly ILogger<RegisterModel> _logger;
-        private readonly IEmailSender _emailSender;
-=======
+
         private readonly EmailService _emailService;
         private readonly IUserStore<IdentityUser> _userStore;
         private readonly IUserEmailStore<IdentityUser> _emailStore;
         private readonly ILogger<RegisterModel> _logger;
->>>>>>> Adding_Identity
+
 
         public RegisterModel(
             UserManager<IdentityUser> userManager,
             IUserStore<IdentityUser> userStore,
             SignInManager<IdentityUser> signInManager,
             ILogger<RegisterModel> logger,
-<<<<<<< HEAD
-            IEmailSender emailSender)
-=======
             EmailService emailService)
->>>>>>> Adding_Identity
         {
             _userManager = userManager;
             _userStore = userStore;
             _emailStore = GetEmailStore();
             _signInManager = signInManager;
             _logger = logger;
-<<<<<<< HEAD
-            _emailSender = emailSender;
-=======
             _emailService = emailService;
->>>>>>> Adding_Identity
         }
 
         /// <summary>
@@ -153,12 +129,7 @@ namespace Klooz3.Areas.Identity.Pages.Account
                         pageHandler: null,
                         values: new { area = "Identity", userId = userId, code = code, returnUrl = returnUrl },
                         protocol: Request.Scheme);
-
-<<<<<<< HEAD
-                    await _emailSender.SendEmailAsync(Input.Email, "Confirm your email",
-=======
                     await _emailService.SendEmailAsync(Input.Email, "Confirm your email",
->>>>>>> Adding_Identity
                         $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
 
                     if (_userManager.Options.SignIn.RequireConfirmedAccount)

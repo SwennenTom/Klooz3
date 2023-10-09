@@ -17,11 +17,6 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
 
-<<<<<<< HEAD
-//builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-//    .AddEntityFrameworkStores<ApplicationDbContext>();
-//builder.Services.AddDatabaseDeveloperPageExceptionFilter();
-=======
 // Add Identity with the desired settings
 builder.Services.AddIdentity<IdentityUser, IdentityRole>(options =>
 {
@@ -32,8 +27,6 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>(options =>
     .AddDefaultTokenProviders();
 
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
->>>>>>> Adding_Identity
-
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
