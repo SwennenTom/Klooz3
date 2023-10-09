@@ -109,7 +109,7 @@
                 document.write(displayYear);
             </script> 
             <a target="_blank" id="linkdeco" href="https://www.lidk.be/">VZW Link in de Kabel</a> -
-            <a class="nav-link p-0 @(ViewContext.RouteData.Values["controller"]?.ToString() == "Privacy" ? "active" : "")"
+            <a id="linkdeco" class="p-0 @(ViewContext.RouteData.Values["controller"]?.ToString() == "Privacy" ? "active" : "")"
                href="@Url.Action("Index", "Privacy", new { area = "" })">Privacy beleid</a>
 
         </p>
