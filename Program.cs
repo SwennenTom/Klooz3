@@ -9,6 +9,7 @@ using SendGrid;
 using SendGrid.Helpers.Mail;
 using Klooz3.Email;
 using Microsoft.AspNetCore.Identity.UI.Services;
+using System;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,7 +22,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 builder.Services.AddIdentity<IdentityUser, IdentityRole>(options =>
 {
     // Configure Identity options here
-    options.SignIn.RequireConfirmedAccount = false; // Set to true or false as needed
+    options.SignIn.RequireConfirmedAccount = true; // Set to true or false as needed
 })
     .AddEntityFrameworkStores<ApplicationDbContext>()
     .AddDefaultTokenProviders();

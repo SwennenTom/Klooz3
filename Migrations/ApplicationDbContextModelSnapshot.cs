@@ -17,7 +17,7 @@ namespace Klooz3.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.20")
+                .HasAnnotation("ProductVersion", "6.0.23")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
@@ -70,14 +70,8 @@ namespace Klooz3.Migrations
                     b.Property<DateTime?>("experimentLastModified")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("experimentLastModifiedByuserId")
-                        .HasColumnType("int");
-
                     b.Property<string>("experimentName")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("experimentOwneruserId")
-                        .HasColumnType("int");
 
                     b.Property<int?>("experimentPartnerspartnerId")
                         .HasColumnType("int");
@@ -106,10 +100,6 @@ namespace Klooz3.Migrations
                     b.HasKey("experimentId");
 
                     b.HasIndex("categoriesId");
-
-                    b.HasIndex("experimentLastModifiedByuserId");
-
-                    b.HasIndex("experimentOwneruserId");
 
                     b.HasIndex("experimentPartnerspartnerId");
 
@@ -161,46 +151,6 @@ namespace Klooz3.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("teamregies");
-                });
-
-            modelBuilder.Entity("Klooz3.Models.User", b =>
-                {
-                    b.Property<int?>("userId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int?>("userId"), 1L, 1);
-
-                    b.Property<string>("userAchternaam")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("userAdressLine1")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("userEmail")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("userGemeente")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool?>("userIsAccountActive")
-                        .HasColumnType("bit");
-
-                    b.Property<DateTime?>("userJoined")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("userPhoneNumber")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("userPostcode")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("userVoornaam")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("userId");
-
-                    b.ToTable("User");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -407,23 +357,11 @@ namespace Klooz3.Migrations
                         .WithMany()
                         .HasForeignKey("categoriesId");
 
-                    b.HasOne("Klooz3.Models.User", "experimentLastModifiedBy")
-                        .WithMany()
-                        .HasForeignKey("experimentLastModifiedByuserId");
-
-                    b.HasOne("Klooz3.Models.User", "experimentOwner")
-                        .WithMany()
-                        .HasForeignKey("experimentOwneruserId");
-
                     b.HasOne("Klooz3.Models.Partner", "experimentPartners")
                         .WithMany()
                         .HasForeignKey("experimentPartnerspartnerId");
 
                     b.Navigation("categories");
-
-                    b.Navigation("experimentLastModifiedBy");
-
-                    b.Navigation("experimentOwner");
 
                     b.Navigation("experimentPartners");
                 });

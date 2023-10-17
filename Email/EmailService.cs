@@ -3,10 +3,11 @@ using System.Net;
 using System.Net.Mail;
 using Microsoft.Extensions.Configuration;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity.UI.Services;
 
 namespace Klooz3.Email
 {
-    public class EmailService
+    public class EmailService : IEmailSender
     {
         private readonly IConfiguration _configuration;
 
