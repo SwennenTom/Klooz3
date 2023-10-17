@@ -1,4 +1,6 @@
-﻿namespace Klooz3.Models
+﻿using Microsoft.AspNetCore.Identity;
+
+namespace Klooz3.Models
 {
     public class Experiment
     {
@@ -22,11 +24,11 @@
         public byte[]? experimentPhotos { get; set; }
         public bool? experimentPublished { get; set; }
 
-        public User? experimentOwner { get; set; }
         public DateTime? experimentCreatedDate { get; set; }
         public DateTime? experimentLastModified { get; set; }
-        public User? experimentLastModifiedBy { get; set; }
         public ExperimentStatus? experimentStatus { get; set; }
+
+
 
         public enum ExperimentStatus
         {
@@ -37,7 +39,25 @@
             Gearchiveerd
         }
 
-        public Experiment(int experimentId, byte[]? experimentImage, string? experimentName, string? experimentCardFrontText, string? experimentCardBackText, int? categoriesId, Categories? categories, string? experimentShortText, Partner? experimentPartners, DateTime? experimentKickOffDate, DateTime? experimentEndDate, string? experimentwickedProblemsToSmartSolutions, string? experimenttargetAndImpact, string? experimentTouchstone, byte[]? experimentPhotos, bool? experimentPublished, User? experimentOwner, DateTime? experimentCreatedDate, DateTime? experimentLastModified, User? experimentLastModifiedBy, ExperimentStatus? experimentStatus)
+        public Experiment(int experimentId, 
+            byte[]? experimentImage, 
+            string? experimentName, 
+            string? experimentCardFrontText, 
+            string? experimentCardBackText, 
+            int? categoriesId, 
+            Categories? categories, 
+            string? experimentShortText, 
+            Partner? experimentPartners, 
+            DateTime? experimentKickOffDate, 
+            DateTime? experimentEndDate, 
+            string? experimentwickedProblemsToSmartSolutions, 
+            string? experimenttargetAndImpact, 
+            string? experimentTouchstone, 
+            byte[]? experimentPhotos, 
+            bool? experimentPublished, 
+            DateTime? experimentCreatedDate, 
+            DateTime? experimentLastModified, 
+            ExperimentStatus? experimentStatus)
         {
             this.experimentId = experimentId;
             this.experimentImage = experimentImage;
@@ -55,10 +75,8 @@
             this.experimentTouchstone = experimentTouchstone;
             this.experimentPhotos = experimentPhotos;
             this.experimentPublished = experimentPublished;
-            this.experimentOwner = experimentOwner;
             this.experimentCreatedDate = experimentCreatedDate;
             this.experimentLastModified = experimentLastModified;
-            this.experimentLastModifiedBy = experimentLastModifiedBy;
             this.experimentStatus = experimentStatus;
         }
 
