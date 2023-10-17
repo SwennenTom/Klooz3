@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -49,24 +49,27 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse nav" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link p-0 @(ViewContext.RouteData.Values["controller"].ToString() == "Over" ? "active" : "")"
-                               href="@Url.Action("Index", "Over", new { area = "" })">OVER</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link p-0 @(ViewContext.RouteData.Values["controller"].ToString() == "Experimenten" ? "active" : "")"
-                               href="@Url.Action("Index", "Experimenten", new { area = "" })">EXPERIMENTEN</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link p-0 @(ViewContext.RouteData.Values["controller"].ToString() == "Contact" ? "active" : "")"
-                               href="@Url.Action("Index", "Contact", new { area = "" })">CONTACT</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link p-0 @(ViewContext.RouteData.Values["controller"].ToString() == "Agenda" ? "active" : "")"
-                               href="@Url.Action("Index", "Agenda", new { area = "" })">AGENDA</a>
-                        </li>
+                    @{
+                        // Define a list of menu items with their respective controller names and display names
+                        var menuItems = new List<(string Controller, string DisplayName)>
+                    {
+                    ("Over", "OVER"),
+                    ("Experimenten", "EXPERIMENTEN"),
+                    ("Contact", "CONTACT"),
+                    ("Agenda", "AGENDA")
+                    };
+                    }
+
+                    <ul class="nav">
+                        @foreach (var menuItem in menuItems)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link p-0 @(ViewContext.RouteData.Values["controller"]?.ToString() == menuItem.Controller ? "active" : "")"
+                                   href="@Url.Action("Index", menuItem.Controller, new { area = "" })">@menuItem.DisplayName</a>
+                            </li>
+                        }
                     </ul>
+
                 </div>
             </div>
         </nav>
@@ -104,8 +107,11 @@
                 var firstYear = 2023;
                 var displayYear = (currentYear > firstYear) ? `${firstYear} - ${currentYear}` : currentYear;
                 document.write(displayYear);
-            </script> <a target="_blank" id="linkdeco" href="https://www.lidk.be/">VZW Link in de Kabel</a> - <a class="nav-link p-0 @(ViewContext.RouteData.Values["controller"].ToString() == "Privacy" ? "active" : "")"
-                                                                                                                 href="@Url.Action("Index", "Privacy", new { area = "" })">Privacy beleid</a>
+            </script> 
+            <a target="_blank" id="linkdeco" href="https://www.lidk.be/">VZW Link in de Kabel</a> -
+            <a id="linkdeco" class="p-0 @(ViewContext.RouteData.Values["controller"]?.ToString() == "Privacy" ? "active" : "")"
+               href="@Url.Action("Index", "Privacy", new { area = "" })">Privacy beleid</a>
+
         </p>
     </footer>
 
@@ -115,8 +121,9 @@
         <div id="cookieConsent" class="cookie-consent">
             <p>
                 Deze website gebruikt cookies om uw ervaring te verbeteren.
-                <a class="nav-link p-0 @(ViewContext.RouteData.Values["controller"].ToString() == "Privacy" ? "active" : "")"
+                <a class="nav-link p-0 @(ViewContext.RouteData.Values["controller"]?.ToString() == "Privacy" ? "active" : "")"
                    href="@Url.Action("Index", "Privacy", new { area = "" })">Privacy beleid</a>
+
             </p>
             <div class="buttons">
                 <button id="acceptCookiesButton" class="cookie-consent-button">Ok!</button>
