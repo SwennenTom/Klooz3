@@ -15,6 +15,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
 using Klooz3.Email;
+using Klooz3.Data;
 
 namespace Klooz3.Areas.Identity.Pages.Account
 {
@@ -22,6 +23,7 @@ namespace Klooz3.Areas.Identity.Pages.Account
     {
         private readonly SignInManager<IdentityUser> _signInManager;
         private readonly UserManager<IdentityUser> _userManager;
+        private readonly RoleManager<IdentityRole> _roleManager;
 
         private readonly EmailService _emailService;
         private readonly IUserStore<IdentityUser> _userStore;
@@ -31,12 +33,14 @@ namespace Klooz3.Areas.Identity.Pages.Account
 
         public RegisterModel(
             UserManager<IdentityUser> userManager,
+            RoleManager<IdentityRole> roleManager,
             IUserStore<IdentityUser> userStore,
             SignInManager<IdentityUser> signInManager,
             ILogger<RegisterModel> logger,
             EmailService emailService)
         {
             _userManager = userManager;
+            _roleManager = roleManager;
             _userStore = userStore;
             _emailStore = GetEmailStore();
             _signInManager = signInManager;
@@ -112,6 +116,18 @@ namespace Klooz3.Areas.Identity.Pages.Account
             if (ModelState.IsValid)
             {
                 var user = CreateUser();
+
+                var defaultRole = Roles.gebruikerrol; // Assign "Gebruiker" role
+                var role = await _roleManager.FindByNameAsync(defaultRole);
+                if (role != null)
+                {
+                    IdentityResult roleResult = await _userManager.AddToRoleAsync(user, role.Name);
+                    if (!roleResult.Succeeded)
+                    {
+                        // Handle the case where role assignment fails.
+                    }
+                }
+                
 
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
