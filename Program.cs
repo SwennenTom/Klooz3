@@ -8,7 +8,6 @@ using Microsoft.Extensions.DependencyInjection;
 using SendGrid;
 using SendGrid.Helpers.Mail;
 using Klooz3.Email;
-using Klooz3.Data;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using System;
 
