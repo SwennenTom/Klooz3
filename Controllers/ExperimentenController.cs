@@ -22,7 +22,7 @@ namespace Klooz3.Controllers
         // GET: Experimenten
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = _context.experiments.Include(e => e.categories);
+            var applicationDbContext = _context.experiments;
             return View(await applicationDbContext.ToListAsync());
         }
 
@@ -35,7 +35,6 @@ namespace Klooz3.Controllers
             }
 
             var experiment = await _context.experiments
-                .Include(e => e.categories)
                 .FirstOrDefaultAsync(m => m.experimentId == id);
             if (experiment == null)
             {
@@ -57,7 +56,7 @@ namespace Klooz3.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("experimentId,experimentImage,experimentName,experimentCardFrontText,experimentCardBackText,categoriesId,experimentShortText,experimentKickOffDate,experimentEndDate,experimentwickedProblemsToSmartSolutions,experimenttargetAndImpact,experimentTouchstone,experimentPhotos,experimentPublished,experimentCreatedDate,experimentLastModified,experimentStatus")] Experiment experiment, IFormFile experimentCover)
+        public async Task<IActionResult> Create([Bind("experimentId,experimentImage,experimentName,experimentCardBackText,experimentShortText,experimentPhotos,experimentPublished")] Experiment experiment, IFormFile experimentCover)
         {
             if (ModelState.IsValid)
             {
@@ -74,7 +73,6 @@ namespace Klooz3.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["categoriesId"] = new SelectList(_context.categories, "categoriesId", "categoriesId", experiment.categoriesId);
             return View(experiment);
         }
 
@@ -91,7 +89,6 @@ namespace Klooz3.Controllers
             {
                 return NotFound();
             }
-            ViewData["categoriesId"] = new SelectList(_context.categories, "categoriesId", "categoriesId", experiment.categoriesId);
             return View(experiment);
         }
 
@@ -100,7 +97,7 @@ namespace Klooz3.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("experimentId,experimentImage,experimentName,experimentCardFrontText,experimentCardBackText,categoriesId,experimentShortText,experimentKickOffDate,experimentEndDate,experimentwickedProblemsToSmartSolutions,experimenttargetAndImpact,experimentTouchstone,experimentPhotos,experimentPublished,experimentCreatedDate,experimentLastModified,experimentStatus")] Experiment experiment)
+        public async Task<IActionResult> Edit(int id, [Bind("experimentId,experimentImage,experimentName,experimentCardBackText,experimentShortText,experimentPhotos,experimentPublished")] Experiment experiment)
         {
             if (id != experiment.experimentId)
             {
@@ -127,7 +124,6 @@ namespace Klooz3.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["categoriesId"] = new SelectList(_context.categories, "categoriesId", "categoriesId", experiment.categoriesId);
             return View(experiment);
         }
 
@@ -140,7 +136,6 @@ namespace Klooz3.Controllers
             }
 
             var experiment = await _context.experiments
-                .Include(e => e.categories)
                 .FirstOrDefaultAsync(m => m.experimentId == id);
             if (experiment == null)
             {
