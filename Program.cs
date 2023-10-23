@@ -22,7 +22,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 builder.Services.AddIdentity<IdentityUser, IdentityRole>(options =>
 {
     // Configure Identity options here
-    options.SignIn.RequireConfirmedAccount = true; // Set to true or false as needed
+    options.SignIn.RequireConfirmedAccount = false; // Set to true or false as needed
 })
     .AddEntityFrameworkStores<ApplicationDbContext>()
     .AddDefaultTokenProviders();
