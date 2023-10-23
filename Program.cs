@@ -8,6 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 using SendGrid;
 using SendGrid.Helpers.Mail;
 using Klooz3.Email;
+using Klooz3.Data;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using System;
 
@@ -28,12 +29,13 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>(options =>
     .AddDefaultTokenProviders();
 
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
-
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
+builder.Services.AddScoped<UserService>();
 
 // Add SendGrid service
 builder.Services.AddTransient<EmailService>();
+
 
 // Configure SendGrid settings from appsettings.json
 var emailSettings = builder.Configuration.GetSection("EmailSettings");
