@@ -47,7 +47,7 @@ namespace Klooz3.Controllers
         // GET: Experimenten/Create
         public IActionResult Create()
         {
-            ViewData["categoriesId"] = new SelectList(_context.categories, "categoriesId", "name");
+            
             return View();
         }
 

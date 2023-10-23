@@ -23,25 +23,27 @@
                 <span asp-validation-for="experimentName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="experimentCardBackText" class="control-label">Korte beschrijving</label>
+                <label asp-for="experimentCardBackText" class="control-label">Tekst op achterkant van kaart</label>
                 <input asp-for="experimentCardBackText" class="form-control" />
                 <span asp-validation-for="experimentCardBackText" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="experimentShortText" class="control-label"></label>
+                <label asp-for="experimentShortText" class="control-label">Inhoud van het experiment</label>
                 <input asp-for="experimentShortText" class="form-control" />
                 <span asp-validation-for="experimentShortText" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="experimentPhotos" class="control-label">Voeg fotos toe:</label>
+                <label asp-for="experimentPhotos" class="control-label">Voeg fotos toe: (functie komt binnenkort)</label>
                 <input asp-for="experimentPhotos" type="file" class="form-control" multiple/>
                 <span asp-validation-for="experimentPhotos" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="experimentPublished" class="control-label"></label>
-                <input asp-for="experimentPublished" class="form-control" />
+            @* <div class="form-group">
+                <div class="form-check">
+                    <input asp-for="experimentPublished" class="form-check-input" />
+                    <label asp-for="experimentPublished" class="form-check-label">Openbaar plaatsen?</label>
+                </div>
                 <span asp-validation-for="experimentPublished" class="text-danger"></span>
-            </div>
+            </div> *@
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
@@ -50,7 +52,7 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Terug naar overzicht</a>
 </div>
 
 @section Scripts {
