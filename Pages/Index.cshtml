@@ -66,7 +66,11 @@
                         <a class="nav-link" href="@Url.Action("Index","Experimenten", new {area = ""})">EXPERIMENTEN</a>
                         <a class="nav-link" href="@Url.Action("Index","Contact", new {area = ""})">CONTACT</a>
                         <a class="nav-link" href="@Url.Action("Index","Agenda", new {area = ""})">AGENDA</a>
-                        <a class="nav-link" href="@Url.Action("Index","Administratie", new { area = "" })">ADMINISTRATIE</a>
+                        @if(User.Identity.IsAuthenticated)
+                        {
+                            <a class="nav-link" href="@Url.Action("Index","Administratie", new { area = "" })">ADMINISTRATIE</a>
+                        }
+                        
                     </nav>
                 </div>
             </div>

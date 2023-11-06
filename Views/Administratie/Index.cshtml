@@ -4,27 +4,45 @@
 <h2>Administratie</h2>
 <hr />
     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item m-1 p-1">
-            <a class="btn btn-dark @(ViewContext.RouteData.Values["controller"].ToString() == "Administratie" ? "active" : "")"
+        @if (User.IsInRole("Admin"))
+        {
+            <li class="nav-item m-1 p-1">
+                <a class="btn btn-dark @(ViewContext.RouteData.Values["controller"].ToString() == "Administratie" ? "active" : "")"
                href="@Url.Action("SendEmail", "Administratie", new { area = "" })">Stuur testemail</a>
-
         </li>
-        <li class="nav-item m-1 p-1">
-            <a class="btn btn-dark  @(ViewContext.RouteData.Values["controller"].ToString() == "Partner" ? "active" : "")"
+        }
+
+        @if (User.IsInRole("Admin") || User.IsInRole("TeamRegie"))
+        {
+            <li class="nav-item m-1 p-1">
+                <a class="btn btn-dark  @(ViewContext.RouteData.Values["controller"].ToString() == "Partner" ? "active" : "")"
                href="@Url.Action("Index", "Partner", new { area = "" })">Partners</a>
         </li>
-        <li class="nav-item m-1 p-1">
-            <a class="btn btn-dark  @(ViewContext.RouteData.Values["controller"].ToString() == "Experimenten" ? "active" : "")"
+        }
+
+        @if (User.IsInRole("Admin") || User.IsInRole("TeamRegie") || User.IsInRole("Gebruiker"))
+        {
+            <li class="nav-item m-1 p-1">
+                <a class="btn btn-dark  @(ViewContext.RouteData.Values["controller"].ToString() == "Experimenten" ? "active" : "")"
                href="@Url.Action("Index", "Experimenten", new { area = "" })">Experimenten</a>
         </li>
-        <li class="nav-item m-1 p-1">
-            <a class="btn btn-dark  @(ViewContext.RouteData.Values["controller"].ToString() == "TeamRegies" ? "active" : "")"
+        }
+
+        @if (User.IsInRole("Admin") || User.IsInRole("TeamRegie"))
+        {
+            <li class="nav-item m-1 p-1">
+                <a class="btn btn-dark  @(ViewContext.RouteData.Values["controller"].ToString() == "TeamRegies" ? "active" : "")"
                href="@Url.Action("Index", "TeamRegies", new { area = "" })">Team Regie</a>
         </li>
-        <li class="nav-item m-1 p-1">
-            <a class="btn btn-dark  @(ViewContext.RouteData.Values["controller"].ToString() == "User" ? "active" : "")"
+        }
+
+        @if (User.IsInRole("Admin") || User.IsInRole("TeamRegie") || User.IsInRole("Gebruiker"))
+        {
+            <li class="nav-item m-1 p-1">
+                <a class="btn btn-dark  @(ViewContext.RouteData.Values["controller"].ToString() == "User" ? "active" : "")"
                href="@Url.Action("Index", "Users", new { area = "" })">Gebruikers</a>
         </li>
+        }
     </ul>
 
     </div>
