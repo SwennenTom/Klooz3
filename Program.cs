@@ -22,18 +22,19 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 builder.Services.AddIdentity<IdentityUser, IdentityRole>(options =>
 {
     // Configure Identity options here
-    options.SignIn.RequireConfirmedAccount = true; // Set to true or false as needed
+    options.SignIn.RequireConfirmedAccount = false; // Op false houden! anders is de modelstate van de niewe user invalid.
 })
     .AddEntityFrameworkStores<ApplicationDbContext>()
     .AddDefaultTokenProviders();
 
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
-
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
+builder.Services.AddScoped<UserService>();
 
 // Add SendGrid service
 builder.Services.AddTransient<EmailService>();
+
 
 // Configure SendGrid settings from appsettings.json
 var emailSettings = builder.Configuration.GetSection("EmailSettings");

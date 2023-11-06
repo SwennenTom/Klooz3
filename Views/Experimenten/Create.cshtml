@@ -22,75 +22,28 @@
                 <input asp-for="experimentName" class="form-control" />
                 <span asp-validation-for="experimentName" class="text-danger"></span>
             </div>
-            @*<div class="form-group">
-                <label asp-for="experimentCardFrontText" class="control-label"></label>
-                <input asp-for="experimentCardFrontText" class="form-control" />
-                <span asp-validation-for="experimentCardFrontText" class="text-danger"></span>
-            </div>*@
             <div class="form-group">
-                <label asp-for="experimentCardBackText" class="control-label">Korte beschrijving</label>
+                <label asp-for="experimentCardBackText" class="control-label">Tekst op achterkant van kaart</label>
                 <input asp-for="experimentCardBackText" class="form-control" />
                 <span asp-validation-for="experimentCardBackText" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="categoriesId" class="control-label">Categorie</label>
-                <select asp-for="categoriesId" class ="form-control" asp-items="ViewBag.categoriesId"></select>
-            </div>
-            <div class="form-group">
-                <label asp-for="experimentShortText" class="control-label"></label>
+                <label asp-for="experimentShortText" class="control-label">Inhoud van het experiment</label>
                 <input asp-for="experimentShortText" class="form-control" />
                 <span asp-validation-for="experimentShortText" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="experimentKickOffDate" class="control-label">Start datum</label>
-                <input asp-for="experimentKickOffDate" class="form-control" />
-                <span asp-validation-for="experimentKickOffDate" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="experimentEndDate" class="control-label">Einddatum (niet verplicht)</label>
-                <input asp-for="experimentEndDate" class="form-control" />
-                <span asp-validation-for="experimentEndDate" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="experimentwickedProblemsToSmartSolutions" class="control-label">Wicked Problems To Smart Solutions</label>
-                <input asp-for="experimentwickedProblemsToSmartSolutions" class="form-control" />
-                <span asp-validation-for="experimentwickedProblemsToSmartSolutions" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="experimenttargetAndImpact" class="control-label">Target and Impact</label>
-                <input asp-for="experimenttargetAndImpact" class="form-control" />
-                <span asp-validation-for="experimenttargetAndImpact" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="experimentTouchstone" class="control-label">Touchstone</label>
-                <input asp-for="experimentTouchstone" class="form-control" />
-                <span asp-validation-for="experimentTouchstone" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="experimentPhotos" class="control-label">Voeg fotos toe:</label>
+                <label asp-for="experimentPhotos" class="control-label">Voeg fotos toe: (functie komt binnenkort)</label>
                 <input asp-for="experimentPhotos" type="file" class="form-control" multiple/>
                 <span asp-validation-for="experimentPhotos" class="text-danger"></span>
             </div>
-            @*<div class="form-group">
-                <label asp-for="experimentPublished" class="control-label"></label>
-                <input asp-for="experimentPublished" class="form-control" />
+            @* <div class="form-group">
+                <div class="form-check">
+                    <input asp-for="experimentPublished" class="form-check-input" />
+                    <label asp-for="experimentPublished" class="form-check-label">Openbaar plaatsen?</label>
+                </div>
                 <span asp-validation-for="experimentPublished" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="experimentCreatedDate" class="control-label"></label>
-                <input asp-for="experimentCreatedDate" class="form-control" />
-                <span asp-validation-for="experimentCreatedDate" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="experimentLastModified" class="control-label"></label>
-                <input asp-for="experimentLastModified" class="form-control" />
-                <span asp-validation-for="experimentLastModified" class="text-danger"></span>
-            </div>*@
-            <div class="form-group">
-                <label asp-for="experimentStatus" class="control-label"></label>
-                <input asp-for="experimentStatus" class="form-control" />
-                <span asp-validation-for="experimentStatus" class="text-danger"></span>
-            </div>
+            </div> *@
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
@@ -99,7 +52,7 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Terug naar overzicht</a>
 </div>
 
 @section Scripts {
