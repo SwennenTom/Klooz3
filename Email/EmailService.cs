@@ -30,7 +30,8 @@ namespace Klooz3.Email
                 client.EnableSsl = true; // Set to true if you need SSL
                 client.Timeout = 20000; // Set your desired timeout value
 
-                var from = new MailAddress("tswennen@gmail.com", "Tom Swennen");
+                //var from = new MailAddress("tswennen@gmail.com", "Tom Swennen");
+                var from = new MailAddress("info@klooz.be", "noreply@klooz.be");
                 var to = new MailAddress(toEmail);
 
                 using (var message = new MailMessage(from, to)

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "q4w5gjvzIMcQ2ARQdc5+dRqtyU/kXeQijtAGpz/5S1y8/Hd3+ElWBrPhiqE6G2Ht6m9A93ZK0uqFbDWZfxQncg==",
+  "dgSpecHash": "m0tf/7jAQKFrCzjTJjIdhPkPKxyHUtrctV4OqILvmLQfodYMDWR77lg2FMsWhTpYgHuEUZbdqmqg4pW5iceBIQ==",
   "success": true,
-  "projectFilePath": "E:\\Repositories\\Klooz3\\Klooz3.csproj",
+  "projectFilePath": "C:\\Repositories\\Klooz3\\Klooz3.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tomsw\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\tomsw\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
