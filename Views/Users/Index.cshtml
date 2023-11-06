@@ -1,5 +1,6 @@
 ﻿@using Microsoft.AspNetCore.Identity
-@model List<IdentityUser>
+@using Klooz3.ViewModels
+@model List<UserWithRolesViewModel>
 
 @{
     ViewData["Title"] = "Index";
@@ -15,21 +16,29 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayName("Emailadres")
+                @Html.DisplayName("Gebruiker")
             </th>
-            <th></th>
+            <th>
+                @Html.DisplayName("Rol")
+            </th>
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model)
+        @foreach (var userWithRoles in Model)
         {
             <tr>
                 <td>
-                    @Html.DisplayFor(modelItem => item.UserName)
+                    @Html.DisplayFor(modelItem => userWithRoles.User.UserName)
                 </td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id">Bewerk</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id">Verwijder</a>
+                    @foreach (var role in userWithRoles.Roles)
+                    {
+                        @role <br />
+                    }
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@userWithRoles.User.Id">Bewerk</a> |
+                    <a asp-action="Delete" asp-route-id="@userWithRoles.User.Id">Verwijder</a>
                 </td>
             </tr>
         }
