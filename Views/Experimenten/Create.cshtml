@@ -4,17 +4,14 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
-
-<h4>Experiment</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Create">
+        <form asp-action="Create" method="post" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="experimentImage" class="control-label">Cover Afbeelding</label><br />
-                <input type="file" name="experimentImageFile" />
+                <input type="file" name="experimentCover" />
                 <span asp-validation-for="experimentImage" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -31,11 +28,6 @@
                 <label asp-for="experimentShortText" class="control-label">Inhoud van het experiment</label>
                 <input asp-for="experimentShortText" class="form-control" />
                 <span asp-validation-for="experimentShortText" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="experimentPhotos" class="control-label">Voeg fotos toe: (functie komt binnenkort)</label>
-                <input asp-for="experimentPhotos" type="file" class="form-control" multiple/>
-                <span asp-validation-for="experimentPhotos" class="text-danger"></span>
             </div>
             @* <div class="form-group">
                 <div class="form-check">

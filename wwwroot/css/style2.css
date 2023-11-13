@@ -277,6 +277,13 @@ margin-bottom: 25%;
     list-style: none;
 }
 
+.center-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
 /*STAPPENPLAN*/
 
 .stappencard{
@@ -302,6 +309,13 @@ margin-bottom: 25%;
 @media (max-height: 800px) {
     .TorenImage{
         height: 350px;
+        width: auto;
+    }
+}
+
+@media (max-width: 990px) {
+    .TorenImage {
+        height: 300px;
         width: auto;
     }
 }

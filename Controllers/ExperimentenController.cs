@@ -7,17 +7,42 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Klooz3.Data;
 using Klooz3.Models;
+using Microsoft.AspNetCore.Identity;
 
 namespace Klooz3.Controllers
 {
     public class ExperimentenController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly UserService _userService;
+        private readonly UserManager<IdentityUser> _userManager;
+        private readonly RoleManager<IdentityRole> _roleManager;
+        private readonly UserExperimenten _userExperimenten;
+        private readonly ExperimentRepo _experimentrepo;
 
-        public ExperimentenController(ApplicationDbContext context)
+        public ExperimentenController(UserService userService, UserManager<IdentityUser> userManager, RoleManager<IdentityRole> roleManager, Models.UserExperimenten userExperimenten, ExperimentRepo userExperimentenService, ApplicationDbContext dbContext)
         {
-            _context = context;
+            _userService = userService;
+            _userManager = userManager;
+            _roleManager = roleManager;
+            _userExperimenten = userExperimenten;
+            _experimentrepo = userExperimentenService;
+            _context = dbContext;
         }
+
+        public IActionResult Admin()
+        {
+            // Get the currently logged-in user
+            var currentUser = _userManager.GetUserAsync(User).Result;
+
+            // Retrieve experimenten based on the user's roles
+            var experimenten = _userManager.IsInRoleAsync(currentUser, "admin").Result || _userManager.IsInRoleAsync(currentUser, "teamregie").Result
+        ? _experimentrepo.GetAllUserExperimenten()
+        : _experimentrepo.GetUserExperimentenByUserId(currentUser.Id);
+
+            return View(experimenten);
+        }
+
 
         // GET: Experimenten
         public async Task<IActionResult> Index()
@@ -56,10 +81,12 @@ namespace Klooz3.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("experimentId,experimentImage,experimentName,experimentCardBackText,experimentShortText,experimentPhotos,experimentPublished")] Experiment experiment, IFormFile experimentCover)
+        public async Task<IActionResult> Create([Bind("experimentId,experimentImage,experimentName,experimentCardBackText,experimentShortText,experimentPublished")] Experiment experiment, IFormFile experimentCover)
         {
             if (ModelState.IsValid)
             {
+                var currentUser = await _userManager.GetUserAsync(User);
+
                 if (experimentCover != null && experimentCover.Length > 0)
                 {
                     using (var stream = new MemoryStream())
@@ -71,10 +98,21 @@ namespace Klooz3.Controllers
 
                 _context.Add(experiment);
                 await _context.SaveChangesAsync();
+
+                var userExperiment = new UserExperimenten
+                {
+                    UserId = currentUser.Id,
+                    ExperimentId = experiment.experimentId
+                };
+                _context.Add(userExperiment);
+                await _context.SaveChangesAsync();
+
                 return RedirectToAction(nameof(Index));
             }
+
             return View(experiment);
         }
+
 
         // GET: Experimenten/Edit/5
         public async Task<IActionResult> Edit(int? id)
@@ -130,20 +168,30 @@ namespace Klooz3.Controllers
         // GET: Experimenten/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null || _context.experiments == null)
+            try
             {
-                return NotFound();
-            }
+                if (id == null)
+                {
+                    return NotFound();
+                }
 
-            var experiment = await _context.experiments
-                .FirstOrDefaultAsync(m => m.experimentId == id);
-            if (experiment == null)
+                var experiment = await _context.experiments
+                    .FirstOrDefaultAsync(m => m.experimentId == id);
+
+                if (experiment == null)
+                {
+                    return NotFound();
+                }
+
+                return View(experiment);
+            }
+            catch (Exception ex)
             {
-                return NotFound();
+                // Log the exception or handle it as needed
+                return StatusCode(500, $"Internal Server Error: {ex.Message}");
             }
-
-            return View(experiment);
         }
+
 
         // POST: Experimenten/Delete/5
         [HttpPost, ActionName("Delete")]

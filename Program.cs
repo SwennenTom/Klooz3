@@ -10,6 +10,7 @@ using SendGrid.Helpers.Mail;
 using Klooz3.Email;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using System;
+using Klooz3.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -31,6 +32,8 @@ builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 builder.Services.AddScoped<UserService>();
+builder.Services.AddScoped<ExperimentRepo>();
+builder.Services.AddScoped<UserExperimenten>();
 
 // Add SendGrid service
 builder.Services.AddTransient<EmailService>();

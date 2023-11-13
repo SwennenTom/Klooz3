@@ -36,9 +36,9 @@ namespace Klooz3.Data
                 var _userManager = scope.ServiceProvider.GetRequiredService<UserManager<IdentityUser>>();
                 var _roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
                 await VoegRollenToeAsync(_context, _roleManager);
-                await CreateIdentityRecordAsync(Roles.regierol, "student@pxl.be", "Student1!", Roles.regierol);
-                await CreateIdentityRecordAsync(Roles.gebruikerrol, "lector@pxl.be", "Lector1!", Roles.gebruikerrol);
-                await CreateIdentityRecordAsync(Roles.adminrol, "admin@pxl.be", "Admin1!", Roles.adminrol);
+                //await CreateIdentityRecordAsync(Roles.regierol, "student@pxl.be", "Student1!", Roles.regierol);
+                //await CreateIdentityRecordAsync(Roles.gebruikerrol, "lector@pxl.be", "Lector1!", Roles.gebruikerrol);
+                //await CreateIdentityRecordAsync(Roles.adminrol, "admin@pxl.be", "Admin1!", Roles.adminrol);
             }
         }
 

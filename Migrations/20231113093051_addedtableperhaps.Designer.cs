@@ -4,6 +4,7 @@ using Klooz3.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Klooz3.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231113093051_addedtableperhaps")]
+    partial class addedtableperhaps
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -54,6 +56,9 @@ namespace Klooz3.Migrations
 
                     b.Property<string>("experimentName")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<byte[]>("experimentPhotos")
+                        .HasColumnType("varbinary(max)");
 
                     b.Property<bool?>("experimentPublished")
                         .HasColumnType("bit");

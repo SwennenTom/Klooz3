@@ -1,9 +1,21 @@
 ﻿@model Klooz3.Models.Experiment
 
+<!-- Add this to your head section -->
+<script>
+    function openExperimentModal() {
+        $('#experimentModal').modal('show');
+    }
+</script>
+
+
 <div class="card experimentcard" onclick="flipCard(this)">
     <a href="#top" target="" class="card-front">
-        <div class="d-flex align-items-center">
-            @Model.experimentImage
+        <div class="d-flex align-items-center justify-content-center">
+            <!-- Updated class -->
+            @if (Model.experimentImage != null)
+            {
+                <img class="experimentsizer center-image" src="data:image/png;base64,@Convert.ToBase64String(Model.experimentImage)" alt="Experiment Image">
+            }
         </div>
         <div class="card-body">
             <h5 class="card-title text-center">@Model.experimentName</h5>
@@ -14,6 +26,26 @@
         <p>
             @Model.experimentCardBackText
         </p>
-        <a class="fw-bolder" href="/experimenten/experiment1.html">Lees meer...</a>
+        @* <a  class="fw-bolder" href="/experimenten/experiment1.html">Lees meer...</a> *@
+        <button class="btn btn-dark" onclick="openExperimentModal()">Lees meer...</button>
+    </div>
+</div>
+
+<!-- Add this at the end of your view -->
+<div class="modal fade" id="experimentModal" tabindex="-1" role="dialog" aria-labelledby="experimentModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="experimentModalLabel">@Model.experimentName</h5>
+            </div>
+            <div class="modal-body justify-content-center text-center">
+                <br />
+                <img class="experimentsizer center-image" src="data:image/png;base64,@Convert.ToBase64String(Model.experimentImage)" alt="Experiment Image">
+                <br /><br />
+                <p>@Model.experimentShortText</p><br />
+                <!-- Add more details here as needed -->
+            </div>
+            
+        </div>
     </div>
 </div>
