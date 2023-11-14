@@ -355,6 +355,7 @@ margin-bottom: 25%;
     padding: 20px;
     text-align: center;
     transition: transform 0.3s ease;
+}
     /* Footer logo's */
     .footerlogo {
     height: 4vh;
@@ -376,62 +377,34 @@ margin-bottom: 25%;
     font-size: 0.75rem;
 }
 
-html, body {
-    height: 100%;
-    margin: 0;
-  }
+/*Cookie stuff*/
 
-/* Cookie Consent Popup Styles */
-body {
-    margin: 0;
-    padding: 0;
-}
-
-.cookie-consent-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-}
-
-.cookie-consent {
-    background: #fff;
-    padding: 20px;
-    border-radius: 4px;
-    max-width: 400px;
+.cookies-eu-banner {
+    background: #444;
+    color: #fff;
+    padding: 6px;
+    font-size: 13px;
     text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
 }
 
-    .cookie-consent p {
-        color: #333;
-        margin: 0 0 20px;
+    .cookies-eu-banner button {
+        text-decoration: none;
+        background: #222;
+        color: #fff;
+        border: 1px solid #000;
+        cursor: pointer;
+        padding: 4px 7px;
+        margin: 2px 0;
+        font-size: 13px;
+        font-weight: 700;
+        transition: background 0.07s, color 0.07s, border-color 0.07s;
     }
 
-    .cookie-consent a {
-        color: #4CAF50;
-    }
-
-.cookie-consent-button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin: 5px;
-    font-weight: bold;
-}
-
-#acceptCookiesButton {
-    background-color: #4CAF50;
-    color: white;
-}
-
-#refuseCookiesButton {
-    background-color: #FF5733;
-    color: white;
-}
+        .cookies-eu-banner button:hover {
+            background: #fff;
+            color: #222;
+        }

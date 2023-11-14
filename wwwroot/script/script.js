@@ -1,27 +1,3 @@
-window.addEventListener('load', function() {
-  var buttons = document.querySelectorAll('button');
-  var delay = 100;
-  var transitionTime = 250;
-
-  for (var i = 0; i < buttons.length; i++) {
-    (function(index) {
-      setTimeout(function() {
-        buttons[index].classList.add('green-button');
-        setTimeout(function() {
-          buttons[index].style.transition = "all " + transitionTime + "ms ease-in-out";
-          buttons[index].classList.remove('green-button');
-        }, delay);
-      }, delay * index);
-
-      buttons[index].addEventListener('click', function() {
-          var topElement = document.getElementById("top");
-          topElement.scrollIntoView({ behavior: "smooth" });
-      });
-
-    })(i);
-  }
-});
-
 function flipCard(card) {
   var allCards = document.querySelectorAll('.card.experimentcard');
 
@@ -40,4 +16,36 @@ function flipCard(card) {
       cardBack.classList.add('invisible');
     }
   }
+}
+
+function setCookie(name, value, days) {
+    console.log("SetCookiefunction triggered")
+    var expires = "";
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
+
+function hideCookieConsent() {
+    console.log("hideCookieConsent")
+    var cookieConsentBanner = document.querySelector('.cookies-eu-banner');
+    if (cookieConsentBanner) {
+        cookieConsentBanner.style.display = 'none';
+    }
+}
+
+function handleAcceptClick() {
+    console.log("Ok! clicked")
+    setCookie("cookieConsent", "accepted", 365); // Cookie will expire after 1 year
+    hideCookieConsent();
+}
+
+
+function handleRefuseClick() {
+    console.log("handlerefuseclicked triggered")
+    setCookie("cookieConsent", "refused", 365); // Cookie will expire after 1 year
+    hideCookieConsent();
 }

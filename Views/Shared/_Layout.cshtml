@@ -19,12 +19,21 @@
     <script defer async src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
             crossorigin="anonymous"></script>
-    <script defer src="/script/script.js"></script>
+    <script defer src="~/script/script.js"></script>
+    
+    <script defer src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script defer src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script defer src="~/js/site.js" asp-append-version="true"></script>
+    
+    
 
-    <script defer type="text/javascript" src="config.js"></script>
-    <script defer type="text/javascript" src="https://cdn.kiprotect.com/klaro/v0.7.18/klaro.js"></script>
 </head>
 <body>
+    <div class="cookies-eu-banner">
+        Door op Ok! the klikken bevestig je dat we cookies mogen gebruiken zoals beschreven staat in het privacy beleid.
+        <button onclick="handleAcceptClick()">Ok!</button>
+        <button onclick="handleRefuseClick()">Liever niet</button>
+    </div>
     <!-- Torentje image in bottom right-->
     <div class="col-12 z-3">
         <img src="/img/Placeholder/PLACEHOLDER_Toren-Transparent.webp" alt=""
@@ -73,6 +82,14 @@
                 </div>
             </div>
         </nav>
+
+        <div class="cookies-eu-banner">
+            Door op Ok! te klikken geef je toestemming voor het gebruik van cookies. 
+            Meer informatie vind je in ons privacy beleid.
+            <button>Ok!</button>
+            <button>Liever niet</button>
+        </div>
+
     </header>
     <div class="container">
         <main role="main" class="pb-3">
@@ -81,6 +98,7 @@
     </div>
 
     <footer class="footer mt-auto py-3">
+
         <div class="row">
             <div class="col-10">
                 <nav>
@@ -128,98 +146,8 @@
             });
 
             </script>
+
     </footer>
-
-    <!-- Cookies consent popup-->
-
-    <div class="cookie-consent-overlay">
-        <div id="cookieConsent" class="cookie-consent">
-            <p>
-                Deze website gebruikt cookies om uw ervaring te verbeteren.
-                <a class="nav-link p-0 @(ViewContext.RouteData.Values["controller"]?.ToString() == "Privacy" ? "active" : "")"
-                   href="@Url.Action("Index", "Privacy", new { area = "" })">Privacy beleid</a>
-
-            </p>
-            <div class="buttons">
-                <button id="acceptCookiesButton" class="cookie-consent-button">Ok!</button>
-                <button id="refuseCookiesButton" class="cookie-consent-button">Liever niet</button>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        // Function to set the cookie for consent
-        function setCookie(name, value, days) {
-            var expires = "";
-            if (days) {
-                var date = new Date();
-                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-                expires = "; expires=" + date.toUTCString();
-            }
-            document.cookie = name + "=" + (value || "") + expires + "; path=/";
-        }
-
-        // Function to hide the cookie consent popup
-        function hideCookieConsent() {
-            var cookieConsentPopup = document.getElementById("cookieConsent");
-            var cookieConsentOverlay = document.querySelector(".cookie-consent-overlay");
-
-            cookieConsentPopup.style.display = "none";
-            cookieConsentOverlay.style.display = "none";
-        }
-
-        // Function to reset the cookie consent status
-        function resetCookieConsent() {
-            setCookie("cookieConsent", "", -1); // Delete the consent cookie
-            var cookieConsentPopup = document.getElementById("cookieConsent");
-            var cookieConsentOverlay = document.querySelector(".cookie-consent-overlay");
-
-            cookieConsentPopup.style.display = "block"; // Display the popup again
-            cookieConsentOverlay.style.display = "block"; // Display the overlay again
-        }
-
-        // Function to handle the Accept button click
-        function handleAcceptClick() {
-            setCookie("cookieConsent", "accepted", 365); // Cookie will expire after 1 year
-            console.log("Accepted");
-            hideCookieConsent();
-        }
-
-        // Function to handle the Refuse button click
-        function handleRefuseClick() {
-            setCookie("cookieConsent", "refused", 365); // Cookie will expire after 1 year
-            console.log("refused");
-            hideCookieConsent();
-        }
-
-        // Check if the consent cookie exists
-        if (!document.cookie.includes("cookieConsent=")) {
-            console.log("cookieConsentCheck performed");
-            document.addEventListener("DOMContentLoaded", function () {
-                var acceptCookiesButton = document.getElementById("acceptCookiesButton");
-                acceptCookiesButton.addEventListener("click", handleAcceptClick);
-
-                var refuseCookiesButton = document.getElementById("refuseCookiesButton");
-                refuseCookiesButton.addEventListener("click", handleRefuseClick);
-
-                var cookieConsentPopup = document.getElementById("cookieConsent");
-                cookieConsentPopup.style.display = "block";
-            });
-        } else {
-            hideCookieConsent();
-        }
-
-        // Add event listener for the "Wijzig cookie instellingen" link
-        var changeCookieSettingsLink = document.getElementById("changeCookieSettingsLink");
-        changeCookieSettingsLink.addEventListener("click", function (event) {
-            event.preventDefault(); // Prevent the link from navigating to a new page
-            resetCookieConsent(); // Reset the cookie consent status and display the popup again
-        });
-    </script>
-
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

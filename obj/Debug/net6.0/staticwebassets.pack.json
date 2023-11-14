@@ -53,10 +53,6 @@
       "PackagePath": "staticwebassets\\docs\\klooz_criteria.docx"
     },
     {
-      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\experimenten\\experiment1.html",
-      "PackagePath": "staticwebassets\\experimenten\\experiment1.html"
-    },
-    {
       "Id": "C:\\Repositories\\Klooz3\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },

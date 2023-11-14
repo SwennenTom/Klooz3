@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "bOPw3FnfxIc61qHL3U/OxySkQG0UbbKTkoSgqR6NpBI=",
+  "Hash": "7my9JJugFbqjgt4bdoWjQ8pTTlok3StaGMKlfvR9bxA=",
   "Source": "Klooz3",
   "BasePath": "_content/Klooz3",
   "Mode": "Default",
@@ -253,23 +253,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\docs\\PItch_template_final.pptx"
-    },
-    {
-      "Identity": "C:\\Repositories\\Klooz3\\wwwroot\\experimenten\\experiment1.html",
-      "SourceId": "Klooz3",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Repositories\\Klooz3\\wwwroot\\",
-      "BasePath": "_content/Klooz3",
-      "RelativePath": "experimenten/experiment1.html",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\experimenten\\experiment1.html"
     },
     {
       "Identity": "C:\\Repositories\\Klooz3\\wwwroot\\favicon.ico",
