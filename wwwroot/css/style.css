@@ -7,6 +7,13 @@
 
                                    /* ++++GENERAL++++*/
 
+ body{
+     margin:0;
+     padding: 0;
+     height: 100vh;
+     overflow:hidden;
+ }
+
 /* Keeps image at bottom right*/
 .TorenImage{
     height: 500px;
@@ -87,7 +94,7 @@ h3 {
     padding-bottom: 140px;
 }
 
-footer{
+/*footer{
     position:fixed;
     bottom:0;
     width: 100vw;
@@ -99,13 +106,28 @@ footer{
         position: static;
         top: 770px;
     }
-}
+}*/
 
-/* Footer logo's */
+.footer {
+    position: fixed;
+    bottom: -100px; /* Adjust this value based on your footer height */
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+    /* Footer logo's */
 .footerlogo {
     height: 4vh;
     margin: 15px;
     filter: grayscale();
+}
+
+.footer.show {
+    transform: translateY(0);
 }
 
 /*Footer logo's get color back on hover*/

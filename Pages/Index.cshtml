@@ -42,7 +42,7 @@
                 
                 <!-- Klooz Logo -->
 
-                <div class="col-12 position-fixed top-0 start-0 kloozLogo">
+                <div class="col-12 position-fixed top-0 start-0 m-3 kloozLogo">
                     <a href="/index2.html">
                         <img src="/img/KloozLogo/PLACEHOLDER_kloozlogo01_TRANSPARANT.webp" width="234px"
                              alt="Welkom op de website van Project Klooz, leerecosysteem">
@@ -107,6 +107,22 @@
                     </script> <a target="_blank" id="linkdeco" href="https://www.lidk.be/">VZW Link in de Kabel</a> - <a id="linkdeco" class="p-0" href="@Url.Action("Index", "Privacy", new { area = "" })">Privacy beleid</a>
                 </p>
             </footer>
+            <script>
+                // JavaScript
+                document.addEventListener("DOMContentLoaded", function () {
+                    var footer = document.querySelector(".footer");
+
+                    window.addEventListener("scroll", function () {
+                        // Adjust the value (500) based on when you want the footer to appear
+                        if (window.scrollY > 500) {
+                            footer.classList.add("show");
+                        } else {
+                            footer.classList.remove("show");
+                        }
+                    });
+                });
+
+                </script>
         </div>
 
         <!-- Cookie consent popup and script -->

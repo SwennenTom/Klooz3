@@ -13,6 +13,12 @@ html{
     font-size: 16px;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+}
 
 /* ++++NAVIGATION++++ */
 
@@ -168,12 +174,11 @@ h3 {
 
 .card-front,
 .card-back {
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  transition: opacity 0.6s;
-  
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.6s;
 }
 
 .card-back{
@@ -325,13 +330,13 @@ margin-bottom: 25%;
     padding-bottom: 340px;
 }
 
-footer{
+/*footer{*/
     /* position:fixed; */
-    position:static;
-    bottom:0;
+    /*position:static;
+    bottom:0;*/
     /* width: 100vw; */
-    background-color: white;
-}
+    /*background-color: white;
+}*/
 
 /* @media (max-height: 850px) {
     footer{
@@ -340,11 +345,25 @@ footer{
     }
 } */
 
-/* Footer logo's */
-.footerlogo {
+.footer {
+    position: fixed;
+    bottom: -100px; /* Adjust this value based on your footer height */
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    /* Footer logo's */
+    .footerlogo {
     height: 4vh;
     margin: 15px;
     filter: grayscale();
+}
+
+.footer.show {
+    transform: translateY(0);
 }
 
 /*Footer logo's get color back on hover*/

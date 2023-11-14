@@ -113,6 +113,21 @@
                href="@Url.Action("Index", "Privacy", new { area = "" })">Privacy beleid</a>
 
         </p>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                var footer = document.querySelector(".footer");
+
+                window.addEventListener("scroll", function () {
+                    // Adjust the value (500) based on when you want the footer to appear
+                    if (window.scrollY > 500) {
+                        footer.classList.add("show");
+                    } else {
+                        footer.classList.remove("show");
+                    }
+                });
+            });
+
+            </script>
     </footer>
 
     <!-- Cookies consent popup-->

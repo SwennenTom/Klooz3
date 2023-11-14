@@ -30,6 +30,14 @@ namespace Klooz3.Controllers
             _context = dbContext;
         }
 
+        [HttpGet]
+        public IActionResult GetExperimentDetails(int id)
+        {
+            var experiment = _context.experiments.Find(id);
+            return Json(experiment);
+        }
+
+
         public IActionResult Admin()
         {
             // Get the currently logged-in user

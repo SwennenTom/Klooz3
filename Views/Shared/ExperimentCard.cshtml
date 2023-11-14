@@ -2,8 +2,24 @@
 
 <!-- Add this to your head section -->
 <script>
-    function openExperimentModal() {
-        $('#experimentModal').modal('show');
+    function openExperimentModal(experimentId) {
+        // Fetch experiment details using AJAX
+        $.ajax({
+            type: "GET",
+            url: "/Experimenten/GetExperimentDetails/" + experimentId,
+            success: function (data) {
+                // Update modal content with fetched details
+                $('#experimentModalLabel').text(data.experimentName);
+                $('#experimentImageModal').attr('src', 'data:image/png;base64,' + data.experimentImage);
+                $('#experimentShortTextModal').text(data.experimentShortText);
+
+                // Show the modal
+                $('#experimentModal').modal('show');
+            },
+            error: function () {
+                alert("Error fetching experiment details.");
+            }
+        });
     }
 </script>
 
@@ -27,7 +43,8 @@
             @Model.experimentCardBackText
         </p>
         @* <a  class="fw-bolder" href="/experimenten/experiment1.html">Lees meer...</a> *@
-        <button class="btn btn-dark" onclick="openExperimentModal()">Lees meer...</button>
+        <button class="btn btn-dark" onclick="openExperimentModal(@Model.experimentId)">Lees meer...</button>
+
     </div>
 </div>
 
@@ -36,16 +53,15 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="experimentModalLabel">@Model.experimentName</h5>
+                <h5 class="modal-title" id="experimentModalLabel"></h5>
             </div>
             <div class="modal-body justify-content-center text-center">
                 <br />
-                <img class="experimentsizer center-image" src="data:image/png;base64,@Convert.ToBase64String(Model.experimentImage)" alt="Experiment Image">
+                <img id="experimentImageModal" class="experimentsizer center-image" alt="Experiment Image">
                 <br /><br />
-                <p>@Model.experimentShortText</p><br />
+                <p id="experimentShortTextModal"></p><br />
                 <!-- Add more details here as needed -->
             </div>
-            
         </div>
     </div>
 </div>

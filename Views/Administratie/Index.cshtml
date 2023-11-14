@@ -36,7 +36,7 @@
         </li>
         }
 
-        @if (User.IsInRole("Admin") || User.IsInRole("TeamRegie") || User.IsInRole("Gebruiker"))
+        @if (User.IsInRole("Admin") || User.IsInRole("TeamRegie"))
         {
             <li class="nav-item m-1 p-1">
                 <a class="btn btn-dark  @(ViewContext.RouteData.Values["controller"].ToString() == "User" ? "active" : "")"
