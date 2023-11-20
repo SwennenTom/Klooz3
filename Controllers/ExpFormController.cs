@@ -2,7 +2,7 @@
 
 namespace Klooz3.Controllers
 {
-    public class ExperimentenFormController : Controller
+    public class ExpFormController : Controller
     {
         public IActionResult Index()
         {

@@ -9,7 +9,10 @@
                 <h6>Stap 1</h6>
                 <hr>
                 <h4>Fill the form</h4>
-                <p>Vul het <a href="/html/ExperimentFormulier.html"><b>pitch formulier</b></a> in.</p>
+            <p>
+                Vul het <a class="linkClickable @(ViewContext.RouteData.Values["Controller"].ToString() == "ExpForm" ? "active" : "")"
+                           href="@Url.Action("Index", "ExpForm", new { area = "" })"><b>Pitch Formulier</b></a><br /> in.
+            </p>
 
                 <p>Klooz bekijkt dit en neemt verder contact met je op.</p>
             </div>

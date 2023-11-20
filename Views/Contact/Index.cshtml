@@ -19,8 +19,8 @@
     <a class="linkClickable @(ViewContext.RouteData.Values["controller"].ToString() == "Stappenplan" ? "active" : "")"
        href="@Url.Action("Index", "Stappenplan", new { area = "" })">Stappenplan</a><br />
 
-    <a class="linkClickable @(ViewContext.RouteData.Values["controller"].ToString() == "ExperimentenForm" ? "active" : "")"
-       href="@Url.Action("Index", "ExpForm", new { area = "" })">Experimenten Formulier</a><br />
+    <a class="linkClickable @(ViewContext.RouteData.Values["Controller"].ToString() == "ExpForm" ? "active" : "")"
+       href="@Url.Action("Index", "ExpForm", new { area = "" })">Pitch Formulier</a><br />
 
 
 
@@ -148,9 +148,11 @@
             <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
                  data-bs-parent="#ContactAccordion">
                 <div class="accordion-body">
-                    <img id="parkeerkaart" class="embed-responsive-item" style="border:1px solid black;"
-                         src="/img/Contact/Parkeerplan-3xUS-staand-rol2.webp"
-                         alt="Het parkeerplan van Borgloon met alle parkings">
+                    <a href="/img/Contact/Parkeerplan-3xUS-staand-rol2.webp" target="_blank">
+                        <img id="parkeerkaart" class="embed-responsive-item" style="border:1px solid black;"
+                             src="/img/Contact/Parkeerplan-3xUS-staand-rol2.webp"
+                             alt="Het parkeerplan van Borgloon met alle parkings">
+                    </a>
                 </div>
             </div>
         </div>
