@@ -19,7 +19,12 @@
     <a class="linkClickable @(ViewContext.RouteData.Values["controller"].ToString() == "Stappenplan" ? "active" : "")"
        href="@Url.Action("Index", "Stappenplan", new { area = "" })">Stappenplan</a><br />
 
-    <a class="linkClickable" href="/html/ExperimentFormulier.html">Aanvraagformulier</a>
+    <a class="linkClickable @(ViewContext.RouteData.Values["controller"].ToString() == "ExperimentenForm" ? "active" : "")"
+       href="@Url.Action("Index", "ExpForm", new { area = "" })">Experimenten Formulier</a><br />
+
+
+
+
     <br><br><br>
 
     <h3>Heb je een vraag?</h3>
