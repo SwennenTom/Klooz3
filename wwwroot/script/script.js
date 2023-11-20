@@ -18,34 +18,27 @@ function flipCard(card) {
   }
 }
 
-function setCookie(name, value, days) {
-    console.log("SetCookiefunction triggered")
-    var expires = "";
-    if (days) {
-        var date = new Date();
-        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-        expires = "; expires=" + date.toUTCString();
+// Add this script to your existing JavaScript file or include it in a separate file
+document.addEventListener("DOMContentLoaded", function () {
+    var footer = document.querySelector('.footer');
+
+    function toggleFooter() {
+        // Adjust the threshold as needed
+        var threshold = window.innerHeight * 0.9;
+        var isFooterVisible = window.innerHeight + window.scrollY >= document.body.offsetHeight - threshold;
+
+        if (isFooterVisible) {
+            footer.classList.add('show');
+        } else {
+            footer.classList.remove('show');
+        }
     }
-    document.cookie = name + "=" + (value || "") + expires + "; path=/";
-}
 
-function hideCookieConsent() {
-    console.log("hideCookieConsent")
-    var cookieConsentBanner = document.querySelector('.cookies-eu-banner');
-    if (cookieConsentBanner) {
-        cookieConsentBanner.style.display = 'none';
-    }
-}
+    // Initial check
+    toggleFooter();
 
-function handleAcceptClick() {
-    console.log("Ok! clicked")
-    setCookie("cookieConsent", "accepted", 365); // Cookie will expire after 1 year
-    hideCookieConsent();
-}
-
-
-function handleRefuseClick() {
-    console.log("handlerefuseclicked triggered")
-    setCookie("cookieConsent", "refused", 365); // Cookie will expire after 1 year
-    hideCookieConsent();
-}
+    // Listen for scroll events
+    window.addEventListener('scroll', function () {
+        toggleFooter();
+    });
+});

@@ -29,45 +29,10 @@
 
         <script defer src="~/script/script.js"></script>
 
-        <style>
-            .cookies-eu-banner {
-                background: #444;
-                color: #fff;
-                padding: 6px;
-                font-size: 13px;
-                text-align: center;
-                position: fixed;
-                bottom: 0;
-                width: 100%;
-                z-index: 10;
-            }
-
-                .cookies-eu-banner button {
-                    text-decoration: none;
-                    background: #222;
-                    color: #fff;
-                    border: 1px solid #000;
-                    cursor: pointer;
-                    padding: 4px 7px;
-                    margin: 2px 0;
-                    font-size: 13px;
-                    font-weight: 700;
-                    transition: background 0.07s, color 0.07s, border-color 0.07s;
-                }
-
-                    .cookies-eu-banner button:hover {
-                        background: #fff;
-                        color: #222;
-                    }
-</style>
     </head>
 
     <body>
-        <div class="cookies-eu-banner">
-            Door op Ok! the klikken bevestig je dat we cookies mogen gebruiken zoals beschreven staat in het privacy beleid.
-            <button onclick="handleAcceptClick()">Ok!</button>
-            <button onclick="handleRefuseClick()">Liever niet</button>
-        </div>
+        
         <div style="float: right;">
             @Html.Partial("_LoginPartial")
         </div>
@@ -112,18 +77,19 @@
             <!-- Footer element-->
 
             <footer class="footer mt-auto py-3">
+
                 <div class="row">
                     <div class="col-10">
                         <nav>
-                            <a target=”_blank” href="https://borgloon.be/">
+                            <a target="_blank" href="https://borgloon.be/" ">
                                 <img src="/img/FooterLogos/logo-borgloon (1).webp"
                                      alt="Link naar de website van de Stad Borgloon" class="footerlogo">
                             </a>
-                            <a target=”_blank” href="https://ec.europa.eu/european-social-fund-plus/nl">
+                            <a target="_blank" href="https://ec.europa.eu/european-social-fund-plus/nl">
                                 <img src="/img/FooterLogos/esflogo_large.webp"
                                      alt="Link naar de website van het Europees Sociaal Fonds" class="footerlogo">
                             </a>
-                            <a target=”_blank” href="https://www.lidk.be/">
+                            <a target="_blank" href="https://www.lidk.be/">
                                 <img src="/img/FooterLogos/lidk_logofull_color_1600x1240.webp"
                                      alt="Link naar de website van VZW Link in de Kabel" class="footerlogo">
                             </a>
@@ -138,20 +104,36 @@
                         var firstYear = 2023;
                         var displayYear = (currentYear > firstYear) ? `${firstYear} - ${currentYear}` : currentYear;
                         document.write(displayYear);
-                    </script> <a target="_blank" id="linkdeco" href="https://www.lidk.be/">VZW Link in de Kabel</a> - <a id="linkdeco" class="p-0" href="@Url.Action("Index", "Privacy", new { area = "" })">Privacy beleid</a>
+                    </script>
+                    <a target="_blank" id="linkdeco" href="https://www.lidk.be/">VZW Link in de Kabel</a> -
+                    <a id="linkdeco" class="p-0 @(ViewContext.RouteData.Values["controller"]?.ToString() == "Privacy" ? "active" : "")"
+                       href="@Url.Action("Index", "Privacy", new { area = "" })">Privacy beleid</a>
+
                 </p>
+
             </footer>
             <script>
                 document.addEventListener("DOMContentLoaded", function () {
-                    var footer = document.querySelector(".footer");
+                    var footer = document.querySelector('.footer');
 
-                    window.addEventListener("scroll", function () {
-                        // Adjust the value (500) based on when you want the footer to appear
-                        if (window.scrollY > 500) {
-                            footer.classList.add("show");
+                    function toggleFooter() {
+                        // Adjust the threshold as needed
+                        var threshold = window.innerHeight * 0.9;
+                        var isFooterVisible = window.innerHeight + window.scrollY >= document.body.offsetHeight - threshold;
+
+                        if (isFooterVisible) {
+                            footer.classList.add('show');
                         } else {
-                            footer.classList.remove("show");
+                            footer.classList.remove('show');
                         }
+                    }
+
+                    // Initial check
+                    toggleFooter();
+
+                    // Listen for scroll events
+                    window.addEventListener('scroll', function () {
+                        toggleFooter();
                     });
                 });
 
