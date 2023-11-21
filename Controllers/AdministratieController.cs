@@ -18,6 +18,7 @@ namespace Klooz3.Controllers
         {
             _emailService = emailService;
         }
+
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> SendEmail()
         {

@@ -16,26 +16,29 @@ using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
 using Klooz3.Email;
 using Klooz3.Data;
+using Klooz3.Models;
+using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
 
 namespace Klooz3.Areas.Identity.Pages.Account
 {
     public class RegisterModel : PageModel
     {
-        private readonly SignInManager<IdentityUser> _signInManager;
-        private readonly UserManager<IdentityUser> _userManager;
+        private readonly SignInManager<ApplicationUser> _signInManager;
+        private readonly UserManager<ApplicationUser> _userManager;
         private readonly RoleManager<IdentityRole> _roleManager;
 
         private readonly EmailService _emailService;
-        private readonly IUserStore<IdentityUser> _userStore;
-        private readonly IUserEmailStore<IdentityUser> _emailStore;
+        private readonly IUserStore<ApplicationUser> _userStore;
+        private readonly IUserEmailStore<ApplicationUser> _emailStore;
         private readonly ILogger<RegisterModel> _logger;
 
 
         public RegisterModel(
-            UserManager<IdentityUser> userManager,
+            UserManager<ApplicationUser> userManager,
             RoleManager<IdentityRole> roleManager,
-            IUserStore<IdentityUser> userStore,
-            SignInManager<IdentityUser> signInManager,
+            IUserStore<ApplicationUser> userStore,
+            SignInManager<ApplicationUser> signInManager,
             ILogger<RegisterModel> logger,
             EmailService emailService)
         {
@@ -86,8 +89,25 @@ namespace Klooz3.Areas.Identity.Pages.Account
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
+            /// 
+
             [Required]
-            [StringLength(12, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
+            [Display(Name = "Voornaam")]
+            public string Voornaam { get; set; }
+
+            [Required]
+            [Display(Name = "Achternaam")]
+            public string Achternaam { get; set; }
+
+            [Required]
+            [Display(Name = "Telefoonnummer")]
+            public string Telefoon { get; set; }
+
+            [Display(Name = "Organisatie")]
+            public string Organisatie { get; set; }
+
+            [Required]
+            [StringLength(12, ErrorMessage = "Het wachtwoord moet minstens 8 tekens lang zijn.", MinimumLength = 8)]
             [DataType(DataType.Password)]
             [Display(Name = "Password")]
             public string Password { get; set; }
@@ -97,9 +117,10 @@ namespace Klooz3.Areas.Identity.Pages.Account
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
             [DataType(DataType.Password)]
-            [Display(Name = "Confirm password")]
-            [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+            [Display(Name = "Bevestig wachtwoord")]
+            [Compare("Password", ErrorMessage = "Wachtwoorden komen niet overeen.")]
             public string ConfirmPassword { get; set; }
+
         }
 
 
@@ -114,53 +135,76 @@ namespace Klooz3.Areas.Identity.Pages.Account
             returnUrl ??= Url.Content("~/");
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             //if (ModelState.IsValid)
+
+            try
             {
-                var user = CreateUser();
-
-                var defaultRole = Roles.gebruikerrol; // Assign "Gebruiker" role
-                var role = await _roleManager.FindByNameAsync(defaultRole);
-                if (role != null)
                 {
-                    IdentityResult roleResult = await _userManager.AddToRoleAsync(user, role.Name);
-                    if (!roleResult.Succeeded)
+                    var user = CreateUser();
+                    user.Firstname = Input.Voornaam;
+                    user.Lastname = Input.Achternaam;
+                    user.Email = Input.Email;
+                    user.Organization = Input.Organisatie;
+                    user.PhoneNumber = Input.Telefoon;
+
+                    var defaultRole = Roles.gebruikerrol; // Assign "Gebruiker" role
+                    var role = await _roleManager.FindByNameAsync(defaultRole);
+                    if (role != null)
                     {
-                        // Handle the case where role assignment fails.
+                        IdentityResult roleResult = await _userManager.AddToRoleAsync(user, role.Name);
+                        if (!roleResult.Succeeded)
+                        {
+                            // Handle the case where role assignment fails.
+                        }
+                    }
+
+
+                    await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
+                    await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
+                    var result = await _userManager.CreateAsync(user, Input.Password);
+
+                    if (result.Succeeded)
+                    {
+                        _logger.LogInformation("User created a new account with password.");
+
+                        var userId = await _userManager.GetUserIdAsync(user);
+                        var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+                        code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
+                        var callbackUrl = Url.Page(
+                            "/Account/ConfirmEmail",
+                            pageHandler: null,
+                            values: new { area = "Identity", userId = userId, code = code, returnUrl = returnUrl },
+                            protocol: Request.Scheme);
+                        await _emailService.SendEmailAsync(Input.Email, "Confirm your email",
+                            $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
+
+                        if (_userManager.Options.SignIn.RequireConfirmedAccount)
+                        {
+                            return RedirectToPage("RegisterConfirmation", new { email = Input.Email, returnUrl = returnUrl });
+                        }
+                        else
+                        {
+                            await _signInManager.SignInAsync(user, isPersistent: false);
+                            return LocalRedirect(returnUrl);
+                        }
+                    }
+                    foreach (var error in result.Errors)
+                    {
+                        ModelState.AddModelError(string.Empty, error.Description);
                     }
                 }
-                
-
-                await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
-                await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
-                var result = await _userManager.CreateAsync(user, Input.Password);
-
-                if (result.Succeeded)
+            }
+            catch (DbUpdateException ex)
+            {
+                var sqlException = ex.InnerException as SqlException;
+                if (sqlException != null && sqlException.Number == 2601) // Unique key violation
                 {
-                    _logger.LogInformation("User created a new account with password.");
-
-                    var userId = await _userManager.GetUserIdAsync(user);
-                    var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
-                    code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
-                    var callbackUrl = Url.Page(
-                        "/Account/ConfirmEmail",
-                        pageHandler: null,
-                        values: new { area = "Identity", userId = userId, code = code, returnUrl = returnUrl },
-                        protocol: Request.Scheme);
-                    await _emailService.SendEmailAsync(Input.Email, "Confirm your email",
-                        $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
-
-                    if (_userManager.Options.SignIn.RequireConfirmedAccount)
-                    {
-                        return RedirectToPage("RegisterConfirmation", new { email = Input.Email, returnUrl = returnUrl });
-                    }
-                    else
-                    {
-                        await _signInManager.SignInAsync(user, isPersistent: false);
-                        return LocalRedirect(returnUrl);
-                    }
+                    ModelState.AddModelError(string.Empty, "A user with this email address already exists.");
+                    return Page();
                 }
-                foreach (var error in result.Errors)
+                else
                 {
-                    ModelState.AddModelError(string.Empty, error.Description);
+                    // Rethrow the exception if it's not a unique key violation
+                    throw;
                 }
             }
 
@@ -168,11 +212,11 @@ namespace Klooz3.Areas.Identity.Pages.Account
             return Page();
         }
 
-        private IdentityUser CreateUser()
+        private ApplicationUser CreateUser()
         {
             try
             {
-                return Activator.CreateInstance<IdentityUser>();
+                return Activator.CreateInstance<ApplicationUser>();
             }
             catch
             {
@@ -182,13 +226,13 @@ namespace Klooz3.Areas.Identity.Pages.Account
             }
         }
 
-        private IUserEmailStore<IdentityUser> GetEmailStore()
+        private IUserEmailStore<ApplicationUser> GetEmailStore()
         {
             if (!_userManager.SupportsUserEmail)
             {
                 throw new NotSupportedException("The default UI requires a user store with email support.");
             }
-            return (IUserEmailStore<IdentityUser>)_userStore;
+            return (IUserEmailStore<ApplicationUser>)_userStore;
         }
     }
 }

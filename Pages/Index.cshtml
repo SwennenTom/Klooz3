@@ -1,7 +1,8 @@
 ﻿@page
 @using Microsoft.AspNetCore.Identity
-@inject SignInManager<IdentityUser> SignInManager
-@inject UserManager<IdentityUser> UserManager
+@using Klooz3.Models
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
 @model Klooz3.Pages.IndexModel
 @{
     <!DOCTYPE html>
@@ -12,7 +13,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description"
-              content="Homepage van de website van Project Klooz - leerecosysteem met navigatie-elementen">
+              content="Project klooz - leerecosysteem">
 
         <title>Project Klooz</title>
 

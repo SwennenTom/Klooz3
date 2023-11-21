@@ -15,12 +15,12 @@ namespace Klooz3.Controllers
     {
         private readonly ApplicationDbContext _context;
         private readonly UserService _userService;
-        private readonly UserManager<IdentityUser> _userManager;
+        private readonly UserManager<ApplicationUser> _userManager;
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly UserExperimenten _userExperimenten;
         private readonly ExperimentRepo _experimentrepo;
 
-        public ExperimentenController(UserService userService, UserManager<IdentityUser> userManager, RoleManager<IdentityRole> roleManager, Models.UserExperimenten userExperimenten, ExperimentRepo userExperimentenService, ApplicationDbContext dbContext)
+        public ExperimentenController(UserService userService, UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager, Models.UserExperimenten userExperimenten, ExperimentRepo userExperimentenService, ApplicationDbContext dbContext)
         {
             _userService = userService;
             _userManager = userManager;

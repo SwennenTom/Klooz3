@@ -13,10 +13,10 @@ namespace Klooz3.Controllers
     public class UsersController : Controller
     {
         private readonly UserService _userService;
-        private readonly UserManager<IdentityUser> _userManager;
+        private readonly UserManager<ApplicationUser> _userManager;
         private readonly RoleManager<IdentityRole> _roleManager;
 
-        public UsersController(UserService userService, UserManager<IdentityUser> userManager, RoleManager<IdentityRole> roleManager)
+        public UsersController(UserService userService, UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager)
         {
             _userService = userService;
             _userManager = userManager;

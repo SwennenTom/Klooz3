@@ -8,6 +8,7 @@ using System.Text;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
 using Klooz3.Email;
+using Klooz3.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
@@ -20,10 +21,10 @@ namespace Klooz3.Areas.Identity.Pages.Account
     [AllowAnonymous]
     public class ResendEmailConfirmationModel : PageModel
     {
-        private readonly UserManager<IdentityUser> _userManager;
+        private readonly UserManager<ApplicationUser> _userManager;
         private readonly EmailService _emailService;
 
-        public ResendEmailConfirmationModel(UserManager<IdentityUser> userManager, EmailService emailService)
+        public ResendEmailConfirmationModel(UserManager<ApplicationUser> userManager, EmailService emailService)
         {
             _userManager = userManager;
             _emailService = emailService;

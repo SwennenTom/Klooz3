@@ -8,14 +8,14 @@ namespace Klooz3.Data
 {
     public class UserService
     {
-        private readonly UserManager<IdentityUser> _userManager;
+        private readonly UserManager<ApplicationUser> _userManager;
 
-        public UserService(UserManager<IdentityUser> userManager)
+        public UserService(UserManager<ApplicationUser> userManager)
         {
             _userManager = userManager;
         }
 
-        public async Task<List<IdentityUser>> GetRegisteredUsersAsync()
+        public async Task<List<ApplicationUser>> GetRegisteredUsersAsync()
         {
             return await _userManager.Users.ToListAsync();
         }

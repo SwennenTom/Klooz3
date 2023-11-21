@@ -20,7 +20,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
 
 // Add Identity with the desired settings
-builder.Services.AddIdentity<IdentityUser, IdentityRole>(options =>
+builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
 {
     // Configure Identity options here
     options.SignIn.RequireConfirmedAccount = false; // Op false houden! anders is de modelstate van de niewe user invalid.

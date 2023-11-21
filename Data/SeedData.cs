@@ -7,7 +7,7 @@ namespace Klooz3.Data
     {
         static ApplicationDbContext? _context;
         static RoleManager<IdentityRole>? _roleManager;
-        static UserManager<IdentityUser>? _userManager;
+        static UserManager<ApplicationUser>? _userManager;
 
         public static async Task VoegRolToeAsync(RoleManager<IdentityRole> _roleManager, string roleName)
         {
@@ -33,7 +33,7 @@ namespace Klooz3.Data
             using (var scope = app.Services.CreateScope())
             {
                 var _context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
-                var _userManager = scope.ServiceProvider.GetRequiredService<UserManager<IdentityUser>>();
+                var _userManager = scope.ServiceProvider.GetRequiredService<UserManager<ApplicationUser>>();
                 var _roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
                 await VoegRollenToeAsync(_context, _roleManager);
                 //await CreateIdentityRecordAsync(Roles.regierol, "student@pxl.be", "Student1!", Roles.regierol);
@@ -48,7 +48,7 @@ namespace Klooz3.Data
             if (_userManager != null && await _userManager.FindByEmailAsync(email) == null &&
                     await _userManager.FindByNameAsync(userName) == null)
             {
-                var identityUser = new IdentityUser() { Email = email, UserName = userName };
+                var identityUser = new ApplicationUser() { Email = email, UserName = userName };
                 var result = await _userManager.CreateAsync(identityUser, pwd);
                 if (result.Succeeded)
                 {

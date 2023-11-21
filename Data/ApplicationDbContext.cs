@@ -16,6 +16,7 @@ namespace Klooz3.Data
 		public DbSet<Partner>? partners { get; set; }
 		public DbSet<TeamRegie>? teamregies { get; set; }
 		public DbSet<UserExperimenten>? userexperimenten { get; set;}
+		public DbSet<ApplicationUser>? applicationuser { get; set; }
 
     }
 }
