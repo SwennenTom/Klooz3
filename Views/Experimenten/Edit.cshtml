@@ -6,6 +6,10 @@
 
 <hr />
 <div class="row">
+    <div>
+        <a class="btn btn-dark  @(ViewContext.RouteData.Values["controller"].ToString() == "Administratie" ? "active" : "")"
+           href="@Url.Action("Index", "Administratie", new { area = "" })">Terug naar administratie</a>
+    </div>
     <div class="col-md-4">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -44,16 +48,15 @@
             }
 
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" value="Save" class="btn btn-dark" />
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Terug naar overzicht</a>
-</div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

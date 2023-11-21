@@ -9,6 +9,7 @@ using Klooz3.Data;
 using Klooz3.Models;
 using Microsoft.AspNetCore.Http;
 using System.IO;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Klooz3.Controllers
 {
@@ -31,24 +32,25 @@ namespace Klooz3.Controllers
         }
 
         // GET: TeamRegies/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null || _context.teamregies == null)
-            {
-                return NotFound();
-            }
+        //public async Task<IActionResult> Details(int? id)
+        //{
+        //    if (id == null || _context.teamregies == null)
+        //    {
+        //        return NotFound();
+        //    }
 
-            var teamRegie = await _context.teamregies
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (teamRegie == null)
-            {
-                return NotFound();
-            }
+        //    var teamRegie = await _context.teamregies
+        //        .FirstOrDefaultAsync(m => m.Id == id);
+        //    if (teamRegie == null)
+        //    {
+        //        return NotFound();
+        //    }
 
-            return View(teamRegie);
-        }
+        //    return View(teamRegie);
+        //}
 
         // GET: TeamRegies/Create
+        [Authorize(Roles = "Admin, TeamRegie")]
         public IActionResult Create()
         {
             return View();
@@ -59,6 +61,7 @@ namespace Klooz3.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin, TeamRegie")]
         public async Task<IActionResult> Create([Bind("Id,Name,Emailadress")] TeamRegie teamRegie)
         {
             if (ModelState.IsValid)
@@ -71,6 +74,7 @@ namespace Klooz3.Controllers
         }
 
         // GET: TeamRegies/Edit/5
+        [Authorize(Roles = "Admin, TeamRegie")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null || _context.teamregies == null)
@@ -91,6 +95,7 @@ namespace Klooz3.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin, TeamRegie")]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Emailadress")] TeamRegie teamRegie)
         {
             if (id != teamRegie.Id)
@@ -122,6 +127,7 @@ namespace Klooz3.Controllers
         }
 
         // GET: TeamRegies/Delete/5
+        [Authorize(Roles = "Admin, TeamRegie")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null || _context.teamregies == null)
@@ -142,6 +148,7 @@ namespace Klooz3.Controllers
         // POST: TeamRegies/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin, TeamRegie")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             if (_context.teamregies == null)

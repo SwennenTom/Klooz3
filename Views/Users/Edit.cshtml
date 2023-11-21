@@ -17,5 +17,9 @@
         </select>
     </div>
 
-    <button type="submit" class="btn btn-primary">Save</button>
+    <button type="submit" class="btn btn-dark">Opslaan</button>
+    <div>
+        <a class="btn btn-dark  @(ViewContext.RouteData.Values["controller"].ToString() == "Administratie" ? "active" : "")"
+           href="@Url.Action("Index", "Administratie", new { area = "" })">Terug naar administratie</a>
+    </div>
 </form>

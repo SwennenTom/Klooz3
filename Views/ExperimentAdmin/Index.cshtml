@@ -9,6 +9,8 @@
 <p>
     <a asp-action="Create">Nieuw experiment</a>
 </p>
+<a class="btn btn-dark  @(ViewContext.RouteData.Values["controller"].ToString() == "Administratie" ? "active" : "")"
+   href="@Url.Action("Index", "Administratie", new { area = "" })">Terug naar administratie</a>
 <table class="table">
     <thead>
         <tr>

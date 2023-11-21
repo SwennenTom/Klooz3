@@ -8,6 +8,9 @@ using Microsoft.EntityFrameworkCore;
 using Klooz3.Data;
 using Klooz3.Models;
 using Microsoft.AspNetCore.Identity;
+using System.Linq;
+using Microsoft.AspNetCore.Authorization;
+using System.Drawing.Imaging;
 
 namespace Klooz3.Controllers
 {
@@ -30,6 +33,7 @@ namespace Klooz3.Controllers
             _context = dbContext;
         }
 
+
         [HttpGet]
         public IActionResult GetExperimentDetails(int id)
         {
@@ -37,7 +41,7 @@ namespace Klooz3.Controllers
             return Json(experiment);
         }
 
-
+        [Authorize]
         public IActionResult Admin()
         {
             // Get the currently logged-in user
@@ -55,32 +59,38 @@ namespace Klooz3.Controllers
         // GET: Experimenten
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = _context.experiments;
-            return View(await applicationDbContext.ToListAsync());
+            var experiments = await _context.experiments
+                .Where(e => e.experimentPublished)
+                .ToListAsync();
+
+            return View(experiments);
         }
+
 
         // GET: Experimenten/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null || _context.experiments == null)
-            {
-                return NotFound();
-            }
+        //public async Task<IActionResult> Details(int? id)
+        //{
+        //    if (id == null || _context.experiments == null)
+        //    {
+        //        return NotFound();
+        //    }
 
-            var experiment = await _context.experiments
-                .FirstOrDefaultAsync(m => m.experimentId == id);
-            if (experiment == null)
-            {
-                return NotFound();
-            }
+        //    var experiment = await _context.experiments
+        //        .FirstOrDefaultAsync(m => m.experimentId == id);
+        //    if (experiment == null)
+        //    {
+        //        return NotFound();
+        //    }
 
-            return View(experiment);
-        }
+        //    return View(experiment);
+        //}
 
         // GET: Experimenten/Create
+
+        [Authorize]
         public IActionResult Create()
         {
-            
+
             return View();
         }
 
@@ -89,6 +99,7 @@ namespace Klooz3.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public async Task<IActionResult> Create([Bind("experimentId,experimentImage,experimentName,experimentCardBackText,experimentShortText,experimentPublished")] Experiment experiment, IFormFile experimentCover)
         {
             if (ModelState.IsValid)
@@ -121,7 +132,7 @@ namespace Klooz3.Controllers
             return View(experiment);
         }
 
-
+        [Authorize]
         // GET: Experimenten/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -143,86 +154,102 @@ namespace Klooz3.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("experimentId,experimentImage,experimentName,experimentCardBackText,experimentShortText,experimentPhotos,experimentPublished")] Experiment experiment)
+        [Authorize]
+        public async Task<IActionResult> Edit(int id, [Bind("experimentId,experimentName,experimentCardBackText,experimentShortText,experimentPhotos,experimentPublished")] Experiment experiment, IFormFile experimentImage)
         {
-            if (id != experiment.experimentId)
+            try
+            {
+                if (experimentImage != null && experimentImage.Length > 0)
+                {
+                    using (var stream = new MemoryStream())
+                    {
+                        await experimentImage.CopyToAsync(stream);
+                        experiment.experimentImage = stream.ToArray();
+                    }
+                }
+                else
+                {
+                    var existingExperiment = await _context.experiments
+                        .AsNoTracking()
+                        .FirstOrDefaultAsync(p => p.experimentId == id);
+
+                    if (existingExperiment != null)
+                    {
+                        experiment.experimentImage = existingExperiment.experimentImage;
+                    }
+                }
+
+                using (var context = _context)
+                {
+                    context.experiments.Update(experiment);
+                    await context.SaveChangesAsync();
+                }
+                return RedirectToAction(nameof(Index));
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!ExperimentExists(experiment.experimentId))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+    }
+
+    // GET: Experimenten/Delete/5
+    public async Task<IActionResult> Delete(int? id)
+    {
+        try
+        {
+            if (id == null)
             {
                 return NotFound();
             }
 
-            if (ModelState.IsValid)
+            var experiment = await _context.experiments
+                .FirstOrDefaultAsync(m => m.experimentId == id);
+
+            if (experiment == null)
             {
-                try
-                {
-                    _context.Update(experiment);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!ExperimentExists(experiment.experimentId))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
+                return NotFound();
             }
+
             return View(experiment);
         }
-
-        // GET: Experimenten/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        catch (Exception ex)
         {
-            try
-            {
-                if (id == null)
-                {
-                    return NotFound();
-                }
-
-                var experiment = await _context.experiments
-                    .FirstOrDefaultAsync(m => m.experimentId == id);
-
-                if (experiment == null)
-                {
-                    return NotFound();
-                }
-
-                return View(experiment);
-            }
-            catch (Exception ex)
-            {
-                // Log the exception or handle it as needed
-                return StatusCode(500, $"Internal Server Error: {ex.Message}");
-            }
-        }
-
-
-        // POST: Experimenten/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            if (_context.experiments == null)
-            {
-                return Problem("Entity set 'ApplicationDbContext.experiments'  is null.");
-            }
-            var experiment = await _context.experiments.FindAsync(id);
-            if (experiment != null)
-            {
-                _context.experiments.Remove(experiment);
-            }
-            
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-        }
-
-        private bool ExperimentExists(int id)
-        {
-          return (_context.experiments?.Any(e => e.experimentId == id)).GetValueOrDefault();
+            // Log the exception or handle it as needed
+            return StatusCode(500, $"Internal Server Error: {ex.Message}");
         }
     }
+
+
+    // POST: Experimenten/Delete/5
+    [HttpPost, ActionName("Delete")]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> DeleteConfirmed(int id)
+    {
+        if (_context.experiments == null)
+        {
+            return Problem("Entity set 'ApplicationDbContext.experiments'  is null.");
+        }
+        var experiment = await _context.experiments.FindAsync(id);
+        if (experiment != null)
+        {
+            _context.experiments.Remove(experiment);
+        }
+
+        await _context.SaveChangesAsync();
+        return RedirectToAction(nameof(Index));
+    }
+
+    private bool ExperimentExists(int id)
+    {
+        return (_context.experiments?.Any(e => e.experimentId == id)).GetValueOrDefault();
+    }
+}
 }

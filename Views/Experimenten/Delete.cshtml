@@ -4,6 +4,8 @@
     ViewData["Title"] = "Delete";
 }
 <h3 style="color: red">Ben je zeker dat je dit experiment wil verwijderen? Dit kan niet ongedaan gemaakt worden.</h3>
+<a class="btn btn-dark  @(ViewContext.RouteData.Values["controller"].ToString() == "Administratie" ? "active" : "")"
+   href="@Url.Action("Index", "Administratie", new { area = "" })">Terug naar administratie</a>
 <div>
     <hr />
     <dl class="row">
@@ -24,7 +26,6 @@
     
     <form asp-action="Delete">
         <input type="hidden" asp-for="experimentId" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a class="btn btn-dark" asp-action="Index">Terug naar overzicht</a>
+        <input type="submit" value="Delete" class="btn btn-danger" />
     </form>
 </div>

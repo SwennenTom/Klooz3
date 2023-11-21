@@ -12,6 +12,7 @@
                 $('#experimentModalLabel').text(data.experimentName);
                 $('#experimentImageModal').attr('src', 'data:image/png;base64,' + data.experimentImage);
                 $('#experimentShortTextModal').text(data.experimentShortText);
+                $('#experimentShortTextModal').css('word-wrap', 'break-word');
 
                 // Show the modal
                 $('#experimentModal').modal('show');
@@ -36,7 +37,7 @@
             <h5 class="card-title text-center">@Model.experimentName</h5>
         </div>
     </a>
-    <div class="card-back invisible">
+    <div class="card-back invisible ms-1">
         <h5 class="text-center">@Model.experimentName</h5><br>
         <p>
             @Model.experimentCardBackText

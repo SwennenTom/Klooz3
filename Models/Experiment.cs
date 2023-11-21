@@ -10,7 +10,7 @@ namespace Klooz3.Models
         public string? experimentName { get; set; }
         public string? experimentCardBackText { get; set; }
         public string? experimentShortText { get; set; }
-        public bool? experimentPublished { get; set; } = false;
+        public bool experimentPublished { get; set; } = false;
 
         public Experiment()
         {

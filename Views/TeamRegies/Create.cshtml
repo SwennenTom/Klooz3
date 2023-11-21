@@ -26,7 +26,8 @@
 </div>
 
 <div>
-    <a asp-action="Index">Terug naar overzicht</a>
+    <a class="btn btn-dark  @(ViewContext.RouteData.Values["controller"].ToString() == "Administratie" ? "active" : "")"
+       href="@Url.Action("Index", "Administratie", new { area = "" })">Terug naar administratie</a>
 </div>
 
 @section Scripts {

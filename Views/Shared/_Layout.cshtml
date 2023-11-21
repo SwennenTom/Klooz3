@@ -102,19 +102,19 @@
             </div>
             <div class="col-2"></div>
         </div>
-        <p id="copyright">
+        <p id="copyright" style="color: black;">
             &copy;
             <script>
                 var currentYear = new Date().getFullYear();
                 var firstYear = 2023;
                 var displayYear = (currentYear > firstYear) ? `${firstYear} - ${currentYear}` : currentYear;
                 document.write(displayYear);
-            </script> 
-            <a target="_blank" id="linkdeco" href="https://www.lidk.be/">VZW Link in de Kabel</a> -
+            </script>
+            <a target="_blank" id="linkdeco" style="color: black;" href="https://www.lidk.be/">VZW Link in de Kabel</a> -
             <a id="linkdeco" class="p-0 @(ViewContext.RouteData.Values["controller"]?.ToString() == "Privacy" ? "active" : "")"
-               href="@Url.Action("Index", "Privacy", new { area = "" })">Privacy beleid</a>
-
+               style="color: black;" href="@Url.Action("Index", "Privacy", new { area = "" })">Privacy beleid</a>
         </p>
+
 
     </footer>
     @await RenderSectionAsync("Scripts", required: false)

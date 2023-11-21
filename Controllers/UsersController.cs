@@ -1,6 +1,7 @@
 ﻿using Klooz3.Data;
 using Klooz3.Models;
 using Klooz3.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -23,6 +24,7 @@ namespace Klooz3.Controllers
             _roleManager = roleManager;
         }
 
+        [Authorize(Roles = "Admin, TeamRegie")]
         public async Task<IActionResult> Index()
         {
             var users = await _userService.GetRegisteredUsersAsync();
@@ -41,6 +43,7 @@ namespace Klooz3.Controllers
             return View(usersWithRoles);
         }
 
+        [Authorize(Roles = "Admin, TeamRegie")]
         public async Task<IActionResult> Edit(string id)
         {
             var user = await _userManager.FindByIdAsync(id);
@@ -66,6 +69,7 @@ namespace Klooz3.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Admin, TeamRegie")]
         public async Task<IActionResult> Edit(string id, EditUserRolesViewModel model)
         {
             var user = await _userManager.FindByIdAsync(id);

@@ -9,6 +9,7 @@ using Klooz3.Data;
 using Klooz3.Models;
 using Microsoft.AspNetCore.Http;
 using System.IO;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Klooz3.Controllers
 {
@@ -33,24 +34,25 @@ namespace Klooz3.Controllers
         }
 
         // GET: Partner/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null || _context.partners == null)
-            {
-                return NotFound();
-            }
+        //public async Task<IActionResult> Details(int? id)
+        //{
+        //    if (id == null || _context.partners == null)
+        //    {
+        //        return NotFound();
+        //    }
 
-            var partner = await _context.partners
-                .FirstOrDefaultAsync(m => m.partnerId == id);
-            if (partner == null)
-            {
-                return NotFound();
-            }
+        //    var partner = await _context.partners
+        //        .FirstOrDefaultAsync(m => m.partnerId == id);
+        //    if (partner == null)
+        //    {
+        //        return NotFound();
+        //    }
 
-            return View(partner);
-        }
+        //    return View(partner);
+        //}
 
         // GET: Partner/Create
+        [Authorize(Roles="Admin, TeamRegie")]
         public IActionResult Create()
         {
             return View();
@@ -61,7 +63,8 @@ namespace Klooz3.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("partnerId,partnerName,partnerLink,partnerDisplayOrder")] Partner partner, IFormFile PartnerImageFile)
+        [Authorize(Roles = "Admin, TeamRegie")]
+        public async Task<IActionResult> Create([Bind("partnerId,partnerName,partnerAlt,partnerLink,partnerDisplayOrder")] Partner partner, IFormFile PartnerImageFile)
         {
             if (ModelState.IsValid)
             {
@@ -87,6 +90,7 @@ namespace Klooz3.Controllers
         }
 
         // GET: Partner/Edit/5
+        [Authorize(Roles = "Admin, TeamRegie")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null || _context.partners == null)
@@ -107,6 +111,7 @@ namespace Klooz3.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin, TeamRegie")]
         public async Task<IActionResult> Edit(int id, [Bind("partnerId,partnerAlt,partnerName,partnerLink,partnerDisplayOrder")] Partner partner, IFormFile? partnerImageFile)
         {
             if (id != partner.partnerId)
@@ -166,6 +171,7 @@ namespace Klooz3.Controllers
 
 
         // GET: Partner/Delete/5
+        [Authorize(Roles = "Admin, TeamRegie")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null || _context.partners == null)
@@ -186,6 +192,7 @@ namespace Klooz3.Controllers
         // POST: Partner/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin, TeamRegie")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             if (_context.partners == null)

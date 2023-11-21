@@ -6,29 +6,34 @@
 
 <hr />
 <div class="row">
+    <div>
+        <a class="btn btn-dark  @(ViewContext.RouteData.Values["controller"].ToString() == "Administratie" ? "active" : "")"
+           href="@Url.Action("Index", "Administratie", new { area = "" })">Terug naar administratie</a>
+    </div>
     <div class="col-md-4">
         <form asp-action="Create" method="post" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
+            <div class="form-group m-2">
                 <label asp-for="experimentImage" class="control-label">Cover Afbeelding</label><br />
                 <input type="file" name="experimentCover" />
                 <span asp-validation-for="experimentImage" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group m-2">
                 <label asp-for="experimentName" class="control-label">Naam van het experiment</label>
-                <input asp-for="experimentName" class="form-control" />
+                <input asp-for="experimentName" class="form-control" maxlength="50" />
                 <span asp-validation-for="experimentName" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group m-2">
                 <label asp-for="experimentCardBackText" class="control-label">Tekst op achterkant van kaart</label>
-                <input asp-for="experimentCardBackText" class="form-control" />
+                <input asp-for="experimentCardBackText" class="form-control" maxlength="270" />
                 <span asp-validation-for="experimentCardBackText" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group m-2">
                 <label asp-for="experimentShortText" class="control-label">Inhoud van het experiment</label>
-                <input asp-for="experimentShortText" class="form-control" />
+                <textarea asp-for="experimentShortText" class="form-control" maxlength="5000" rows="4"></textarea>
                 <span asp-validation-for="experimentShortText" class="text-danger"></span>
             </div>
+
             @* <div class="form-group">
                 <div class="form-check">
                     <input asp-for="experimentPublished" class="form-check-input" />
@@ -37,15 +42,13 @@
                 <span asp-validation-for="experimentPublished" class="text-danger"></span>
             </div> *@
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <p>Je experiment verschijnt pas online nadat iemand van Team Regie het vrijgeeft.</p>
+                <input type="submit" value="Opslaan" class="btn btn-dark" />
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Terug naar overzicht</a>
-</div>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

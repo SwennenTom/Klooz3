@@ -112,20 +112,6 @@ h3 {
     padding-bottom: 140px;
 }
 
-/*footer{
-    position:fixed;
-    bottom:0;
-    width: 100vw;
-    background-color: white;
-}
-
-@media (max-height: 850px) {
-    footer{
-        position: static;
-        top: 770px;
-    }
-}*/
-
 .footer {
     width: 100%;
     background-color: white;

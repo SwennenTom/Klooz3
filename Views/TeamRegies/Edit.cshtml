@@ -5,6 +5,11 @@
 }
 
 <hr />
+
+<div>
+    <a class="btn btn-dark  @(ViewContext.RouteData.Values["controller"].ToString() == "Administratie" ? "active" : "")"
+       href="@Url.Action("Index", "Administratie", new { area = "" })">Terug naar administratie</a>
+</div>
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Edit">
@@ -27,9 +32,6 @@
     </div>
 </div>
 
-<div>
-    <a class="btn btn-dark" asp-action="Index">Terug naar overzicht</a>
-</div>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

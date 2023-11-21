@@ -18,7 +18,6 @@ function flipCard(card) {
   }
 }
 
-// Add this script to your existing JavaScript file or include it in a separate file
 document.addEventListener("DOMContentLoaded", function () {
     var footer = document.querySelector('.footer');
 
@@ -34,10 +33,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // Initial check
     toggleFooter();
 
-    // Listen for scroll events
     window.addEventListener('scroll', function () {
         toggleFooter();
     });
