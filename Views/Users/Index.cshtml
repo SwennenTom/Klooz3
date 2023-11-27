@@ -37,17 +37,20 @@
                     }
                 </td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@userWithRoles.User.Id">Bewerk</a> |
-                    <a asp-action="Delete" asp-route-id="@userWithRoles.User.Id">Verwijder</a>
+                    <a class="btn btn-dark" asp-action="Edit" asp-route-id="@userWithRoles.User.Id">Bewerk</a> |
+                    <a class="btn btn-dark" asp-action="Delete" asp-route-id="@userWithRoles.User.Id">Verwijder</a>
                 </td>
             </tr>
         }
     </tbody>
 </table>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
-@* <ul>
-    @foreach (var user in Model)
-    {
-        <li>@user.UserName</li>
-    }
-</ul> *@
+@if (TempData["ErrorMessage"] != null)
+{
+    <script>
+        $(document).ready(function () {
+            alert('@TempData["ErrorMessage"]');
+        });
+    </script>
+}

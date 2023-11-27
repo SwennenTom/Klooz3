@@ -1,0 +1,25 @@
+﻿@model Klooz3.Models.ApplicationUser
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+
+<h3>Ben je zeker dat je deze gebruiker wil verwijderen?</h3>
+<p class="text-danger">Dit kan niet ongedaan gemaakt worden!</p>
+<div>
+    <hr />
+    <dl class="row">
+        <dd class="col-sm-10 display-1">
+            @Html.DisplayFor(model => model.Firstname)
+            @Html.DisplayFor(model => model.Lastname)
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete" asp-route-id="@Model.Id" method="post">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Verwijder" class="btn btn-danger p-2 m-2" /> |
+        <a class="btn btn-dark" asp-action="Index">Terug naar overzicht</a>
+    </form>
+</div>

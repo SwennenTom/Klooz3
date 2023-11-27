@@ -5,8 +5,10 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using SendGrid.Helpers.Mail;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 
 namespace Klooz3.Controllers
@@ -52,20 +54,31 @@ namespace Klooz3.Controllers
                 return NotFound();
             }
 
-            var roles = await _userManager.GetRolesAsync(user);
+            var loggedInUser = await _userManager.GetUserAsync(User);
 
-            // Query the available roles using the RoleManager or any other method
-            var availableRoles = await _roleManager.Roles.Select(r => r.Name).ToListAsync();
-
-            var model = new EditUserRolesViewModel
+            if (await _userManager.IsInRoleAsync(loggedInUser, "Admin"))
             {
-                UserId = user.Id,
-                UserName = user.UserName,
-                SelectedRole = roles.FirstOrDefault(),
-                AvailableRoles = availableRoles // Populate AvailableRoles with available roles
-            };
+                if (await _userManager.IsInRoleAsync(user, "Admin"))
+                {
+                    TempData["ErrorMessage"] = "Je kan geen admin bewerken.";
+                    return RedirectToAction("Index");
+                }
 
-            return View(model);
+            }
+                var roles = await _userManager.GetRolesAsync(user);
+
+                var availableRoles = await _roleManager.Roles.Select(r => r.Name).ToListAsync();
+
+                var model = new EditUserRolesViewModel
+                {
+                    UserId = user.Id,
+                    UserName = user.UserName,
+                    SelectedRole = roles.FirstOrDefault(),
+                    AvailableRoles = availableRoles
+                };
+
+                return View(model);
+            
         }
 
         [HttpPost]
@@ -78,6 +91,11 @@ namespace Klooz3.Controllers
                 return NotFound();
             }
 
+            if (await _userManager.IsInRoleAsync(user, "Admin"))
+            {
+                TempData["ErrorMessage"] = "Je kan geen admin bewerken.";
+                return RedirectToAction("Index");
+            }
             // Update user's roles based on the model.SelectedRoles
             var userRoles = await _userManager.GetRolesAsync(user);
 
@@ -89,5 +107,57 @@ namespace Klooz3.Controllers
 
             return RedirectToAction("Index"); // Redirect to the user list
         }
+
+        [Authorize(Roles = "Admin, TeamRegie")]
+        public async Task<IActionResult> Delete(string id)
+        {
+            var user = await _userManager.FindByIdAsync(id);
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            if (await _userManager.IsInRoleAsync(user, "Admin"))
+            {
+                TempData["ErrorMessage"] = "Je kan geen admin verwijderen.";
+                return RedirectToAction("Index");
+            }
+
+
+            return View(user);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        [Authorize(Roles = "Admin, TeamRegie")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(string id)
+        {
+            var user = await _userManager.FindByIdAsync(id);
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            if (await _userManager.IsInRoleAsync(user, "Admin"))
+            {
+                TempData["ErrorMessage"] = "Je kan geen admin verwijderen.";
+                return RedirectToAction("Index");
+            }
+
+
+            var result = await _userManager.DeleteAsync(user);
+
+            if (result.Succeeded)
+            {
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                // Handle errors, e.g., display an error message
+                return View(user);
+            }
+        }
+
+
     }
 }

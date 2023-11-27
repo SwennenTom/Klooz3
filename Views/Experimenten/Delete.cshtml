@@ -4,8 +4,7 @@
     ViewData["Title"] = "Delete";
 }
 <h3 style="color: red">Ben je zeker dat je dit experiment wil verwijderen? Dit kan niet ongedaan gemaakt worden.</h3>
-<a class="btn btn-dark  @(ViewContext.RouteData.Values["controller"].ToString() == "Administratie" ? "active" : "")"
-   href="@Url.Action("Index", "Administratie", new { area = "" })">Terug naar administratie</a>
+<a class="btn btn-dark" asp-action="Admin">Terug naar overzicht</a>
 <div>
     <hr />
     <dl class="row">
@@ -14,7 +13,7 @@
         </dt>
         <dd class = "col-sm-10">
             @*@Html.DisplayFor(model => model.experimentImage)*@
-            <img style="width: 300px; height: 300px;" src="data:image/jpeg;base64,@(Model.experimentImage != null ? Convert.ToBase64String(Model.experimentImage) : string.Empty)" alt="Experiment Image" />
+            <img style="width: 300px; height: auto;" src="data:image/jpeg;base64,@(Model.experimentImage != null ? Convert.ToBase64String(Model.experimentImage) : string.Empty)" alt="Experiment Image" />
         </dd>
         <dt class = "col-sm-2">
             Naam

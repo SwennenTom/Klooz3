@@ -155,8 +155,13 @@ namespace Klooz3.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize]
-        public async Task<IActionResult> Edit(int id, [Bind("experimentId,experimentName,experimentCardBackText,experimentShortText,experimentPhotos,experimentPublished")] Experiment experiment, IFormFile experimentImage)
+        public async Task<IActionResult> Edit(int id, [Bind("experimentId,experimentName,experimentCardBackText,experimentShortText,experimentPhotos,experimentPublished")] Experiment experiment, IFormFile? experimentImage)
         {
+            if(id != experiment.experimentId)
+            {
+                return NotFound();
+            }
+
             try
             {
                 if (experimentImage != null && experimentImage.Length > 0)
