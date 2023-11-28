@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Klooz3.Models.UserExperimenten>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<a class="btn btn-dark  @(ViewContext.RouteData.Values["controller"].ToString() == "Administratie" ? "active" : "")"
+   href="@Url.Action("Index", "Administratie", new { area = "" })">Terug naar administratie</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.User)
+            </th>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.User.Email)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Experiment)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.User.Firstname)
+                @Html.DisplayFor(modelItem => item.User.Lastname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.User.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Experiment.experimentName)
+            </td>
+            <td>
+                <a class="btn btn-dark" asp-action="Edit" asp-route-id="@item.Id">Bewerk</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

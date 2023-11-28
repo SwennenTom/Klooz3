@@ -43,6 +43,14 @@
                href="@Url.Action("Index", "Users", new { area = "" })">Gebruikers</a>
         </li>
         }
+
+        @if (User.IsInRole("Admin") || User.IsInRole("TeamRegie"))
+        {
+            <li class="nav-item m-1 p-1">
+                <a class="btn btn-dark  @(ViewContext.RouteData.Values["controller"].ToString() == "UserExperimentens" ? "active" : "")"
+                   href="@Url.Action("Index", "UserExperimentens", new { area = "" })">Eigenaars van experimenten</a>
+            </li>
+        }
     </ul>
 
     </div>

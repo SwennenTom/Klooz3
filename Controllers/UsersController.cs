@@ -56,7 +56,7 @@ namespace Klooz3.Controllers
 
             var loggedInUser = await _userManager.GetUserAsync(User);
 
-            if (await _userManager.IsInRoleAsync(loggedInUser, "Admin"))
+            if (await _userManager.IsInRoleAsync(loggedInUser, "TeamRegie"))
             {
                 if (await _userManager.IsInRoleAsync(user, "Admin"))
                 {
@@ -91,7 +91,7 @@ namespace Klooz3.Controllers
                 return NotFound();
             }
 
-            if (await _userManager.IsInRoleAsync(user, "Admin"))
+            if (await _userManager.IsInRoleAsync(user, "TeamRegie"))
             {
                 TempData["ErrorMessage"] = "Je kan geen admin bewerken.";
                 return RedirectToAction("Index");
@@ -111,16 +111,27 @@ namespace Klooz3.Controllers
         [Authorize(Roles = "Admin, TeamRegie")]
         public async Task<IActionResult> Delete(string id)
         {
+            var loggedInUser = await _userManager.GetUserAsync(User);
             var user = await _userManager.FindByIdAsync(id);
             if (user == null)
             {
                 return NotFound();
             }
 
-            if (await _userManager.IsInRoleAsync(user, "Admin"))
+            //if (await _userManager.IsInRoleAsync(user, "TeamRegie"))
+            //{
+            //    TempData["ErrorMessage"] = "Je kan geen admin verwijderen.";
+            //    return RedirectToAction("Index");
+            //}
+
+            if (await _userManager.IsInRoleAsync(loggedInUser, "TeamRegie"))
             {
-                TempData["ErrorMessage"] = "Je kan geen admin verwijderen.";
-                return RedirectToAction("Index");
+                if (await _userManager.IsInRoleAsync(user, "Admin"))
+                {
+                    TempData["ErrorMessage"] = "Je kan geen admin verwijderen.";
+                    return RedirectToAction("Index");
+                }
+
             }
 
 
@@ -132,18 +143,29 @@ namespace Klooz3.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(string id)
         {
+            var loggedInUser = await _userManager.GetUserAsync(User);
             var user = await _userManager.FindByIdAsync(id);
+
             if (user == null)
             {
                 return NotFound();
             }
 
+            // Check if the user being deleted is an admin
             if (await _userManager.IsInRoleAsync(user, "Admin"))
             {
                 TempData["ErrorMessage"] = "Je kan geen admin verwijderen.";
                 return RedirectToAction("Index");
             }
 
+            // Check if the user being deleted is the last user with TeamRegie role
+            var usersWithTeamRegieRoleCount = await _userManager.GetUsersInRoleAsync("TeamRegie");
+
+            if (usersWithTeamRegieRoleCount.Count == 1 && await _userManager.IsInRoleAsync(user, "TeamRegie"))
+            {
+                TempData["ErrorMessage"] = "Je kan het laatste lid van Team Regie niet verwijderen. Geef eerst een andere gebruiker deze rol.";
+                return RedirectToAction("Index");
+            }
 
             var result = await _userManager.DeleteAsync(user);
 
@@ -157,6 +179,47 @@ namespace Klooz3.Controllers
                 return View(user);
             }
         }
+
+        //[HttpPost, ActionName("Delete")]
+        //[Authorize(Roles = "Admin, TeamRegie")]
+        //[ValidateAntiForgeryToken]
+        //public async Task<IActionResult> DeleteConfirmed(string id)
+        //{
+        //    var loggedInUser = await _userManager.GetUserAsync(User);
+        //    var user = await _userManager.FindByIdAsync(id);
+        //    if (user == null)
+        //    {
+        //        return NotFound();
+        //    }
+
+        //    //if (await _userManager.IsInRoleAsync(user, "Admin"))
+        //    //{
+        //    //    TempData["ErrorMessage"] = "Je kan geen admin verwijderen.";
+        //    //    return RedirectToAction("Index");
+        //    //}
+        //    if (await _userManager.IsInRoleAsync(loggedInUser, "TeamRegie"))
+        //    {
+        //        if (await _userManager.IsInRoleAsync(user, "Admin"))
+        //        {
+        //            TempData["ErrorMessage"] = "Je kan geen admin verwijderen.";
+        //            return RedirectToAction("Index");
+        //        }
+
+        //    }
+
+
+        //    var result = await _userManager.DeleteAsync(user);
+
+        //    if (result.Succeeded)
+        //    {
+        //        return RedirectToAction("Index");
+        //    }
+        //    else
+        //    {
+        //        // Handle errors, e.g., display an error message
+        //        return View(user);
+        //    }
+        //}
 
 
     }

@@ -16,6 +16,9 @@
             <thead>
                 <tr>
                     <th>
+                        @Html.DisplayName("Verantwoordelijke")
+                    </th>
+                    <th>
                         @Html.DisplayName("Experiment")
                     </th>
                     <th>
@@ -28,6 +31,13 @@
                 @foreach (var userExperiment in Model)
                 {
                     <tr>
+                        <td>
+                            @if (userExperiment.User != null)
+                            {
+                                
+                                @($"{userExperiment.User.Firstname} {userExperiment.User.Lastname}")
+                            }
+                        </td>
                         <td>
                             <partial name="ExperimentCard" model="userExperiment.Experiment" />
                         </td>

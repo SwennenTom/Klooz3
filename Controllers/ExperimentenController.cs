@@ -66,25 +66,6 @@ namespace Klooz3.Controllers
             return View(experiments);
         }
 
-
-        // GET: Experimenten/Details/5
-        //public async Task<IActionResult> Details(int? id)
-        //{
-        //    if (id == null || _context.experiments == null)
-        //    {
-        //        return NotFound();
-        //    }
-
-        //    var experiment = await _context.experiments
-        //        .FirstOrDefaultAsync(m => m.experimentId == id);
-        //    if (experiment == null)
-        //    {
-        //        return NotFound();
-        //    }
-
-        //    return View(experiment);
-        //}
-
         // GET: Experimenten/Create
 
         [Authorize]
@@ -100,17 +81,18 @@ namespace Klooz3.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize]
-        public async Task<IActionResult> Create([Bind("experimentId,experimentImage,experimentName,experimentCardBackText,experimentShortText,experimentPublished")] Experiment experiment, IFormFile experimentCover)
+        public async Task<IActionResult> Create([Bind("experimentId,experimentName,experimentCardBackText,experimentShortText,experimentPublished")] Experiment experiment, IFormFile experimentImage)
         {
+            
             if (ModelState.IsValid)
             {
                 var currentUser = await _userManager.GetUserAsync(User);
 
-                if (experimentCover != null && experimentCover.Length > 0)
+                if (experimentImage != null && experimentImage.Length > 0)
                 {
                     using (var stream = new MemoryStream())
                     {
-                        await experimentCover.CopyToAsync(stream);
+                        await experimentImage.CopyToAsync(stream);
                         experiment.experimentImage = stream.ToArray();
                     }
                 }
@@ -126,7 +108,14 @@ namespace Klooz3.Controllers
                 _context.Add(userExperiment);
                 await _context.SaveChangesAsync();
 
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Admin");
+            }
+
+            if (!ModelState.IsValid)
+            {
+                // Log or inspect ModelState errors
+                var errors = ModelState.Values.SelectMany(v => v.Errors);
+                // ...
             }
 
             return View(experiment);
@@ -189,7 +178,7 @@ namespace Klooz3.Controllers
                     context.experiments.Update(experiment);
                     await context.SaveChangesAsync();
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Admin");
             }
             catch (DbUpdateConcurrencyException)
             {

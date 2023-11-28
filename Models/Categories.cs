@@ -5,7 +5,7 @@ namespace Klooz3.Models
     public class Categories
     {
         public int categoriesId { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Verplicht veld.")]
         public string? name { get; set; }
 
         public Categories() { }
