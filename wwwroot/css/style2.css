@@ -84,11 +84,11 @@ h3 {
 }
 
 /* Smaller font size for small devices */
-@media (max-width: 990px) {
+/*@media (max-width: 990px) {
     .nav-link {
         font-size: 3.5rem !important;
     }
-}
+}*/
 
 .smallfont{
     font-size: 48px !important;
@@ -321,6 +321,9 @@ margin-bottom: 25%;
     float: left;
 }
 
+.loginPartialstijl {
+    font-size: 1rem;
+}
 
 /*++++FOOTER++++*/
 

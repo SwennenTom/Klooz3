@@ -18,9 +18,20 @@
                 @if (Model.experimentImage != null)
                 {
                 <label asp-for="experimentImage" class="control-label">Cover Afbeelding</label><br/>
+                    <img src="data:image/jpeg;base64,@Convert.ToBase64String(Model.experimentImage)" alt="Current Image" style="max-width: 200px; max-height: 200px;" />
                 }
                 <input type="file" name="experimentImage" />
                 <span asp-validation-for="experimentImage" class="text-danger"></span>
+
+                @* @if (Model.partnerImage != null)
+                {
+                    <label asp-for="partnerImage" class="control-label">Afbeelding</label>
+                    <br />
+                    <img src="data:image/jpeg;base64,@Convert.ToBase64String(Model.partnerImage)" alt="Current Image" style="max-width: 200px; max-height: 200px;" />
+                    <br />
+                }
+                <input type="file" name="partnerImageFile" />
+                <span asp-validation-for="partnerImage" class="text-danger"></span> *@
             </div>
 
             <div class="form-group">

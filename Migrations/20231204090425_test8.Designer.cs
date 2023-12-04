@@ -4,6 +4,7 @@ using Klooz3.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Klooz3.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231204090425_test8")]
+    partial class test8
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -383,7 +385,7 @@ namespace Klooz3.Migrations
             modelBuilder.Entity("Klooz3.Models.UserExperimenten", b =>
                 {
                     b.HasOne("Klooz3.Models.Experiment", "Experiment")
-                        .WithMany("UserExperimenten")
+                        .WithMany()
                         .HasForeignKey("ExperimentId");
 
                     b.HasOne("Klooz3.Models.ApplicationUser", "User")
@@ -444,11 +446,6 @@ namespace Klooz3.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("Klooz3.Models.Experiment", b =>
-                {
-                    b.Navigation("UserExperimenten");
                 });
 #pragma warning restore 612, 618
         }

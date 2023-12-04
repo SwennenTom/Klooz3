@@ -23,6 +23,8 @@ namespace Klooz3.Models
         [StringLength(5000, ErrorMessage = "Deze tekst kan maximaal 5000 tekens lang zijn.")]
         public string experimentShortText { get; set; }
 
+        public ICollection<UserExperimenten> UserExperimenten { get; set; } = new List<UserExperimenten>();
+
         public bool experimentPublished { get; set; } = false;
 
         public Experiment()

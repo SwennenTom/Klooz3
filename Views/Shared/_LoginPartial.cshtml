@@ -11,8 +11,8 @@
             var firstName = user.Firstname;
 
             <li class="nav-item d-flex">
-                <a class="nav-link text-dark m-2" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Welkom @firstName!</a>
-                <form class="form-inline m-2" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                <a class="nav-link text-dark m-2 loginPartialstijl" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Welkom @firstName!</a>
+                <form class="form-inline m-2 loginPartialstijl" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
                     <button type="submit" class="nav-link btn btn-dark text-light">Uitloggen</button>
                 </form>
             </li>
@@ -26,29 +26,3 @@
         </li>
     }
 </ul>
-
-
-
-@* @using Microsoft.AspNetCore.Identity
-@inject SignInManager<ApplicationUser> SignInManager
-@inject UserManager<ApplicationUser> UserManager
-
-<ul class="navbar-nav">
-@if (SignInManager.IsSignedIn(User))
-{
-    <li class="nav-item">
-        <a  class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Welkom @User.Identity?.Name!</a>
-            <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
-                <button type="submit" class="nav-link btn btn-dark text-light">Uitloggen</button>
-            </form>
-    </li>
-}
-else
-{
-    <li class="nav-item">
-            <a class="btn btn-dark text-light m-1" asp-area="Identity" asp-page="/Account/Register">Registreren</a>
-            <a class="btn btn-dark text-light m-1" asp-area="Identity" asp-page="/Account/Login">Inloggen</a>
-    </li>
-}
-</ul>
- *@

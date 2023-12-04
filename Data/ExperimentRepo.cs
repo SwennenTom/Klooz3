@@ -21,13 +21,21 @@ namespace Klooz3.Data
         public List<UserExperimenten> GetAllUserExperimenten()
         {
             var userExperimentList = _dbContext.experiments
-                .Select(e => new UserExperimenten
-                {
-                    Experiment = e,
-                    User = GetUserForExperiment(_dbContext, e.experimentId).Result // Pass _dbContext as a parameter
-                                                                                   // Set other properties as needed
-                })
-                .ToList();
+        .SelectMany(e => e.UserExperimenten.Select(ue => new UserExperimenten
+        {
+            Experiment = e,
+            User = ue.User,
+            // Set other properties as needed
+        }))
+        .ToList();
+            //var userExperimentList = _dbContext.experiments
+            //    .Select(e => new UserExperimenten
+            //    {
+            //        Experiment = e,
+            //        User = GetUserForExperiment(_dbContext, e.experimentId).Result // Pass _dbContext as a parameter
+            //                                                                        Set other properties as needed
+            //    })
+            //    .ToList();
 
             return userExperimentList;
         }
@@ -40,14 +48,6 @@ namespace Klooz3.Data
 
             return userExperiment?.User;
         }
-
-
-        //public List<UserExperimenten> GetAllUserExperimenten()
-        //{
-        //    return _dbContext.experiments
-        //        .Select(e => new UserExperimenten { Experiment = e })
-        //        .ToList();
-        //}
 
         public List<UserExperimenten> GetUserExperimentenByUserId(string userId)
         {

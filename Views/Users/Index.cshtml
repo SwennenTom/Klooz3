@@ -16,7 +16,10 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayName("Gebruiker")
+                @Html.DisplayName("Naam")
+            </th>
+            <th>
+                @Html.DisplayName("Email")
             </th>
             <th>
                 @Html.DisplayName("Rol")
@@ -27,6 +30,10 @@
         @foreach (var userWithRoles in Model)
         {
             <tr>
+                <td>
+                    @($"{userWithRoles.User.Firstname} {userWithRoles.User.Lastname}")
+
+                </td>
                 <td>
                     @Html.DisplayFor(modelItem => userWithRoles.User.UserName)
                 </td>

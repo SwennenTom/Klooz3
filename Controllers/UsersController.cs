@@ -66,7 +66,6 @@ namespace Klooz3.Controllers
 
             }
                 var roles = await _userManager.GetRolesAsync(user);
-
                 var availableRoles = await _roleManager.Roles.Select(r => r.Name).ToListAsync();
 
                 var model = new EditUserRolesViewModel
@@ -90,12 +89,16 @@ namespace Klooz3.Controllers
             {
                 return NotFound();
             }
-
-            if (await _userManager.IsInRoleAsync(user, "TeamRegie"))
+            var loggedInUser = await _userManager.GetUserAsync(User);
+            if (await _userManager.IsInRoleAsync(loggedInUser,"TeamRegie"))
             {
-                TempData["ErrorMessage"] = "Je kan geen admin bewerken.";
-                return RedirectToAction("Index");
+                if (await _userManager.IsInRoleAsync(user, "Admin"))
+                {
+                    TempData["ErrorMessage"] = "Je kan geen admin bewerken.";
+                    return RedirectToAction("Index");
+                }
             }
+            
             // Update user's roles based on the model.SelectedRoles
             var userRoles = await _userManager.GetRolesAsync(user);
 
@@ -118,11 +121,6 @@ namespace Klooz3.Controllers
                 return NotFound();
             }
 
-            //if (await _userManager.IsInRoleAsync(user, "TeamRegie"))
-            //{
-            //    TempData["ErrorMessage"] = "Je kan geen admin verwijderen.";
-            //    return RedirectToAction("Index");
-            //}
 
             if (await _userManager.IsInRoleAsync(loggedInUser, "TeamRegie"))
             {
@@ -151,12 +149,16 @@ namespace Klooz3.Controllers
                 return NotFound();
             }
 
-            // Check if the user being deleted is an admin
-            if (await _userManager.IsInRoleAsync(user, "Admin"))
+            if(await _userManager.IsInRoleAsync(loggedInUser, "TeamRegie"))
             {
-                TempData["ErrorMessage"] = "Je kan geen admin verwijderen.";
-                return RedirectToAction("Index");
+                // Check if the user being deleted is an admin
+                if (await _userManager.IsInRoleAsync(user, "Admin"))
+                {
+                    TempData["ErrorMessage"] = "Je kan geen admin verwijderen.";
+                    return RedirectToAction("Index");
+                }
             }
+            
 
             // Check if the user being deleted is the last user with TeamRegie role
             var usersWithTeamRegieRoleCount = await _userManager.GetUsersInRoleAsync("TeamRegie");
@@ -179,48 +181,6 @@ namespace Klooz3.Controllers
                 return View(user);
             }
         }
-
-        //[HttpPost, ActionName("Delete")]
-        //[Authorize(Roles = "Admin, TeamRegie")]
-        //[ValidateAntiForgeryToken]
-        //public async Task<IActionResult> DeleteConfirmed(string id)
-        //{
-        //    var loggedInUser = await _userManager.GetUserAsync(User);
-        //    var user = await _userManager.FindByIdAsync(id);
-        //    if (user == null)
-        //    {
-        //        return NotFound();
-        //    }
-
-        //    //if (await _userManager.IsInRoleAsync(user, "Admin"))
-        //    //{
-        //    //    TempData["ErrorMessage"] = "Je kan geen admin verwijderen.";
-        //    //    return RedirectToAction("Index");
-        //    //}
-        //    if (await _userManager.IsInRoleAsync(loggedInUser, "TeamRegie"))
-        //    {
-        //        if (await _userManager.IsInRoleAsync(user, "Admin"))
-        //        {
-        //            TempData["ErrorMessage"] = "Je kan geen admin verwijderen.";
-        //            return RedirectToAction("Index");
-        //        }
-
-        //    }
-
-
-        //    var result = await _userManager.DeleteAsync(user);
-
-        //    if (result.Succeeded)
-        //    {
-        //        return RedirectToAction("Index");
-        //    }
-        //    else
-        //    {
-        //        // Handle errors, e.g., display an error message
-        //        return View(user);
-        //    }
-        //}
-
 
     }
 }

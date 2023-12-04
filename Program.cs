@@ -23,7 +23,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
 {
     // Configure Identity options here
-    options.SignIn.RequireConfirmedAccount = false; // Op false houden! anders is de modelstate van de niewe user invalid.
+    options.SignIn.RequireConfirmedAccount = true; // Op false houden! anders is de modelstate van de niewe user invalid.
 
     options.Password.RequireDigit = false;
     options.Password.RequireLowercase = false;
