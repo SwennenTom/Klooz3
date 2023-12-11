@@ -16,10 +16,12 @@ namespace Klooz3.Controllers
     public class PartnerController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly ImageConversionService _imageConversionService;
 
-        public PartnerController(ApplicationDbContext context)
+        public PartnerController(ApplicationDbContext context, ImageConversionService imageConversionService)
         {
             _context = context;
+            _imageConversionService = imageConversionService;
         }
 
         // GET: Partner
@@ -32,24 +34,6 @@ namespace Klooz3.Controllers
 
             return View(orderedPartners);
         }
-
-        // GET: Partner/Details/5
-        //public async Task<IActionResult> Details(int? id)
-        //{
-        //    if (id == null || _context.partners == null)
-        //    {
-        //        return NotFound();
-        //    }
-
-        //    var partner = await _context.partners
-        //        .FirstOrDefaultAsync(m => m.partnerId == id);
-        //    if (partner == null)
-        //    {
-        //        return NotFound();
-        //    }
-
-        //    return View(partner);
-        //}
 
         // GET: Partner/Create
         [Authorize(Roles="Admin, TeamRegie")]
@@ -73,7 +57,8 @@ namespace Klooz3.Controllers
                     using (var stream = new MemoryStream())
                     {
                         await PartnerImageFile.CopyToAsync(stream);
-                        partner.partnerImage = stream.ToArray();
+                        var webPImage = _imageConversionService.ConvertToWebP(stream.ToArray());
+                        partner.partnerImage = webPImage;
                     }
                 }
 
@@ -128,7 +113,8 @@ namespace Klooz3.Controllers
                         using (var stream = new MemoryStream())
                         {
                             await partnerImageFile.CopyToAsync(stream);
-                            partner.partnerImage = stream.ToArray();
+                            var WebPImage = _imageConversionService.ConvertToWebP(stream.ToArray());
+                            partner.partnerImage = WebPImage;
                         }
                     }
 

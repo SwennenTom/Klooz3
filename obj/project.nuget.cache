@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "urUHs3pjlCHMiJ+cQ4A+KO0J45Z31bAUiPMZzFpstMsBKMYb4j8SZwIoNgSF1dHzvjaVI2Te8TLElA0CkUn/Ow==",
+  "dgSpecHash": "x5pqtq/CoC7rRlFeslTUKi5z9YGkWmsPnTauV+KcdjHFvcxJtyHMrOY6FlxIZ4y/DKsXoI1shaPx3CpKrhSoIw==",
   "success": true,
   "projectFilePath": "C:\\Repositories\\Klooz3\\Klooz3.csproj",
   "expectedPackageFiles": [
@@ -153,6 +153,7 @@
     "C:\\Users\\tomsw\\.nuget\\packages\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\tomsw\\.nuget\\packages\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\tomsw\\.nuget\\packages\\sendgrid\\9.28.1\\sendgrid.9.28.1.nupkg.sha512",
+    "C:\\Users\\tomsw\\.nuget\\packages\\sixlabors.imagesharp\\3.1.0\\sixlabors.imagesharp.3.1.0.nupkg.sha512",
     "C:\\Users\\tomsw\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.1.2\\sqlitepclraw.bundle_e_sqlite3.2.1.2.nupkg.sha512",
     "C:\\Users\\tomsw\\.nuget\\packages\\sqlitepclraw.core\\2.1.2\\sqlitepclraw.core.2.1.2.nupkg.sha512",
     "C:\\Users\\tomsw\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.1.2\\sqlitepclraw.lib.e_sqlite3.2.1.2.nupkg.sha512",

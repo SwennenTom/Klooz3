@@ -18,24 +18,5 @@ function flipCard(card) {
   }
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-    var footer = document.querySelector('.footer');
 
-    function toggleFooter() {
-        // Adjust the threshold as needed
-        var threshold = window.innerHeight * 0.9;
-        var isFooterVisible = window.innerHeight + window.scrollY >= document.body.offsetHeight - threshold;
-
-        if (isFooterVisible) {
-            footer.classList.add('show');
-        } else {
-            footer.classList.remove('show');
-        }
-    }
-
-    toggleFooter();
-
-    window.addEventListener('scroll', function () {
-        toggleFooter();
-    });
-});
+/* Cookie*/

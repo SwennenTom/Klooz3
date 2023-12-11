@@ -10,18 +10,19 @@
  body{
      margin:0;
      padding: 0;
-     height: 100vh;
-     overflow:hidden;
+     height: 90vh;
+     /*overflow:hidden;*/
  }
 
 /* Keeps image at bottom right*/
-.TorenImage{
+.TorenImage {
     height: 500px;
     width: auto;
+    z-index: -100;
 }
 
 @media (max-height: 850px) {
-    .TorenImage{
+    .TorenImage {
         height: 250px;
         width: auto;
     }
@@ -113,7 +114,7 @@ h3 {
 /*++++FOOTER++++*/
 /*Footer position*/
 #content {
-    padding-bottom: 140px;
+    padding-bottom: 100px;
 }
 
 .footer {
@@ -122,24 +123,14 @@ h3 {
     color: #fff;
     padding: 20px;
     text-align: left;
-    transition: transform 0.3s ease;
-    opacity: 0;
-    pointer-events: none; /* Disable pointer events when hidden */
-    z-index: -1;
 }
-
 
 /* Footer logo's */
 .footerlogo {
-    height: 4vh;
+    /*height: 4vh;*/
+    height: 20px;
     margin: 15px;
     filter: grayscale();
-}
-
-.footer.show {
-    transform: translateY(0);
-    pointer-events: all;
-    opacity: 1;
 }
 
 /*Footer logo's get color back on hover*/
@@ -152,32 +143,3 @@ h3 {
     font-size: 0.75rem;
 }
 
-.cookies-eu-banner {
-    background: #444;
-    color: #fff;
-    padding: 6px;
-    font-size: 13px;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    z-index: 10;
-}
-
-    .cookies-eu-banner button {
-        text-decoration: none;
-        background: #222;
-        color: #fff;
-        border: 1px solid #000;
-        cursor: pointer;
-        padding: 4px 7px;
-        margin: 2px 0;
-        font-size: 13px;
-        font-weight: 700;
-        transition: background 0.07s, color 0.07s, border-color 0.07s;
-    }
-
-        .cookies-eu-banner button:hover {
-            background: #fff;
-            color: #222;
-        }

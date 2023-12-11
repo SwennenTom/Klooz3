@@ -13,32 +13,37 @@
 
             <div class="form-group">
                 <label asp-for="partnerName" class="control-label">Naam</label>
+                <span title="De naam van de partner zoals zichtbaar op de site, bvb OCMW">ℹ️</span>
                 <input asp-for="partnerName" class="form-control" />
                 <span asp-validation-for="partnerName" class="text-danger"></span>
             </div>
             <br />
             <div class="form-group">
                 <label asp-for="partnerAlt" class="control-label">Volledige naam</label>
+                <span title="De volledige naam (vooral voor screenreaders voor slechtzienden) bvb Openbare Centra voor Maatschappelijk Welzijn. ">ℹ️</span>
                 <input asp-for="partnerAlt" class="form-control" />
                 <span asp-validation-for="partnerAlt" class="text-danger"></span>
             </div>
             <br />
             <div class="form-group">
                 <label asp-for="partnerImage" class="control-label">Afbeelding</label><br />
-                <input type="file" name="partnerImageFile" />
+                <input type="file" name="PartnerImageFile" />
                 <span asp-validation-for="partnerImage" class="text-danger"></span>
             </div>
             <br />
             <div class="form-group">
                 <label asp-for="partnerLink" class="control-label">Link</label>
+                <span title="De link naar de partnersite, www. en https:// zijn beide toegestaan.">ℹ️</span>
                 <input asp-for="partnerLink" class="form-control" />
                 <span asp-validation-for="partnerLink" class="text-danger"></span>
             </div>
 
             <div class="form-group">
                 <label asp-for="partnerDisplayOrder" class="control-label">Prioriteit</label>
+                <span title="Een lager cijfer geeft een hogere plaats in de rankschikking. Cijfers kunnen meerdere keren gebruikt worden, partners met dezelfde cijfers worden alfabetisch weer gegeven.">ℹ️</span>
                 <input asp-for="partnerDisplayOrder" class="form-control" />
                 <span asp-validation-for="partnerDisplayOrder" class="text-danger"></span>
+                
             </div>
 
             <div class="form-group">

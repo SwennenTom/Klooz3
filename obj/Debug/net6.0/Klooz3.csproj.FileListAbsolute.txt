@@ -574,3 +574,4 @@ C:\Repositories\Klooz3\obj\Debug\net6.0\refint\Klooz3.dll
 C:\Repositories\Klooz3\obj\Debug\net6.0\Klooz3.pdb
 C:\Repositories\Klooz3\obj\Debug\net6.0\Klooz3.genruntimeconfig.cache
 C:\Repositories\Klooz3\obj\Debug\net6.0\ref\Klooz3.dll
+C:\Repositories\Klooz3\bin\Debug\net6.0\SixLabors.ImageSharp.dll

@@ -21,9 +21,63 @@
             integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
             crossorigin="anonymous"></script>
     <script defer src="~/script/script.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var cookieConsent = document.getElementById("cookieConsent");
+
+            // Check if the user has previously accepted cookies
+            var hasAcceptedCookies = localStorage.getItem("cookiesAccepted");
+
+            if (!hasAcceptedCookies) {
+                // Show the cookie consent popup
+                cookieConsent.style.display = "block";
+            }
+
+            // Event listener for the "Ok!" button
+            document.getElementById("acceptCookies").addEventListener("click", function () {
+                // Set a flag indicating that cookies are accepted
+                localStorage.setItem("cookiesAccepted", "true");
+
+                // Hide the cookie consent popup
+                cookieConsent.style.display = "none";
+            });
+
+            // Event listener for the "Liever niet" button
+            document.getElementById("denyCookies").addEventListener("click", function () {
+                // Hide the cookie consent popup
+                cookieConsent.style.display = "none";
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var cookieConsentPopup = document.getElementById('cookieConsent');
+            var changeCookieSettingsLink = document.getElementById('changeCookieSettingsLink');
+
+            // Function to show the cookie consent popup
+            function showCookieConsentPopup() {
+                cookieConsentPopup.style.display = 'block';
+            }
+
+            // Attach a click event to the "Wijzig cookie instellingen" button
+            changeCookieSettingsLink.addEventListener('click', function () {
+                showCookieConsentPopup();
+            });
+        });
+    </script>
+
+
     
 </head>
 <body>
+
+    <div id="cookieConsent" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #000; color: #fff; padding: 15px; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); text-align: center; z-index: 9999;">
+        <p>Wij gebruiken cookies om uw ervaring te verbeteren.</p>
+        <p>Lees ons <a href="@Url.Action("Index", "Privacy", new { area = "" })">privacybeleid</a> voor meer informatie.</p>
+        <button id="acceptCookies" style="padding: 10px 20px; margin: 0 10px; border: none; border-radius: 3px; cursor: pointer; font-weight: bold; background-color: #4CAF50; color: #fff;">Ok!</button>
+        <button id="denyCookies" style="padding: 10px 20px; margin: 0 10px; border: none; border-radius: 3px; cursor: pointer; font-weight: bold; background-color: #FF5733; color: #fff;">Liever niet</button>
+    </div>
 
     <!-- Torentje image in bottom right-->
     <div class="col-12 z-3">

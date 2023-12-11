@@ -40,6 +40,7 @@ builder.Services.AddRazorPages();
 builder.Services.AddScoped<UserService>();
 builder.Services.AddScoped<ExperimentRepo>();
 builder.Services.AddScoped<UserExperimenten>();
+builder.Services.AddScoped<ImageConversionService>();
 
 // Add SendGrid service
 builder.Services.AddTransient<EmailService>();
