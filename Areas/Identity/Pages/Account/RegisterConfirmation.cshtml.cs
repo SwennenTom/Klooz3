@@ -5,6 +5,7 @@
 using System;
 using System.Text;
 using System.Threading.Tasks;
+using Klooz3.Email;
 using Klooz3.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -20,11 +21,13 @@ namespace Klooz3.Areas.Identity.Pages.Account
     {
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly IEmailSender _sender;
+        private readonly EmailService _emailService;
 
-        public RegisterConfirmationModel(UserManager<ApplicationUser> userManager, IEmailSender sender)
+        public RegisterConfirmationModel(UserManager<ApplicationUser> userManager, IEmailSender sender, EmailService emailService)
         {
             _userManager = userManager;
             _sender = sender;
+            _emailService = emailService;
         }
 
         /// <summary>
@@ -49,7 +52,7 @@ namespace Klooz3.Areas.Identity.Pages.Account
         {
             if (email == null)
             {
-                return RedirectToPage("/Index");
+                return RedirectToPage("./Index");
             }
             returnUrl = returnUrl ?? Url.Content("~/");
 

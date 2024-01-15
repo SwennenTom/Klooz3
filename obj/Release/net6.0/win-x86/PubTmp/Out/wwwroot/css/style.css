@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@700&display=swap');
+
+@font-face {
+    font-family: 'ImpactFont';
+    src: url('/fonts/impact.ttf') format('truetype');
+  }
+
+                                   /* ++++GENERAL++++*/
+
+ body{
+     margin:0;
+     padding: 0;
+     height: 90vh;
+     /*overflow:hidden;*/
+ }
+
+/* Keeps image at bottom right*/
+.TorenImage {
+    height: 500px;
+    width: auto;
+    z-index: -100;
+}
+
+@media (max-height: 850px) {
+    .TorenImage {
+        height: 250px;
+        width: auto;
+    }
+}
+
+/* Keeps z-index of Klooz logo negative*/
+.kloozLogo{
+    z-index: -100;
+}
+
+                                        /* ++++NAVIGATION++++ */
+
+/* Font size and color*/
+
+h3 {
+    font-family: 'ImpactFont', Impact, 'Hind', 'Arial Narrow Bold', sans-serif;
+    color: black;
+    text-decoration: none;
+}
+
+.nav a {
+    font-family: 'ImpactFont', Impact, 'Hind', 'Arial Narrow Bold', sans-serif;
+    font-size: 3rem;
+    color: black;
+    text-decoration: none;
+}
+
+@media(max-width: 1600) {
+    .nav-item {
+        font-size: 4rem;
+    }
+}
+
+@media(max-width: 1400) {
+    .nav-item {
+        font-size: 3rem;
+    }
+}
+
+@media(max-width: 1100) {
+    .nav-item {
+        font-size: 2rem;
+    }
+}
+
+/*First letter stays black*/
+.nav a::first-letter{
+    color: black;
+}
+
+/* Link turns green on hover*/
+.nav a:hover{
+    color: rgba(1,78,25,255);
+    color: rgb(155,186,97);
+}
+
+/* Position */
+#navbar-position{
+    margin-top: 30vh;
+}
+
+/*Turns link black and removes decoration */
+
+#linkdeco{
+    color: black;
+    text-decoration: none;
+}
+
+/* Smaller font size for small devices */
+@media (max-width: 650px) {
+    .nav-link { 
+      font-size: 2.5rem; 
+      font-weight: 700;
+    }
+}
+
+.loginPartialstijl {
+    font-size: 1rem;
+}
+
+.smallfont {
+    font-size: 48px !important;
+    margin: -16px;
+}
+
+.loginPartialstijl{
+    font-size: 1rem;
+}
+/*++++FOOTER++++*/
+/*Footer position*/
+#content {
+    padding-bottom: 100px;
+}
+
+.footer {
+    width: 100%;
+    background-color: white;
+    color: #fff;
+    padding: 20px;
+    text-align: left;
+}
+
+/* Footer logo's */
+.footerlogo {
+    /*height: 4vh;*/
+    height: 20px;
+    margin: 15px;
+    filter: grayscale();
+}
+
+/*Footer logo's get color back on hover*/
+.footerlogo:hover {
+    filter: none;
+}
+
+/* Copy right sizing */
+#copyright{
+    font-size: 0.75rem;
+}
+

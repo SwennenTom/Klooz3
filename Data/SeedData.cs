@@ -110,7 +110,7 @@ namespace Klooz3.Data
                 //}
             }
 
-            if(!context.teamregies.Any())
+            if (!context.teamregies.Any())
             {
                 context.teamregies.AddRange(
                     new TeamRegie { Name = "Nele Bylois", Emailadress = "nele@klooz.be" },

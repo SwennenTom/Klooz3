@@ -19,13 +19,23 @@ namespace Klooz3.Controllers
             _emailService = emailService;
         }
 
-        [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> SendEmail()
+        [Authorize(Roles = "Admin, TeamRegie")]
+        public async Task<IActionResult> SendEmail(string InviteEmail)
         {
-            string toEmail = "tswennen@gmail.com";
-            string subject = "Test Email";
-            string body = "Dit is een test email.";
+            //var urlHelper = HttpContext.RequestServices.GetRequiredService<IUrlHelper>();
+            string registrationLink = "https://localhost:7287/Identity/Account/Register?area=Identity";
+            var toEmail = InviteEmail;
+            string subject = "Uitnodiging registratie klooz";
+            string body = $@"Hey! 
+Via onderstaande link kan je een account aanmaken bij klooz en je experiment aanmaken. 
+Wanneer het experiment goedgekeurd is, zal dit online verschijnen.
 
+{registrationLink}
+
+Met vriendelijke groeten
+Team klooz";
+
+            Console.WriteLine($"Email: {InviteEmail}");
             await _emailService.SendEmailAsync(toEmail, subject, body);
 
             return RedirectToAction("Index");

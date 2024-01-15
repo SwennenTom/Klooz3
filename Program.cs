@@ -23,7 +23,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
 {
     // Configure Identity options here
-    options.SignIn.RequireConfirmedAccount = true; // Op false houden! anders is de modelstate van de niewe user invalid.
+    options.SignIn.RequireConfirmedAccount = true;
 
     options.Password.RequireDigit = false;
     options.Password.RequireLowercase = false;
@@ -36,7 +36,11 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
 
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 builder.Services.AddControllersWithViews();
-builder.Services.AddRazorPages();
+builder.Services.AddRazorPages()
+    .AddRazorPagesOptions(options =>
+    {
+        options.RootDirectory = "/Pages";
+    });
 builder.Services.AddScoped<UserService>();
 builder.Services.AddScoped<ExperimentRepo>();
 builder.Services.AddScoped<UserExperimenten>();
@@ -78,6 +82,8 @@ else
     app.UseHsts();
 }
 
+app.UseFileServer();
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
@@ -88,7 +94,22 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Over}/{action=Index}/{id?}");
+
+app.MapControllerRoute(
+    name: "identity",
+    pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+
+
 app.MapRazorPages();
+
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllers();
+    endpoints.MapControllerRoute(
+        name: "identity",
+        pattern: "{area=Identity}/{controller=Account}/{action=Register}/{id?}");
+    endpoints.MapRazorPages();
+});
 
 app.Run();

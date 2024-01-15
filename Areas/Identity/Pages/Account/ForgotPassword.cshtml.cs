@@ -76,7 +76,7 @@ namespace Klooz3.Areas.Identity.Pages.Account
                 await _emailService.SendEmailAsync(
                     Input.Email,
                     "Reset Password",
-                    $"Please reset your password by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
+                    $"Je kan the wachtwoord resetten door <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>hier</a> te klikken.");
 
                 return RedirectToPage("./ForgotPasswordConfirmation");
             }

@@ -146,14 +146,14 @@ namespace Klooz3.Areas.Identity.Pages.Account
                     user.Organization = Input.Organisatie;
                     user.PhoneNumber = Input.Telefoon;
 
-                    var defaultRole = Roles.gebruikerrol; // Assign "Gebruiker" role
+                    var defaultRole = Roles.gebruikerrol; 
                     var role = await _roleManager.FindByNameAsync(defaultRole);
                     if (role != null)
                     {
                         IdentityResult roleResult = await _userManager.AddToRoleAsync(user, role.Name);
                         if (!roleResult.Succeeded)
                         {
-                            // Handle the case where role assignment fails.
+                            
                         }
                     }
 
@@ -180,6 +180,7 @@ namespace Klooz3.Areas.Identity.Pages.Account
                         if (_userManager.Options.SignIn.RequireConfirmedAccount)
                         {
                             return RedirectToPage("RegisterConfirmation", new { email = Input.Email, returnUrl = returnUrl });
+
                         }
                         else
                         {
