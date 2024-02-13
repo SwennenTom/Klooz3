@@ -3,7 +3,7 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:58894",
+      "applicationUrl": "http://www.tomswennen.be",
       "sslPort": 44338
     }
   },
@@ -12,7 +12,7 @@
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
-      "applicationUrl": "https://localhost:7287;http://localhost:5214",
+      "applicationUrl": "https://www.tomswennen.be",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

@@ -30,5 +30,6 @@ namespace Klooz3.Controllers
 
             return View(orderedPartners);
         }
+
     }
 }

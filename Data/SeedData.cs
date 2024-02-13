@@ -16,6 +16,10 @@ namespace Klooz3.Data
                 IdentityRole role = new IdentityRole(roleName);
                 await _roleManager.CreateAsync(role);
             }
+            else
+            {
+                Console.Write("Error in VoegRolToeAsync");
+            }
         }
 
         private static async Task VoegRollenToeAsync(ApplicationDbContext _context, RoleManager<IdentityRole> _roleManager)
@@ -26,21 +30,30 @@ namespace Klooz3.Data
                 await VoegRolToeAsync(_roleManager, Roles.gebruikerrol);
                 await VoegRolToeAsync(_roleManager, Roles.adminrol);
             }
+            else
+            {
+                Console.Write("Error in VoegRollenToeAsync");
+            }
         }
 
         public static async Task EnsurePopulatedAsync(WebApplication app)
         {
-            using (var scope = app.Services.CreateScope())
+            try
             {
-                var _context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
-                var _userManager = scope.ServiceProvider.GetRequiredService<UserManager<ApplicationUser>>();
-                var _roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
-                await VoegRollenToeAsync(_context, _roleManager);
-                await CreateIdentityUserAsync(_userManager);
-                //await CreateIdentityRecordAsync(Roles.regierol, "student@pxl.be", "Student1!", Roles.regierol);
-                //await CreateIdentityRecordAsync(Roles.gebruikerrol, "lector@pxl.be", "Lector1!", Roles.gebruikerrol);
-                //await CreateIdentityRecordAsync(Roles.adminrol, "admin@pxl.be", "Admin1!", Roles.adminrol);
+                using (var scope = app.Services.CreateScope())
+                {
+                    var _context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+                    var _userManager = scope.ServiceProvider.GetRequiredService<UserManager<ApplicationUser>>();
+                    var _roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+                    await VoegRollenToeAsync(_context, _roleManager);
+                    await CreateIdentityUserAsync(_userManager);
+                }
             }
+            catch (Exception ex)
+            {
+                Console.WriteLine("An error occurred: " + ex.Message);
+            }
+
         }
 
         private static async Task CreateIdentityUserAsync(UserManager<ApplicationUser> _userManager)
@@ -89,35 +102,36 @@ namespace Klooz3.Data
 
         public static void Seed(IApplicationBuilder app)
         {
-            ApplicationDbContext context = app.ApplicationServices.CreateScope().ServiceProvider.GetRequiredService<ApplicationDbContext>();
-
-            if (!context.categories.Any())
+            try
             {
-                context.categories.AddRange(
-                    new Categories { name = "Innovatieve landbouw" },
-                    new Categories { name = "Vrijetijdseconomie" },
-                    new Categories { name = "Creatief" },
-                    new Categories { name = "Duurzaam toerisme" },
-                    new Categories { name = "Leerplek" },
-                    new Categories { name = "Mijn experiment behoort niet tot één van deze thema's" });
+                ApplicationDbContext context = app.ApplicationServices.CreateScope().ServiceProvider.GetRequiredService<ApplicationDbContext>();
 
-                context.SaveChanges();
+                if (!context.categories.Any())
+                {
+                    context.categories.AddRange(
+                        new Categories { name = "Innovatieve landbouw" },
+                        new Categories { name = "Vrijetijdseconomie" },
+                        new Categories { name = "Creatief" },
+                        new Categories { name = "Duurzaam toerisme" },
+                        new Categories { name = "Leerplek" },
+                        new Categories { name = "Mijn experiment behoort niet tot één van deze thema's" });
 
-                //try { context.SaveChanges(); }
-                //catch (Exception ex)
-                //{
-                //    Console.WriteLine("An error occurred while saving changes: " + ex.Message);
-                //}
+                    context.SaveChanges();
+                }
+
+                if (!context.teamregies.Any())
+                {
+                    context.teamregies.AddRange(
+                        new TeamRegie { Name = "Nele Bylois", Emailadress = "nele@klooz.be" });
+
+                    context.SaveChanges();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("An error occurred: " + ex.Message);
             }
 
-            if (!context.teamregies.Any())
-            {
-                context.teamregies.AddRange(
-                    new TeamRegie { Name = "Nele Bylois", Emailadress = "nele@klooz.be" },
-                    new TeamRegie { Name = "Valerie Spec", Emailadress = "valerie@klooz.be" });
-
-                context.SaveChanges();
-            }
 
 
 

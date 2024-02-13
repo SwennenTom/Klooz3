@@ -1,9 +1,8 @@
 ﻿@model Klooz3.Models.Experiment
 
-<!-- Add this to your head section -->
 <script>
     function openExperimentModal(experimentId) {
-        // Fetch experiment details using AJAX
+        
         $.ajax({
             type: "GET",
             url: "/Experimenten/GetExperimentDetails/" + experimentId,

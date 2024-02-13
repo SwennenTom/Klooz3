@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "YiALhyVG97ofNXRwjkOLgOEouWqvVJhCd6QEGey75JdCo/bj+kEdUJIFRIuQpCH9SK8V/vljbadgrBZbcMMlyA==",
+  "dgSpecHash": "FdJGSRLN/WGt9DKcjcc96kplSf6w4QInxec5PEF7TzzRsT+mqdpq7tGxul7j3cU+qkJUDR6pz2XKP/eWyjE5qg==",
   "success": true,
   "projectFilePath": "C:\\Repositories\\Klooz3\\Klooz3.csproj",
   "expectedPackageFiles": [
@@ -265,10 +265,7 @@
     "C:\\Users\\tomsw\\.nuget\\packages\\system.threading.timer\\4.3.0\\system.threading.timer.4.3.0.nupkg.sha512",
     "C:\\Users\\tomsw\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
     "C:\\Users\\tomsw\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
-    "C:\\Users\\tomsw\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\tomsw\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x86\\6.0.22\\microsoft.netcore.app.runtime.win-x86.6.0.22.nupkg.sha512",
-    "C:\\Users\\tomsw\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x86\\6.0.22\\microsoft.windowsdesktop.app.runtime.win-x86.6.0.22.nupkg.sha512",
-    "C:\\Users\\tomsw\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x86\\6.0.22\\microsoft.aspnetcore.app.runtime.win-x86.6.0.22.nupkg.sha512"
+    "C:\\Users\\tomsw\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512"
   ],
   "logs": []
 }
