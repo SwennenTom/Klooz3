@@ -1,0 +1,445 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Repositories\\Klooz3\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{715D7695-AB49-4ABD-85A5-519EFAD5C0F7}|Klooz3.csproj|c:\\repositories\\klooz3\\views\\experimenten\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{715D7695-AB49-4ABD-85A5-519EFAD5C0F7}|Klooz3.csproj|solutionrelative:views\\experimenten\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{715D7695-AB49-4ABD-85A5-519EFAD5C0F7}|Klooz3.csproj|c:\\repositories\\klooz3\\views\\shared\\experimentcard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{715D7695-AB49-4ABD-85A5-519EFAD5C0F7}|Klooz3.csproj|solutionrelative:views\\shared\\experimentcard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{715D7695-AB49-4ABD-85A5-519EFAD5C0F7}|Klooz3.csproj|c:\\repositories\\klooz3\\views\\experimenten\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{715D7695-AB49-4ABD-85A5-519EFAD5C0F7}|Klooz3.csproj|solutionrelative:views\\experimenten\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{715D7695-AB49-4ABD-85A5-519EFAD5C0F7}|Klooz3.csproj|c:\\repositories\\klooz3\\wwwroot\\css\\style2.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{715D7695-AB49-4ABD-85A5-519EFAD5C0F7}|Klooz3.csproj|solutionrelative:wwwroot\\css\\style2.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{715D7695-AB49-4ABD-85A5-519EFAD5C0F7}|Klooz3.csproj|c:\\repositories\\klooz3\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{715D7695-AB49-4ABD-85A5-519EFAD5C0F7}|Klooz3.csproj|solutionrelative:views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{715D7695-AB49-4ABD-85A5-519EFAD5C0F7}|Klooz3.csproj|C:\\Repositories\\Klooz3\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{715D7695-AB49-4ABD-85A5-519EFAD5C0F7}|Klooz3.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{715D7695-AB49-4ABD-85A5-519EFAD5C0F7}|Klooz3.csproj|C:\\Repositories\\Klooz3\\controllers\\administratiecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{715D7695-AB49-4ABD-85A5-519EFAD5C0F7}|Klooz3.csproj|solutionrelative:controllers\\administratiecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{715D7695-AB49-4ABD-85A5-519EFAD5C0F7}|Klooz3.csproj|C:\\Repositories\\Klooz3\\views\\userexperimentens\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{715D7695-AB49-4ABD-85A5-519EFAD5C0F7}|Klooz3.csproj|solutionrelative:views\\userexperimentens\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{715D7695-AB49-4ABD-85A5-519EFAD5C0F7}|Klooz3.csproj|C:\\Repositories\\Klooz3\\views\\teamregies\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{715D7695-AB49-4ABD-85A5-519EFAD5C0F7}|Klooz3.csproj|solutionrelative:views\\teamregies\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{715D7695-AB49-4ABD-85A5-519EFAD5C0F7}|Klooz3.csproj|C:\\Repositories\\Klooz3\\areas\\identity\\pages\\account\\forgotpassword.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{715D7695-AB49-4ABD-85A5-519EFAD5C0F7}|Klooz3.csproj|solutionrelative:areas\\identity\\pages\\account\\forgotpassword.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{715D7695-AB49-4ABD-85A5-519EFAD5C0F7}|Klooz3.csproj|C:\\Repositories\\Klooz3\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{715D7695-AB49-4ABD-85A5-519EFAD5C0F7}|Klooz3.csproj|solutionrelative:areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{715D7695-AB49-4ABD-85A5-519EFAD5C0F7}|Klooz3.csproj|C:\\Repositories\\Klooz3\\areas\\identity\\pages\\account\\resetpasswordconfirmation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{715D7695-AB49-4ABD-85A5-519EFAD5C0F7}|Klooz3.csproj|solutionrelative:areas\\identity\\pages\\account\\resetpasswordconfirmation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{715D7695-AB49-4ABD-85A5-519EFAD5C0F7}|Klooz3.csproj|C:\\Repositories\\Klooz3\\areas\\identity\\pages\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{715D7695-AB49-4ABD-85A5-519EFAD5C0F7}|Klooz3.csproj|solutionrelative:areas\\identity\\pages\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{715D7695-AB49-4ABD-85A5-519EFAD5C0F7}|Klooz3.csproj|C:\\Repositories\\Klooz3\\areas\\identity\\pages\\account\\resendemailconfirmation.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{715D7695-AB49-4ABD-85A5-519EFAD5C0F7}|Klooz3.csproj|solutionrelative:areas\\identity\\pages\\account\\resendemailconfirmation.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{715D7695-AB49-4ABD-85A5-519EFAD5C0F7}|Klooz3.csproj|C:\\Repositories\\Klooz3\\areas\\identity\\pages\\account\\registerconfirmation.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{715D7695-AB49-4ABD-85A5-519EFAD5C0F7}|Klooz3.csproj|solutionrelative:areas\\identity\\pages\\account\\registerconfirmation.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{715D7695-AB49-4ABD-85A5-519EFAD5C0F7}|Klooz3.csproj|C:\\Repositories\\Klooz3\\areas\\identity\\pages\\account\\registerconfirmation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{715D7695-AB49-4ABD-85A5-519EFAD5C0F7}|Klooz3.csproj|solutionrelative:areas\\identity\\pages\\account\\registerconfirmation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{715D7695-AB49-4ABD-85A5-519EFAD5C0F7}|Klooz3.csproj|C:\\Repositories\\Klooz3\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{715D7695-AB49-4ABD-85A5-519EFAD5C0F7}|Klooz3.csproj|solutionrelative:areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{715D7695-AB49-4ABD-85A5-519EFAD5C0F7}|Klooz3.csproj|C:\\Repositories\\Klooz3\\areas\\identity\\pages\\account\\logout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{715D7695-AB49-4ABD-85A5-519EFAD5C0F7}|Klooz3.csproj|solutionrelative:areas\\identity\\pages\\account\\logout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{715D7695-AB49-4ABD-85A5-519EFAD5C0F7}|Klooz3.csproj|C:\\Repositories\\Klooz3\\views\\users\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{715D7695-AB49-4ABD-85A5-519EFAD5C0F7}|Klooz3.csproj|solutionrelative:views\\users\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{715D7695-AB49-4ABD-85A5-519EFAD5C0F7}|Klooz3.csproj|C:\\Repositories\\Klooz3\\views\\administratie\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{715D7695-AB49-4ABD-85A5-519EFAD5C0F7}|Klooz3.csproj|solutionrelative:views\\administratie\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{715D7695-AB49-4ABD-85A5-519EFAD5C0F7}|Klooz3.csproj|C:\\Repositories\\Klooz3\\areas\\identity\\pages\\account\\confirmemail.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{715D7695-AB49-4ABD-85A5-519EFAD5C0F7}|Klooz3.csproj|solutionrelative:areas\\identity\\pages\\account\\confirmemail.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{715D7695-AB49-4ABD-85A5-519EFAD5C0F7}|Klooz3.csproj|C:\\Repositories\\Klooz3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{715D7695-AB49-4ABD-85A5-519EFAD5C0F7}|Klooz3.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{715D7695-AB49-4ABD-85A5-519EFAD5C0F7}|Klooz3.csproj|C:\\Repositories\\Klooz3\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{715D7695-AB49-4ABD-85A5-519EFAD5C0F7}|Klooz3.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{715D7695-AB49-4ABD-85A5-519EFAD5C0F7}|Klooz3.csproj|C:\\Repositories\\Klooz3\\data\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{715D7695-AB49-4ABD-85A5-519EFAD5C0F7}|Klooz3.csproj|solutionrelative:data\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{715D7695-AB49-4ABD-85A5-519EFAD5C0F7}|Klooz3.csproj|C:\\Repositories\\Klooz3\\views\\over\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{715D7695-AB49-4ABD-85A5-519EFAD5C0F7}|Klooz3.csproj|solutionrelative:views\\over\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{715D7695-AB49-4ABD-85A5-519EFAD5C0F7}|Klooz3.csproj|C:\\Repositories\\Klooz3\\controllers\\overcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{715D7695-AB49-4ABD-85A5-519EFAD5C0F7}|Klooz3.csproj|solutionrelative:controllers\\overcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Repositories\\Klooz3\\Views\\Experimenten\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Experimenten\\Create.cshtml",
+              "ToolTip": "C:\\Repositories\\Klooz3\\Views\\Experimenten\\Create.cshtml",
+              "RelativeToolTip": "Views\\Experimenten\\Create.cshtml",
+              "ViewState": "AQIAABUAAAAAAAAAAAAswB8AAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-28T08:38:39.853Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ExperimentCard.cshtml",
+              "DocumentMoniker": "C:\\Repositories\\Klooz3\\Views\\Shared\\ExperimentCard.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\ExperimentCard.cshtml",
+              "ToolTip": "C:\\Repositories\\Klooz3\\Views\\Shared\\ExperimentCard.cshtml",
+              "RelativeToolTip": "Views\\Shared\\ExperimentCard.cshtml",
+              "ViewState": "AQIAAC8AAAAAAAAAAAAswDwAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-28T08:34:00.735Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Repositories\\Klooz3\\Views\\Experimenten\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\Experimenten\\Edit.cshtml",
+              "ToolTip": "C:\\Repositories\\Klooz3\\Views\\Experimenten\\Edit.cshtml",
+              "RelativeToolTip": "Views\\Experimenten\\Edit.cshtml",
+              "ViewState": "AQIAACoAAAAAAAAAAAAAADAAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-28T08:34:46.917Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "style2.css",
+              "DocumentMoniker": "C:\\Repositories\\Klooz3\\wwwroot\\css\\style2.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\style2.css",
+              "ToolTip": "C:\\Repositories\\Klooz3\\wwwroot\\css\\style2.css",
+              "RelativeToolTip": "wwwroot\\css\\style2.css",
+              "ViewState": "AQIAAHgBAAAAAAAAAAAAAIsBAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-03-28T08:37:14.078Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_LoginPartial.cshtml",
+              "DocumentMoniker": "C:\\Repositories\\Klooz3\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_LoginPartial.cshtml",
+              "ToolTip": "C:\\Repositories\\Klooz3\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_LoginPartial.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAACFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-04T08:58:47.127Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ForgotPassword.cshtml.cs",
+              "DocumentMoniker": "C:\\Repositories\\Klooz3\\Areas\\Identity\\Pages\\Account\\ForgotPassword.cshtml.cs",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\ForgotPassword.cshtml.cs",
+              "ToolTip": "C:\\Repositories\\Klooz3\\Areas\\Identity\\Pages\\Account\\ForgotPassword.cshtml.cs",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\ForgotPassword.cshtml.cs",
+              "ViewState": "AQIAADAAAAAAAAAAAAAAAE4AAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-11T11:56:35.354Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Repositories\\Klooz3\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Repositories\\Klooz3\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAD8AAAAAAAAAAAAcwJAAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-02-26T09:19:41.83Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ResetPasswordConfirmation.cshtml",
+              "DocumentMoniker": "C:\\Repositories\\Klooz3\\Areas\\Identity\\Pages\\Account\\ResetPasswordConfirmation.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\ResetPasswordConfirmation.cshtml",
+              "ToolTip": "C:\\Repositories\\Klooz3\\Areas\\Identity\\Pages\\Account\\ResetPasswordConfirmation.cshtml",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\ResetPasswordConfirmation.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-11T11:50:55.739Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Error.cshtml",
+              "DocumentMoniker": "C:\\Repositories\\Klooz3\\Areas\\Identity\\Pages\\Error.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Error.cshtml",
+              "ToolTip": "C:\\Repositories\\Klooz3\\Areas\\Identity\\Pages\\Error.cshtml",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Error.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-11T11:54:33.994Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "RegisterConfirmation.cshtml",
+              "DocumentMoniker": "C:\\Repositories\\Klooz3\\Areas\\Identity\\Pages\\Account\\RegisterConfirmation.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\RegisterConfirmation.cshtml",
+              "ToolTip": "C:\\Repositories\\Klooz3\\Areas\\Identity\\Pages\\Account\\RegisterConfirmation.cshtml",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\RegisterConfirmation.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-11T11:49:58.43Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "RegisterConfirmation.cshtml.cs",
+              "DocumentMoniker": "C:\\Repositories\\Klooz3\\Areas\\Identity\\Pages\\Account\\RegisterConfirmation.cshtml.cs",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\RegisterConfirmation.cshtml.cs",
+              "ToolTip": "C:\\Repositories\\Klooz3\\Areas\\Identity\\Pages\\Account\\RegisterConfirmation.cshtml.cs",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\RegisterConfirmation.cshtml.cs",
+              "ViewState": "AQIAAEQAAAAAAAAAAAAAAD0AAABLAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-04T10:01:01.835Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AdministratieController.cs",
+              "DocumentMoniker": "C:\\Repositories\\Klooz3\\Controllers\\AdministratieController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AdministratieController.cs",
+              "ToolTip": "C:\\Repositories\\Klooz3\\Controllers\\AdministratieController.cs",
+              "RelativeToolTip": "Controllers\\AdministratieController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-04T09:50:33.72Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Repositories\\Klooz3\\Views\\TeamRegies\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\TeamRegies\\Edit.cshtml",
+              "ToolTip": "C:\\Repositories\\Klooz3\\Views\\TeamRegies\\Edit.cshtml",
+              "RelativeToolTip": "Views\\TeamRegies\\Edit.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAABFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-11T11:58:53.698Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Repositories\\Klooz3\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Repositories\\Klooz3\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAAACUAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-04T08:43:17.78Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Repositories\\Klooz3\\Views\\UserExperimentens\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\UserExperimentens\\Edit.cshtml",
+              "ToolTip": "C:\\Repositories\\Klooz3\\Views\\UserExperimentens\\Edit.cshtml",
+              "RelativeToolTip": "Views\\UserExperimentens\\Edit.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAABtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-11T12:01:15.65Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Repositories\\Klooz3\\Views\\Users\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Users\\Index.cshtml",
+              "ToolTip": "C:\\Repositories\\Klooz3\\Views\\Users\\Index.cshtml",
+              "RelativeToolTip": "Views\\Users\\Index.cshtml",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAADIAAABRAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-11T11:42:39.333Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Repositories\\Klooz3\\Views\\Administratie\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Administratie\\Index.cshtml",
+              "ToolTip": "C:\\Repositories\\Klooz3\\Views\\Administratie\\Index.cshtml",
+              "RelativeToolTip": "Views\\Administratie\\Index.cshtml",
+              "ViewState": "AQIAADAAAAAAAAAAAAAAAEsAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-11T11:34:28.937Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ResendEmailConfirmation.cshtml.cs",
+              "DocumentMoniker": "C:\\Repositories\\Klooz3\\Areas\\Identity\\Pages\\Account\\ResendEmailConfirmation.cshtml.cs",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\ResendEmailConfirmation.cshtml.cs",
+              "ToolTip": "C:\\Repositories\\Klooz3\\Areas\\Identity\\Pages\\Account\\ResendEmailConfirmation.cshtml.cs",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\ResendEmailConfirmation.cshtml.cs",
+              "ViewState": "AQIAAEUAAAAAAAAAAAAAAE8AAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-04T12:17:43.927Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Repositories\\Klooz3\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Repositories\\Klooz3\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAACBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-02-27T08:14:42.25Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Register.cshtml.cs",
+              "DocumentMoniker": "C:\\Repositories\\Klooz3\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "ToolTip": "C:\\Repositories\\Klooz3\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "ViewState": "AQIAAOUAAAAAAAAAAAAAANgAAABuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-04T09:14:57.142Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "SeedData.cs",
+              "DocumentMoniker": "C:\\Repositories\\Klooz3\\Data\\SeedData.cs",
+              "RelativeDocumentMoniker": "Data\\SeedData.cs",
+              "ToolTip": "C:\\Repositories\\Klooz3\\Data\\SeedData.cs",
+              "RelativeToolTip": "Data\\SeedData.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-05T08:58:53.93Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Logout.cshtml",
+              "DocumentMoniker": "C:\\Repositories\\Klooz3\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+              "ToolTip": "C:\\Repositories\\Klooz3\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAB1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-04T09:13:31.024Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Repositories\\Klooz3\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Repositories\\Klooz3\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAADAAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-26T15:05:55.896Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ConfirmEmail.cshtml.cs",
+              "DocumentMoniker": "C:\\Repositories\\Klooz3\\Areas\\Identity\\Pages\\Account\\ConfirmEmail.cshtml.cs",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\ConfirmEmail.cshtml.cs",
+              "ToolTip": "C:\\Repositories\\Klooz3\\Areas\\Identity\\Pages\\Account\\ConfirmEmail.cshtml.cs",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\ConfirmEmail.cshtml.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAAABEAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-04T09:15:45.204Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Repositories\\Klooz3\\Views\\Over\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Over\\Index.cshtml",
+              "ToolTip": "C:\\Repositories\\Klooz3\\Views\\Over\\Index.cshtml",
+              "RelativeToolTip": "Views\\Over\\Index.cshtml",
+              "ViewState": "AQIAAOEAAAAAAAAAAAAkwAIBAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-02-26T14:42:22.304Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "OverController.cs",
+              "DocumentMoniker": "C:\\Repositories\\Klooz3\\Controllers\\OverController.cs",
+              "RelativeDocumentMoniker": "Controllers\\OverController.cs",
+              "ToolTip": "C:\\Repositories\\Klooz3\\Controllers\\OverController.cs",
+              "RelativeToolTip": "Controllers\\OverController.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABsAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-26T14:34:43.087Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

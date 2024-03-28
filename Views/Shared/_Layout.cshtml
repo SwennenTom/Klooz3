@@ -30,24 +30,25 @@
             var cookieConsent = document.getElementById("cookieConsent");
 
             // Check if the user has previously accepted cookies
-            var hasAcceptedCookies = localStorage.getItem("cookiesAccepted");
+            var cookiesDecision = localStorage.getItem("cookiesDecision");
 
-            if (!hasAcceptedCookies) {
+            if (cookiesDecision !== "accepted" && cookiesDecision !== "denied") {
                 // Show the cookie consent popup
                 cookieConsent.style.display = "block";
             }
 
-            // Event listener for the "Ok!" button
             document.getElementById("acceptCookies").addEventListener("click", function () {
                 // Set a flag indicating that cookies are accepted
-                localStorage.setItem("cookiesAccepted", "true");
+                localStorage.setItem("cookiesDecision", "accepted");
 
                 // Hide the cookie consent popup
                 cookieConsent.style.display = "none";
             });
 
-            // Event listener for the "Liever niet" button
             document.getElementById("denyCookies").addEventListener("click", function () {
+                // Set a flag indicating that cookies are denied
+                localStorage.setItem("cookiesDecision", "denied");
+
                 // Hide the cookie consent popup
                 cookieConsent.style.display = "none";
             });
@@ -107,26 +108,27 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse nav" id="navbarSupportedContent">
-                    @{
-                        // Define a list of menu items with their respective controller names and display names
-                        var menuItems = new List<(string Controller, string DisplayName)>
-                    {
-                    ("Over", "OVER"),
-                    ("Experimenten", "EXPERIMENTEN"),
-                    ("Contact", "CONTACT"),
-                    ("Agenda", "AGENDA")
-                    };
-                    }
-
+                    
                     <ul class="nav">
-                        @foreach (var menuItem in menuItems)
-                        {
-                            <li class="nav-item">
-                                <a class="nav-link p-0 @(ViewContext.RouteData.Values["controller"]?.ToString() == menuItem.Controller ? "active" : "")"
-                                   href="@Url.Action("Index", menuItem.Controller, new { area = "" })">@menuItem.DisplayName</a>
-                            </li>
-                        }
+                        <li class="nav-item">
+                            <a class="nav-link p-0 @(ViewContext.RouteData.Values["controller"]?.ToString() == "Over" ? "active" : "")"
+                               href="@Url.Content("~/Over/Index")">OVER</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link p-0 @(ViewContext.RouteData.Values["controller"]?.ToString() == "Experimenten" ? "active" : "")"
+                               href="@Url.Content("~/Experimenten/Index")">EXPERIMENTEN</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link p-0 @(ViewContext.RouteData.Values["controller"]?.ToString() == "Contact" ? "active" : "")"
+                               href="@Url.Content("~/Contact/Index")">CONTACT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link p-0 @(ViewContext.RouteData.Values["controller"]?.ToString() == "Agenda" ? "active" : "")"
+                               href="@Url.Content("~/Agenda/Index")">AGENDA</a>
+                        </li>
                     </ul>
+
+
 
                 </div>
             </div>
@@ -140,7 +142,7 @@
     </div>
 
     <footer class="footer mt-auto py-3">
-        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        <br /><br /><br /><br /><br /><br /><br />
         <div class="row">
             <div class="col-10">
                 <nav>

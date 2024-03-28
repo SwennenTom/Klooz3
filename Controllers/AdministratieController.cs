@@ -23,7 +23,7 @@ namespace Klooz3.Controllers
         public async Task<IActionResult> SendEmail(string InviteEmail)
         {
             //var urlHelper = HttpContext.RequestServices.GetRequiredService<IUrlHelper>();
-            string registrationLink = "https://localhost:7287/Identity/Account/Register?area=Identity";
+            string registrationLink = "http://klooz.be/Identity/Account/Register";
             var toEmail = InviteEmail;
             string subject = "Uitnodiging registratie klooz";
             string body = $@"Hey! 

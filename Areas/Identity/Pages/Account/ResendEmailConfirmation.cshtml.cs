@@ -74,10 +74,14 @@ namespace Klooz3.Areas.Identity.Pages.Account
             var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
             code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
             var callbackUrl = Url.Page(
-                "/Account/ConfirmEmail",
-                pageHandler: null,
-                values: new { userId = userId, code = code },
-                protocol: Request.Scheme);
+    "/Account/ConfirmEmail",
+    pageHandler: null,
+    values: new { userId = userId, code = code },
+    protocol: "http"); // Explicitly specify the protocol (https)
+
+            // Append the domain to the callbackUrl
+            //callbackUrl = $"{Request.Scheme}://www.tomswennen.be{callbackUrl}";
+
             await _emailService.SendEmailAsync(
                 Input.Email,
                 "Bevestig je email",

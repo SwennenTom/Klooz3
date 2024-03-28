@@ -22,6 +22,12 @@
                 @Html.DisplayName("Email")
             </th>
             <th>
+                @Html.DisplayName("Telefoon")
+            </th>
+            <th>
+                @Html.DisplayName("Organisatie")
+            </th>
+            <th>
                 @Html.DisplayName("Rol")
             </th>
         </tr>
@@ -37,6 +43,14 @@
                 <td>
                     @Html.DisplayFor(modelItem => userWithRoles.User.UserName)
                 </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => userWithRoles.User.PhoneNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => userWithRoles.User.Organization)
+                </td>
+
                 <td>
                     @foreach (var role in userWithRoles.Roles)
                     {

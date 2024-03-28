@@ -250,9 +250,16 @@
                         <p>Wij werken samen met deze partners:</p>
                         <div class="row" id="partnerKaarten">
                             <div class="card-container">
-                                @foreach (var item in Model)
+                                @try
                                 {
-                                    <partial name="PartnerCardPartial" model="item"/>
+                                    @foreach (var item in Model)
+                                    {
+                                        <partial name="PartnerCardPartial" model="item"/>
+                                    }
+                                }catch (Exception ex){
+                                    <div class="alert alert-danger" role="alert">
+                                        An error occurred while rendering the items: @ex.Message
+                                    </div>
                                 }
                             </div>
                         </div>

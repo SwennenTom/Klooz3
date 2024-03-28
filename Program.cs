@@ -45,6 +45,8 @@ builder.Services.AddScoped<UserService>();
 builder.Services.AddScoped<ExperimentRepo>();
 builder.Services.AddScoped<UserExperimenten>();
 builder.Services.AddScoped<ImageConversionService>();
+builder.Services.AddScoped<ApplicationDbContext>();
+//builder.Services.AddScoped<IEmailSender>();
 
 // Add SendGrid service
 builder.Services.AddTransient<EmailService>();

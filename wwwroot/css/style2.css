@@ -389,3 +389,8 @@ margin-bottom: 25%;
 #copyright{
     font-size: 0.75rem;
 }
+
+.custom-input {
+    width: 300px;
+    height: 300px;
+}

@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Klooz3")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+61645a6645b2cdbf07ad4c8a846a72eaf024f228")]
 [assembly: System.Reflection.AssemblyProductAttribute("Klooz3")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Klooz3")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -62,7 +62,7 @@ namespace Klooz3.Data
             string lastname = "Swennen";
             string phonenumber = "0498147788";
             string email = "tswennen@gmail.com";
-            string organization = "nvt";
+            string organization = "admin";
             string password = "O826o826";
 
             if (_userManager != null && await _userManager.FindByEmailAsync(email) == null)

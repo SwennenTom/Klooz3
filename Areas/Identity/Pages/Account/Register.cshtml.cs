@@ -132,7 +132,7 @@ namespace Klooz3.Areas.Identity.Pages.Account
 
         public async Task<IActionResult> OnPostAsync(string returnUrl = null)
         {
-            returnUrl ??= Url.Content("~/");
+            returnUrl ??= Url.Content("/");
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             //if (ModelState.IsValid)
 
@@ -169,13 +169,28 @@ namespace Klooz3.Areas.Identity.Pages.Account
                         var userId = await _userManager.GetUserIdAsync(user);
                         var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
                         code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
+
                         var callbackUrl = Url.Page(
                             "/Account/ConfirmEmail",
                             pageHandler: null,
                             values: new { area = "Identity", userId = userId, code = code, returnUrl = returnUrl },
                             protocol: Request.Scheme);
-                        await _emailService.SendEmailAsync(Input.Email, "Confirm your email",
-                            $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
+
+                        
+                        callbackUrl += $"{callbackUrl}";
+
+
+                        //                    var callbackUrl = Url.Page(
+                        //"/Account/ConfirmEmail",
+                        //pageHandler: null,
+                        //values: new { area = "Identity", userId = userId, code = code, returnUrl = returnUrl },
+                        //protocol: "https"); // Explicitly specify the protocol (https)
+
+                        //                    // Append the domain to the callbackUrl
+                        //                    callbackUrl = $"{Request.Scheme}://www.klooz.be{callbackUrl}";
+
+                        await _emailService.SendEmailAsync(Input.Email, "Bevestig je emailadres.",
+                            $"Gelieve je emailadres te bevestigen door <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>hier</a> te klikken.");
 
                         if (_userManager.Options.SignIn.RequireConfirmedAccount)
                         {
@@ -199,7 +214,7 @@ namespace Klooz3.Areas.Identity.Pages.Account
                 var sqlException = ex.InnerException as SqlException;
                 if (sqlException != null && sqlException.Number == 2601) // Unique key violation
                 {
-                    ModelState.AddModelError(string.Empty, "A user with this email address already exists.");
+                    ModelState.AddModelError(string.Empty, "Er bestaat reeds een gebruiker met dit emailadres.");
                     return Page();
                 }
                 else
