@@ -25,12 +25,20 @@
       "PackagePath": "staticwebassets\\docs\\HowToExperiment.pdf"
     },
     {
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\docs\\Klooz_GebruikersHandleiding_2024.pdf",
+      "PackagePath": "staticwebassets\\docs\\Klooz_GebruikersHandleiding_2024.pdf"
+    },
+    {
       "Id": "C:\\Repositories\\Klooz3\\wwwroot\\docs\\Klooz_Sjabloon Experiment (3).pptx",
       "PackagePath": "staticwebassets\\docs\\Klooz_Sjabloon Experiment (3).pptx"
     },
     {
       "Id": "C:\\Repositories\\Klooz3\\wwwroot\\docs\\Klooz_Sjabloon Experiment.pptx",
       "PackagePath": "staticwebassets\\docs\\Klooz_Sjabloon Experiment.pptx"
+    },
+    {
+      "Id": "C:\\Repositories\\Klooz3\\wwwroot\\docs\\Klooz_TeamRegieHandleiding_2024.pdf",
+      "PackagePath": "staticwebassets\\docs\\Klooz_TeamRegieHandleiding_2024.pdf"
     },
     {
       "Id": "C:\\Repositories\\Klooz3\\wwwroot\\docs\\Opvolging_experiment_[TEMPLATE] (1) (1).xlsx",

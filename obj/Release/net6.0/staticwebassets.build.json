@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "LP8dHOeYR93QN6fkgNQYHrAIUZ+zTrKK2lczC9tgavU=",
+  "Hash": "R4YFL78wr+NU2LmRAEzz3bMzaL0VP5rqwDhsPEgUPs8=",
   "Source": "Klooz3",
   "BasePath": "_content/Klooz3",
   "Mode": "Default",
@@ -169,6 +169,25 @@
       "OriginalItemSpec": "wwwroot\\docs\\klooz_criteria.docx"
     },
     {
+      "Identity": "C:\\Repositories\\Klooz3\\wwwroot\\docs\\Klooz_GebruikersHandleiding_2024.pdf",
+      "SourceId": "Klooz3",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Repositories\\Klooz3\\wwwroot\\",
+      "BasePath": "_content/Klooz3",
+      "RelativePath": "docs/Klooz_GebruikersHandleiding_2024.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\docs\\Klooz_GebruikersHandleiding_2024.pdf"
+    },
+    {
       "Identity": "C:\\Repositories\\Klooz3\\wwwroot\\docs\\Klooz_Sjabloon Experiment (3).pptx",
       "SourceId": "Klooz3",
       "SourceType": "Discovered",
@@ -205,6 +224,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\docs\\Klooz_Sjabloon Experiment.pptx"
+    },
+    {
+      "Identity": "C:\\Repositories\\Klooz3\\wwwroot\\docs\\Klooz_TeamRegieHandleiding_2024.pdf",
+      "SourceId": "Klooz3",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Repositories\\Klooz3\\wwwroot\\",
+      "BasePath": "_content/Klooz3",
+      "RelativePath": "docs/Klooz_TeamRegieHandleiding_2024.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\docs\\Klooz_TeamRegieHandleiding_2024.pdf"
     },
     {
       "Identity": "C:\\Repositories\\Klooz3\\wwwroot\\docs\\klooz-aanvraag terugbetaling werkingskosten_Template (1).docx",
